@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Обліковець. Станція №4</title>
+  <style>
+    :root {
+      /* Сучасна темна палітра (шапка та нижня панель гри) */
+      --ui-bg: #141413;
+      --ui-surface: #1d1d1b;
+      --ui-border: rgba(255, 255, 255, 0.08);
+      --ui-text: #f3f1ec;
+      --ui-muted: #9a968c;
+      --accent: #e5a93c;
+      --warn: #f08a38;
+      --danger: #e05247;
+
+      /* Ретро-палітра документів */
+      --paper: #e6dec8;
+      --ink: #1e1b17;
+      --ink-soft: #4e473c;
+      --ink-faint: #756b5c;
+      --stamp-in: #195e33;
+      --stamp-out: #1b437a;
+      --stamp-rej: #8c1d18;
+
+      --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      --font-doc: "Courier New", Courier, "Liberation Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: #0c0c0b;
+      color: var(--ui-text);
+      font-family: var(--font-ui);
+      overflow: hidden;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Основний вертикальний мобільний контейнер */
+    .app {
+      width: 100%;
+      max-width: 440px;
+      height: 100dvh;
+      margin: 0 auto;
+      background: var(--ui-bg);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 42px rgba(0, 0, 0, 0.72);
+    }
+
+    /* =========================================================================
+       1. СУЧАСНА МІНІМАЛІСТИЧНА ШАПКА (ВИКЛЮЧНО ПІД ЧАС ГРИ)
+       ========================================================================= */
+    .topbar {
+      flex: 0 0 auto;
+      background: var(--ui-bg);
+      padding: 11px 16px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--ui-border);
+      gap: 12px;
+    }
+
+    .top-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .train-label {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ui-text);
+    }
+
+    .reprimands-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12.5px;
+      color: var(--ui-muted);
+    }
+
+    .rep-dots {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .rep-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.14);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .rep-dot.active {
+      background: var(--danger);
+      box-shadow: 0 0 8px rgba(224, 82, 71, 0.55);
+      transform: scale(1.12);
+    }
+
+    .top-right {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1px;
+    }
+
+    .station-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ui-muted);
+    }
+
+    .station-count {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .station-count small {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ui-muted);
+    }
+
+    .station-count.warn {
+      color: var(--warn);
+    }
+
+    .station-count.crit {
+      color: var(--danger);
+    }
+
+    /* =========================================================================
+       2. ОБЛАСТЬ РОБОЧОГО РЕТРО-БЛАНКУ (ОДНАКОВИЙ ПАПЕРОВИЙ ФОН)
+       ========================================================================= */
+    .doc-viewport {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: var(--paper);
+      background-image:
+        radial-gradient(rgba(30, 27, 23, 0.035) 1px, transparent 0),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, transparent 16px);
+      background-size: 18px 18px, 100% 100%;
+      padding: 12px 14px 14px;
+      color: var(--ink);
+      font-family: var(--font-doc);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .blank-sheet {
+      width: 100%;
+      position: relative;
+    }
+
+    .blank-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 7px;
+      margin-bottom: 7px;
+      border-bottom: 2px solid var(--ink);
+      font-weight: 700;
+      gap: 8px;
+    }
+
+    .dir-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border: 1.5px solid var(--ink);
+      font-size: 13.5px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background: rgba(30, 27, 23, 0.05);
+      white-space: nowrap;
+    }
+
+    .meta-info {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* Таблиця вагонів — строго однорядкові записи, шрифт 15.5px */
+    .wagon-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      font-size: 15.5px;
+      line-height: 1.26;
+    }
+
+    .wagon-table th {
+      text-align: left;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--ink-soft);
+      padding: 3px 3px 6px;
+      border-bottom: 1.5px solid var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .wagon-table th:first-child {
+      width: 34px;
+      text-align: center;
+    }
+
+    .wagon-table th:nth-child(2) {
+      width: 104px;
+    }
+
+    .wagon-table td {
+      padding: 5px 3px;
+      border-bottom: 1px dashed rgba(30, 27, 23, 0.28);
+      vertical-align: middle;
+    }
+
+    .wagon-table tr:last-child td {
+      border-bottom: 1.5px solid var(--ink);
+    }
+
+    .col-num {
+      text-align: center;
+      color: var(--ink-soft);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .col-code {
+      white-space: nowrap;
+      letter-spacing: -0.03em;
+    }
+
+    .w-type {
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .col-cargo {
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      max-width: 0;
+    }
+
+    @media (max-width: 390px) {
+      .wagon-table {
+        font-size: 14.5px;
+      }
+      .wagon-table th:nth-child(2) {
+        width: 96px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .wagon-table {
+        font-size: 13.5px;
+      }
+      .wagon-table th:nth-child(2) {
+        width: 88px;
+      }
+    }
+
+    /* Компактне місце під штамп над примітками */
+    .stamp-slot {
+      margin-top: 8px;
+      height: 48px;
+      border: 1px dashed rgba(30, 27, 23, 0.45);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(30, 27, 23, 0.02);
+    }
+
+    .stamp-placeholder {
+      font-size: 11px;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .ink-stamp {
+      position: absolute;
+      padding: 2px 12px;
+      border: 2.5px solid currentColor;
+      border-radius: 3px;
+      font-family: var(--font-doc);
+      text-align: center;
+      line-height: 1.06;
+      transform: rotate(-3deg) scale(1);
+      opacity: 0.93;
+      pointer-events: none;
+      background: rgba(230, 222, 200, 0.8);
+      box-shadow: inset 0 0 0 1px currentColor;
+      animation: stampHit 0.18s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+    }
+
+    .ink-stamp .st-status {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .ink-stamp .st-name {
+      font-size: 16.5px;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .ink-stamp.in { color: var(--stamp-in); }
+    .ink-stamp.out { color: var(--stamp-out); }
+    .ink-stamp.rej { color: var(--stamp-rej); }
+
+    @keyframes stampHit {
+      0% { transform: rotate(-6deg) scale(1.6); opacity: 0.2; }
+      100% { transform: rotate(-3deg) scale(1); opacity: 0.93; }
+    }
+
+    /* Примітки тим самим моноширинним шрифтом */
+    .blank-notes {
+      margin-top: 7px;
+      font-size: 12.2px;
+      line-height: 1.32;
+      color: var(--ink-soft);
+      font-family: var(--font-doc);
+    }
+
+    .blank-notes b {
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    /* =========================================================================
+       3. СУЧАСНА НИЖНЯ ПАНЕЛЬ КЕРУВАННЯ
+       ========================================================================= */
+    .controls {
+      flex: 0 0 auto;
+      background: var(--ui-surface);
+      border-top: 1px solid var(--ui-border);
+      padding: 10px 14px calc(12px + env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .input-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .input-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ui-text);
+    }
+
+    .stepper {
+      display: flex;
+      align-items: center;
+      background: #121210;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .step-btn {
+      width: 42px;
+      height: 38px;
+      background: transparent;
+      border: none;
+      color: var(--ui-text);
+      font-size: 21px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-btn:active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .count-input {
+      width: 54px;
+      height: 38px;
+      background: transparent;
+      border: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--ui-text);
+      font-family: var(--font-ui);
+      font-size: 19px;
+      font-weight: 800;
+      text-align: center;
+      outline: none;
+      -moz-appearance: textfield;
+    }
+
+    .count-input::-webkit-outer-spin-button,
+    .count-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .act-btn {
+      height: 44px;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-ui);
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #fff;
+      transition: transform 0.08s, opacity 0.15s;
+    }
+
+    .act-btn:active {
+      transform: scale(0.97);
+    }
+
+    .act-btn:disabled {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .btn-in { background: #266b43; }
+    .btn-out { background: #27538c; }
+    .btn-rej { background: #8a2c26; }
+
+    /* =========================================================================
+       4. РЕТРО-ЕКРАНИ (СТАРТ, ЗВІТ, МОРАЛЬ, АРХІВ)
+       ========================================================================= */
+    .retro-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 40;
+      background-color: var(--paper);
+      background-image: radial-gradient(rgba(30, 27, 23, 0.04) 1px, transparent 0);
+      background-size: 18px 18px;
+      color: var(--ink);
+      font-family: var(--font-doc);
+      display: flex;
+      flex-direction: column;
+      padding: 18px 14px calc(18px + env(safe-area-inset-bottom));
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .retro-frame {
+      flex: 1 0 auto;
+      border: 2px solid var(--ink);
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .retro-kicker {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
+    }
+
+    .retro-title {
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .retro-rules {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+
+    .retro-rules li {
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .retro-rules li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+
+    .retro-field {
+      border: 1.5px dashed rgba(30, 27, 23, 0.55);
+      padding: 12px;
+      margin-bottom: 16px;
+      background: rgba(30, 27, 23, 0.03);
+    }
+
+    .retro-field label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+
+    .retro-input {
+      width: 100%;
+      height: 42px;
+      background: #f2ebd9;
+      border: 1.5px solid var(--ink);
+      padding: 0 10px;
+      font-family: var(--font-doc);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .retro-input:focus {
+      background: #faf5e8;
+    }
+
+    .retro-btn {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      font-family: var(--font-doc);
+      font-size: 14.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: 2px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      transition: opacity 0.15s, transform 0.08s;
+    }
+
+    .retro-btn:active {
+      transform: scale(0.985);
+    }
+
+    .retro-btn.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .retro-btn.moral-btn {
+      background: var(--stamp-rej);
+      border-color: var(--stamp-rej);
+      color: #f7efe0;
+    }
+
+    .retro-actions {
+      margin-top: auto;
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    /* Службовий звіт */
+    .retro-stat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .retro-stat-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(30, 27, 23, 0.35);
+      padding-bottom: 5px;
+      gap: 8px;
+    }
+
+    .retro-stat-row strong {
+      font-weight: 900;
+      text-align: right;
+    }
+
+    /* Екран «Мораль» */
+    .moral-doc p {
+      font-size: 14px;
+      line-height: 1.46;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .moral-highlight {
+      margin: 12px 0 14px;
+      padding: 10px 12px;
+      background: rgba(140, 29, 24, 0.09);
+      border-left: 4px solid var(--stamp-rej);
+      font-size: 13.8px;
+      line-height: 1.48;
+      font-weight: 700;
+    }
+
+    /* Архів підписаних бланків */
+    .archive-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 10px;
+    }
+
+    .arch-card {
+      border: 1.5px solid var(--ink);
+      padding: 9px 10px;
+      background: rgba(255, 255, 255, 0.16);
+      font-size: 12.5px;
+    }
+
+    .arch-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      font-weight: 900;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+
+    .arch-stamp-tag {
+      padding: 1px 5px;
+      border: 1.5px solid currentColor;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .arch-stamp-tag.in { color: var(--stamp-in); }
+    .arch-stamp-tag.out { color: var(--stamp-out); }
+    .arch-stamp-tag.rej { color: var(--stamp-rej); }
+
+    .arch-row {
+      padding: 2px 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .arch-row.flagged-people {
+      background: rgba(140, 29, 24, 0.14);
+      font-weight: 700;
+    }
+
+    .arch-row.flagged-belongings {
+      background: rgba(130, 92, 24, 0.14);
+      font-weight: 700;
+    }
+
+    /* =========================================================================
+       5. МОДАЛЬНИЙ РЕТРО-ТАЛОН ДОГАНИ (ЛИШЕ НУМЕРОВАНИЙ СПИСОК ПОРУШЕНЬ)
+       ========================================================================= */
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      z-index: 60;
+      background: rgba(10, 10, 9, 0.78);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .reprimand-blank {
+      width: 100%;
+      background-color: var(--paper);
+      background-image: radial-gradient(rgba(30, 27, 23, 0.04) 1px, transparent 0);
+      background-size: 16px 16px;
+      color: var(--ink);
+      font-family: var(--font-doc);
+      border: 2.5px solid var(--stamp-rej);
+      padding: 16px 15px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.65);
+    }
+
+    .rep-blank-title {
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--stamp-rej);
+      border-bottom: 2px solid var(--stamp-rej);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .rep-violations {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 16px;
+      font-size: 14.5px;
+      line-height: 1.38;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .rep-violations li {
+      padding: 7px 10px;
+      background: rgba(140, 29, 24, 0.08);
+      border-left: 3.5px solid var(--stamp-rej);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- СУЧАСНА ШАПКА ГРИ -->
+    <header class="topbar">
+      <div class="top-left">
+        <span class="train-label" id="trainLabel">Ешелон 1 / 10</span>
+        <div class="reprimands-row">
+          <span>Догани:</span>
+          <span class="rep-dots" id="repDots">
+            <span class="rep-dot"></span>
+            <span class="rep-dot"></span>
+            <span class="rep-dot"></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="top-right">
+        <span class="station-title">Вагонів на станції:</span>
+        <div class="station-count" id="stationCount">86 <small>/ 100</small></div>
+      </div>
+    </header>
+
+    <!-- РОБОЧИЙ РЕТРО-БЛАНК -->
+    <main class="doc-viewport" id="docViewport">
+      <div class="blank-sheet" id="blankSheet">
+        <div class="blank-meta">
+          <span class="dir-badge" id="dirBadge">ПРИБУТТЯ (+)</span>
+          <span class="meta-info" id="metaInfo">Рейс №408 • Колія 2</span>
+        </div>
+
+        <table class="wagon-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Вагон</th>
+              <th>Вантаж / призначення</th>
+            </tr>
+          </thead>
+          <tbody id="wagonBody"></tbody>
+        </table>
+
+        <div class="stamp-slot" id="stampSlot">
+          <span class="stamp-placeholder">Місце для печатки обліковця</span>
+        </div>
+
+        <div class="blank-notes">
+          Індекси: <b>ТВ</b> — товарний критий; <b>ПВ</b> — піввагон відкритий; <b>ЦВ</b> — цистерна. Звіряйте фактичну кількість рядків із порядковими номерами.
+        </div>
+      </div>
+    </main>
+
+    <!-- СУЧАСНА НИЖНЯ ПАНЕЛЬ КЕРУВАННЯ -->
+    <footer class="controls">
+      <div class="input-row">
+        <span class="input-label">Кількість вагонів у бланку:</span>
+        <div class="stepper">
+          <button class="step-btn" id="decBtn" type="button" aria-label="Зменшити">−</button>
+          <input class="count-input" id="countInput" type="number" inputmode="numeric" min="1" max="20" value="8" />
+          <button class="step-btn" id="incBtn" type="button" aria-label="Збільшити">+</button>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="act-btn btn-in" id="btnIn" type="button">Прийнято</button>
+        <button class="act-btn btn-out" id="btnOut" type="button">Відправлено</button>
+        <button class="act-btn btn-rej" id="btnRej" type="button">Відхилити</button>
+      </div>
+    </footer>
+
+    <!-- МОДАЛЬНИЙ РЕТРО-ТАЛОН ДОГАНИ -->
+    <div class="modal-backdrop hidden" id="reprimandModal">
+      <div class="reprimand-blank" role="dialog" aria-modal="true">
+        <div class="rep-blank-title" id="repModalTitle">ДОГАНА 1 / 3</div>
+        <ul class="rep-violations" id="repViolationsList"></ul>
+        <button class="retro-btn" id="closeReprimandBtn" type="button">Закрити</button>
+      </div>
+    </div>
+
+    <!-- СТАРТОВИЙ РЕТРО-ІНСТРУКТАЖ -->
+    <section class="retro-overlay" id="startOverlay">
+      <div class="retro-frame">
+        <div class="retro-kicker">Залізничний вузол • Станція №4</div>
+        <h1 class="retro-title">Інструктаж обліковця</h1>
+        <ul class="retro-rules">
+          <li>Рахуйте фактичну кількість вагонів у бланку — у колонці «№» трапляються пропуски.</li>
+          <li>Введіть точну кількість та натисніть <b>«Прийнято»</b> або <b>«Відправлено»</b>.</li>
+          <li>Ліміт станції — <b>100 вагонів</b>. Якщо прибуття перевищить 100 — тисніть <b>«Відхилити»</b>.</li>
+          <li>За помилку виноситься догана. <b>3 догани</b> — негайне відсторонення.</li>
+        </ul>
+
+        <div class="retro-field">
+          <label for="playerNameInput">Прізвище для особистої печатки:</label>
+          <input class="retro-input" id="playerNameInput" type="text" maxlength="16" placeholder="К. Вебер" />
+        </div>
+
+        <div class="retro-actions">
+          <button class="retro-btn" id="startBtn" type="button">Заступити на зміну</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФІНАЛЬНІ РЕТРО-ЕКРАНИ (ЗВІТ / МОРАЛЬ / АРХІВ) -->
+    <section class="retro-overlay hidden" id="endOverlay">
+      <!-- 1. Службовий звіт обліковця -->
+      <div class="retro-frame" id="panelReport">
+        <div class="retro-kicker" id="endKicker">Зміну завершено</div>
+        <h2 class="retro-title" id="endTitle">Службовий звіт обліковця</h2>
+        <div class="retro-stat-list" id="endStats"></div>
+
+        <div class="retro-actions">
+          <button class="retro-btn moral-btn hidden" id="openMoralBtn" type="button">Мораль</button>
+          <button class="retro-btn secondary hidden" id="openArchiveFromReportBtn" type="button">Переглянути підписані бланки</button>
+          <button class="retro-btn" id="restartFromReportBtn" type="button">Нова зміна</button>
+        </div>
+      </div>
+
+      <!-- 2. Екран «Мораль» -->
+      <div class="retro-frame hidden" id="panelMoral">
+        <div class="retro-kicker">Архів станції №4</div>
+        <h2 class="retro-title">Мораль</h2>
+        <div class="moral-doc" id="moralContent"></div>
+
+        <div class="retro-actions">
+          <button class="retro-btn secondary" id="openArchiveFromMoralBtn" type="button">Переглянути підписані бланки</button>
+          <button class="retro-btn secondary" id="backToReportBtn" type="button">Назад до звіту</button>
+          <button class="retro-btn" id="restartFromMoralBtn" type="button">Нова зміна</button>
+        </div>
+      </div>
+
+      <!-- 3. Екран «Архів зміни» -->
+      <div class="retro-frame hidden" id="panelArchive">
+        <div class="retro-kicker">Підписані відомості</div>
+        <h2 class="retro-title">Архів зміни</h2>
+        <div class="archive-list" id="archiveList"></div>
+
+        <div class="retro-actions">
+          <button class="retro-btn" id="backFromArchiveBtn" type="button">Назад до моралі</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const TOTAL_TRAINS = 10;
+      const MAX_CAPACITY = 100;
+      const MAX_REPRIMANDS = 3;
+      const START_WAGONS = 86;
+
+      const state = {
+        playerName: 'К. Вебер',
+        stationWagons: START_WAGONS,
+        trainIndex: 0,
+        reprimands: 0,
+        locked: false,
+        currentTrain: null,
+        history: [],
+        archiveReturnPanel: 'panelMoral'
+      };
+
+      /* =======================================================================
+         Синтезатор звуків (Web Audio API — удар печатки та сигнал догани)
+         ======================================================================= */
+      let audioCtx = null;
+
+      function ensureAudio() {
+        try {
+          if (!audioCtx) {
+            const Ctx = window.AudioContext || window.webkitAudioContext;
+            if (Ctx) audioCtx = new Ctx();
+          }
+          if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume();
+          }
+        } catch (e) {}
+      }
+
+      function playStampSound() {
+        ensureAudio();
+        if (!audioCtx) return;
+        try {
+          const now = audioCtx.currentTime;
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(145, now);
+          osc.frequency.exponentialRampToValueAtTime(38, now + 0.14);
+
+          gain.gain.setValueAtTime(0.45, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.16);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + 0.17);
+        } catch (e) {}
+      }
+
+      function playErrorSound() {
+        ensureAudio();
+        if (!audioCtx) return;
+        try {
+          const now = audioCtx.currentTime;
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(112, now);
+          osc.frequency.linearRampToValueAtTime(76, now + 0.24);
+
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.26);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + 0.27);
+        } catch (e) {}
+      }
+
+      /* =======================================================================
+         Пули вантажів (кожен рядок <= 21 символа для гарантованого 1 рядка)
+         ======================================================================= */
+      const NORMAL_CARGO = {
+        'ТВ': [
+          'Зерно в мішках',
+          'Борошно житнє',
+          'Запчастини, ящики',
+          'Сукно та тканини',
+          'Продрезерв, ящики',
+          'Інструмент колійний',
+          'Цемент у мішках',
+          "Тара дерев'яна",
+          'Консерви, партія №14',
+          'Цукор, мішки'
+        ],
+        'ПВ': [
+          "Вугілля кам'яне",
+          'Щебінь гранітний',
+          'Рейки сталеві',
+          'Ліс-кругляк',
+          'Металобрухт',
+          'Шпали просочені',
+          'Пісок будівельний'
+        ],
+        'ЦВ': [
+          'Дизельне паливо',
+          'Мазут топковий',
+          'Мастило технічне',
+          'Вода технічна',
+          'Гас освітлювальний',
+          'Бензин, резерв'
+        ]
+      };
+
+      const HIDDEN_PEOPLE_CARGO = [
+        'Пасажири (транзит)',
+        'Пасажири, без багажу',
+        'Цивільні (переїзд)',
+        'Пасажири (пересел.)',
+        'Пасажири (плановий)'
+      ];
+
+      const HIDDEN_BELONGINGS_CARGO = [
+        'Багаж без власників',
+        'Особисті речі',
+        'Валізи та клунки',
+        'Домашній скарб, мішки'
+      ];
+
+      function randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function pick(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function escapeHtml(str) {
+        return String(str).replace(/[&<>"']/g, m => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[m]));
+      }
+
+      function generateWagonCode(type) {
+        return `${type}-${randInt(10, 99)}${randInt(10, 99)}`;
+      }
+
+      /* =======================================================================
+         Генерація ешелону
+         - 7–11 вагонів, регулярні пропуски номерів у колонці №
+         - У перших 3 ешелонах (0..2) НЕМАЄ ані людей, ані особистих речей
+         - З 4-го ешелону (index >= 3) речі з'являються ЛИШЕ у складах із людьми
+         ======================================================================= */
+      function generateTrain(index, currentStationCount) {
+        let dir;
+        if (index === 0) {
+          dir = 'IN';
+        } else if (currentStationCount >= 94) {
+          dir = Math.random() < 0.55 ? 'IN' : 'OUT';
+        } else if (currentStationCount <= 78) {
+          dir = 'IN';
+        } else {
+          dir = Math.random() < 0.52 ? 'IN' : 'OUT';
+        }
+
+        const count = randInt(7, 11);
+        const hasSkip = index >= 1 && Math.random() < 0.72;
+        const skipAt = hasSkip ? randInt(2, count - 1) : -1;
+
+        const hasPeopleTrain = index >= 3 && (index === 3 || Math.random() < 0.72);
+        let peopleTarget = hasPeopleTrain ? randInt(1, 3) : 0;
+        let belongingsTarget = hasPeopleTrain ? randInt(1, 2) : 0;
+
+        const items = [];
+        for (let i = 0; i < count; i++) {
+          let type;
+          let cargo;
+          let hiddenKind = null;
+
+          if (peopleTarget > 0) {
+            type = 'ТВ';
+            cargo = pick(HIDDEN_PEOPLE_CARGO);
+            hiddenKind = 'people';
+            peopleTarget--;
+          } else if (belongingsTarget > 0) {
+            type = 'ТВ';
+            cargo = pick(HIDDEN_BELONGINGS_CARGO);
+            hiddenKind = 'belongings';
+            belongingsTarget--;
+          } else {
+            const nr = Math.random();
+            type = nr < 0.46 ? 'ТВ' : nr < 0.77 ? 'ПВ' : 'ЦВ';
+            cargo = pick(NORMAL_CARGO[type]);
+          }
+
+          items.push({
+            type,
+            code: generateWagonCode(type),
+            cargo,
+            hiddenKind
+          });
+        }
+
+        // Перемішуємо вагони у випадковому порядку
+        for (let i = items.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const tmp = items[i];
+          items[i] = items[j];
+          items[j] = tmp;
+        }
+
+        // Нумеруємо рядки з можливим пропуском номера
+        const wagons = [];
+        let displayNum = 1;
+        for (let i = 1; i <= count; i++) {
+          if (i === skipAt) {
+            displayNum += randInt(1, 2);
+          }
+          wagons.push({
+            displayNum,
+            ...items[i - 1]
+          });
+          displayNum++;
+        }
+
+        return {
+          number: index + 1,
+          routeCode: `№${randInt(310, 899)}`,
+          track: randInt(1, 4),
+          dir,
+          wagons,
+          actualCount: count,
+          lastDisplayNum: wagons[wagons.length - 1].displayNum
+        };
+      }
+
+      /* =======================================================================
+         Посилання на елементи DOM
+         ======================================================================= */
+      const trainLabel = document.getElementById('trainLabel');
+      const repDots = document.getElementById('repDots');
+      const stationCount = document.getElementById('stationCount');
+      const dirBadge = document.getElementById('dirBadge');
+      const metaInfo = document.getElementById('metaInfo');
+      const wagonBody = document.getElementById('wagonBody');
+      const stampSlot = document.getElementById('stampSlot');
+      const docViewport = document.getElementById('docViewport');
+
+      const countInput = document.getElementById('countInput');
+      const decBtn = document.getElementById('decBtn');
+      const incBtn = document.getElementById('incBtn');
+      const btnIn = document.getElementById('btnIn');
+      const btnOut = document.getElementById('btnOut');
+      const btnRej = document.getElementById('btnRej');
+
+      const reprimandModal = document.getElementById('reprimandModal');
+      const repModalTitle = document.getElementById('repModalTitle');
+      const repViolationsList = document.getElementById('repViolationsList');
+      const closeReprimandBtn = document.getElementById('closeReprimandBtn');
+
+      const startOverlay = document.getElementById('startOverlay');
+      const playerNameInput = document.getElementById('playerNameInput');
+      const startBtn = document.getElementById('startBtn');
+
+      const endOverlay = document.getElementById('endOverlay');
+      const panelReport = document.getElementById('panelReport');
+      const panelMoral = document.getElementById('panelMoral');
+      const panelArchive = document.getElementById('panelArchive');
+
+      const endKicker = document.getElementById('endKicker');
+      const endTitle = document.getElementById('endTitle');
+      const endStats = document.getElementById('endStats');
+      const openMoralBtn = document.getElementById('openMoralBtn');
+      const openArchiveFromReportBtn = document.getElementById('openArchiveFromReportBtn');
+      const restartFromReportBtn = document.getElementById('restartFromReportBtn');
+
+      const moralContent = document.getElementById('moralContent');
+      const openArchiveFromMoralBtn = document.getElementById('openArchiveFromMoralBtn');
+      const backToReportBtn = document.getElementById('backToReportBtn');
+      const restartFromMoralBtn = document.getElementById('restartFromMoralBtn');
+
+      const archiveList = document.getElementById('archiveList');
+      const backFromArchiveBtn = document.getElementById('backFromArchiveBtn');
+
+      /* =======================================================================
+         Оновлення інтерфейсу
+         ======================================================================= */
+      function updateHeader() {
+        trainLabel.textContent = `Ешелон ${Math.min(state.trainIndex + 1, TOTAL_TRAINS)} / ${TOTAL_TRAINS}`;
+
+        const dots = repDots.querySelectorAll('.rep-dot');
+        dots.forEach((d, idx) => {
+          d.classList.toggle('active', idx < state.reprimands);
+        });
+
+        stationCount.innerHTML = `${state.stationWagons} <small>/ ${MAX_CAPACITY}</small>`;
+        stationCount.classList.remove('warn', 'crit');
+        if (state.stationWagons >= 95) {
+          stationCount.classList.add('crit');
+        } else if (state.stationWagons >= 88) {
+          stationCount.classList.add('warn');
+        }
+      }
+
+      function setButtonsDisabled(flag) {
+        btnIn.disabled = flag;
+        btnOut.disabled = flag;
+        btnRej.disabled = flag;
+      }
+
+      function renderTrain() {
+        const t = generateTrain(state.trainIndex, state.stationWagons);
+        state.currentTrain = t;
+        state.locked = false;
+
+        updateHeader();
+
+        dirBadge.textContent = t.dir === 'IN' ? 'ПРИБУТТЯ (+)' : 'ВІДПРАВЛЕННЯ (−)';
+        metaInfo.textContent = `Рейс ${t.routeCode} • Колія ${t.track}`;
+
+        wagonBody.innerHTML = t.wagons.map(w => {
+          const numPart = w.code.slice(2);
+          return `
+            <tr>
+              <td class="col-num">${w.displayNum}</td>
+              <td class="col-code"><span class="w-type">${w.type}</span>${numPart}</td>
+              <td class="col-cargo">${escapeHtml(w.cargo)}</td>
+            </tr>
+          `;
+        }).join('');
+
+        stampSlot.innerHTML = '<span class="stamp-placeholder">Місце для печатки обліковця</span>';
+        // Автопідстановка останньої цифри з колонки № (пастка при пропусках)
+        countInput.value = t.lastDisplayNum;
+        setButtonsDisabled(false);
+        docViewport.scrollTop = 0;
+      }
+
+      function placeStamp(actionType) {
+        const map = {
+          IN: { text: 'ПРИЙНЯТО', cls: 'in' },
+          OUT: { text: 'ВІДПРАВЛЕНО', cls: 'out' },
+          REJ: { text: 'ВІДХИЛЕНО', cls: 'rej' }
+        };
+        const info = map[actionType];
+        stampSlot.innerHTML = `
+          <div class="ink-stamp ${info.cls}">
+            <div class="st-status">${info.text}</div>
+            <div class="st-name">${escapeHtml(state.playerName)}</div>
+          </div>
+        `;
+        playStampSound();
+        stampSlot.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      /* =======================================================================
+         Перевірка рішення обліковця та модальна догана
+         ======================================================================= */
+      function handleAction(action) {
+        if (state.locked) return;
+        const t = state.currentTrain;
+        const entered = parseInt(countInput.value, 10);
+        const safeEntered = isNaN(entered) ? 0 : entered;
+
+        state.locked = true;
+        setButtonsDisabled(true);
+        placeStamp(action);
+
+        const actual = t.actualCount;
+        const projected = state.stationWagons + actual;
+        const isOverload = t.dir === 'IN' && projected > MAX_CAPACITY;
+        const hasPeopleInFreight = t.wagons.some(w => w.type === 'ТВ' && w.hiddenKind === 'people');
+
+        // Одночасна перевірка всіх можливих порушень
+        const violations = [];
+
+        if (action === 'IN') {
+          if (t.dir !== 'IN') {
+            violations.push('Ешелон на відправлення, а не прибуття');
+          } else if (isOverload) {
+            violations.push(`Перевищення ліміту 100 вагонів (${projected} / 100)`);
+          }
+        } else if (action === 'OUT') {
+          if (t.dir !== 'OUT') {
+            violations.push('Ешелон на прибуття, а не відправлення');
+          }
+        } else if (action === 'REJ') {
+          // Відхилення ешелону з людьми у ТВ завжди дозволене без догани
+          if (!hasPeopleInFreight) {
+            if (t.dir === 'OUT') {
+              violations.push('Безпідставне відхилення (ешелон на відправлення)');
+            } else if (!isOverload) {
+              violations.push(`Перевантаження немає (${projected} з 100)`);
+            }
+          }
+        }
+
+        if (safeEntered !== actual) {
+          violations.push(`У переліку ${actual} вагонів, а не ${safeEntered}`);
+        }
+
+        // Оновлення кількості вагонів на станції
+        if (violations.length === 0) {
+          if (action === 'IN') state.stationWagons += actual;
+          if (action === 'OUT') state.stationWagons = Math.max(0, state.stationWagons - actual);
+        } else {
+          state.reprimands++;
+          if (t.dir === 'IN' && action === 'IN' && !isOverload) {
+            state.stationWagons += actual;
+          } else if (t.dir === 'OUT' && action === 'OUT') {
+            state.stationWagons = Math.max(0, state.stationWagons - actual);
+          }
+        }
+
+        state.history.push({
+          train: t,
+          action,
+          entered: safeEntered,
+          hadError: violations.length > 0
+        });
+
+        updateHeader();
+
+        if (violations.length > 0) {
+          setTimeout(() => {
+            playErrorSound();
+            showReprimandModal(violations);
+          }, 420);
+        } else {
+          setTimeout(advanceAfterDecision, 820);
+        }
+      }
+
+      function showReprimandModal(violations) {
+        repModalTitle.textContent = `ДОГАНА ${state.reprimands} / ${MAX_REPRIMANDS}`;
+        repViolationsList.innerHTML = violations
+          .map((v, idx) => `<li>${idx + 1}. ${escapeHtml(v)}</li>`)
+          .join('');
+        reprimandModal.classList.remove('hidden');
+      }
+
+      function advanceAfterDecision() {
+        if (state.reprimands >= MAX_REPRIMANDS) {
+          finishShift(true);
+          return;
+        }
+        state.trainIndex++;
+        if (state.trainIndex >= TOTAL_TRAINS) {
+          finishShift(false);
+        } else {
+          renderTrain();
+        }
+      }
+
+      /* =======================================================================
+         Фінальні ретро-екрани (суворе перемикання через .hidden)
+         ======================================================================= */
+      function showEndPanel(panelId) {
+        panelReport.classList.toggle('hidden', panelId !== 'panelReport');
+        panelMoral.classList.toggle('hidden', panelId !== 'panelMoral');
+        panelArchive.classList.toggle('hidden', panelId !== 'panelArchive');
+        endOverlay.scrollTop = 0;
+      }
+
+      function countHiddenStats() {
+        let peoplePassed = 0;
+        let belongingsPassed = 0;
+        let peopleRejected = 0;
+        let belongingsRejected = 0;
+
+        state.history.forEach(item => {
+          item.train.wagons.forEach(w => {
+            if (item.action === 'REJ') {
+              if (w.hiddenKind === 'people') peopleRejected++;
+              if (w.hiddenKind === 'belongings') belongingsRejected++;
+            } else {
+              if (w.hiddenKind === 'people') peoplePassed++;
+              if (w.hiddenKind === 'belongings') belongingsPassed++;
+            }
+          });
+        });
+
+        return { peoplePassed, belongingsPassed, peopleRejected, belongingsRejected };
+      }
+
+      function finishShift(fired) {
+        endOverlay.classList.remove('hidden');
+        showEndPanel('panelReport');
+
+        if (fired) {
+          endKicker.textContent = 'Наказ по станції №4';
+          endTitle.textContent = 'Відсторонення від служби';
+        } else {
+          endKicker.textContent = 'Зміну завершено';
+          endTitle.textContent = 'Службовий звіт обліковця';
+        }
+
+        const totalProcessed = state.history.reduce((sum, h) => sum + h.train.actualCount, 0);
+        endStats.innerHTML = `
+          <div class="retro-stat-row"><span>Обліковець:</span><strong>${escapeHtml(state.playerName)}</strong></div>
+          <div class="retro-stat-row"><span>Опрацьовано ешелонів:</span><strong>${state.history.length} / ${TOTAL_TRAINS}</strong></div>
+          <div class="retro-stat-row"><span>Обліковано вагонів:</span><strong>${totalProcessed}</strong></div>
+          <div class="retro-stat-row"><span>Залишок на станції:</span><strong>${state.stationWagons} / ${MAX_CAPACITY}</strong></div>
+          <div class="retro-stat-row"><span>Отримано доган:</span><strong>${state.reprimands} / ${MAX_REPRIMANDS}</strong></div>
+        `;
+
+        const { peoplePassed, belongingsPassed, peopleRejected, belongingsRejected } = countHiddenStats();
+        const closingParagraph = '«Я просто виконував свою роботу» — найпоширеніше виправдання, яким вимостили дорогу до концтаборів.';
+
+        if (peoplePassed > 0) {
+          openMoralBtn.classList.remove('hidden');
+          openArchiveFromReportBtn.classList.add('hidden');
+
+          moralContent.innerHTML = `
+            <p>Ви сумлінно звіряли номери, стежили за лімітом колії та ставили печатку <b>«${escapeHtml(state.playerName)}»</b> на кожному бланку.</p>
+            <div class="moral-highlight">
+              За вашої зміни через станцію під вашим підписом пройшло:<br/>
+              • Товарних вагонів (<b>ТВ</b>) із людьми: ${peoplePassed}<br/>
+              • Товарних вагонів (<b>ТВ</b>) з особистими речами: ${belongingsPassed}
+            </div>
+            <p>${closingParagraph}</p>
+          `;
+        } else if (peopleRejected > 0) {
+          openMoralBtn.classList.remove('hidden');
+          openArchiveFromReportBtn.classList.add('hidden');
+
+          moralContent.innerHTML = `
+            <p>Серед сухих колонок із цифрами ви помітили те, на що за інструкцією не вимагалося звертати уваги — людей у критих товарних вагонах (<b>ТВ</b>).</p>
+            <div class="moral-highlight">
+              За вашої зміни ви затримали всі такі ешелони:<br/>
+              • Затримано товарних вагонів (<b>ТВ</b>) із людьми: ${peopleRejected}<br/>
+              • Затримано вагонів (<b>ТВ</b>) з особистими речами: ${belongingsRejected}
+            </div>
+            <p>${closingParagraph}</p>
+          `;
+        } else {
+          openMoralBtn.classList.add('hidden');
+          openArchiveFromReportBtn.classList.remove('hidden');
+        }
+      }
+
+      function renderArchive(returnPanelId) {
+        state.archiveReturnPanel = returnPanelId;
+        backFromArchiveBtn.textContent = returnPanelId === 'panelMoral' ? 'Назад до моралі' : 'Назад до звіту';
+
+        const actionMeta = {
+          IN: { label: 'ПРИЙНЯТО', cls: 'in' },
+          OUT: { label: 'ВІДПРАВЛЕНО', cls: 'out' },
+          REJ: { label: 'ВІДХИЛЕНО', cls: 'rej' }
+        };
+
+        archiveList.innerHTML = state.history.map(item => {
+          const st = actionMeta[item.action];
+          const rows = item.train.wagons.map(w => {
+            let cls = 'arch-row';
+            if (w.hiddenKind === 'people') cls += ' flagged-people';
+            else if (w.hiddenKind === 'belongings') cls += ' flagged-belongings';
+            return `<div class="${cls}">${w.displayNum}. <b>${w.type}</b>${w.code.slice(2)} — ${escapeHtml(w.cargo)}</div>`;
+          }).join('');
+
+          return `
+            <div class="arch-card">
+              <div class="arch-head">
+                <span>Ешелон ${item.train.number} (${item.train.routeCode})</span>
+                <span class="arch-stamp-tag ${st.cls}">${st.label} • ${escapeHtml(state.playerName)}</span>
+              </div>
+              ${rows}
+            </div>
+          `;
+        }).join('');
+
+        showEndPanel('panelArchive');
+      }
+
+      function resetGame() {
+        state.stationWagons = START_WAGONS;
+        state.trainIndex = 0;
+        state.reprimands = 0;
+        state.history = [];
+        reprimandModal.classList.add('hidden');
+        endOverlay.classList.add('hidden');
+        renderTrain();
+      }
+
+      /* =======================================================================
+         Обробники подій
+         ======================================================================= */
+      decBtn.addEventListener('click', () => {
+        const v = Math.max(1, (parseInt(countInput.value, 10) || 1) - 1);
+        countInput.value = v;
+      });
+
+      incBtn.addEventListener('click', () => {
+        const v = Math.min(20, (parseInt(countInput.value, 10) || 1) + 1);
+        countInput.value = v;
+      });
+
+      btnIn.addEventListener('click', () => handleAction('IN'));
+      btnOut.addEventListener('click', () => handleAction('OUT'));
+      btnRej.addEventListener('click', () => handleAction('REJ'));
+
+      closeReprimandBtn.addEventListener('click', () => {
+        reprimandModal.classList.add('hidden');
+        advanceAfterDecision();
+      });
+
+      startBtn.addEventListener('click', () => {
+        const raw = playerNameInput.value.trim();
+        state.playerName = raw || 'К. Вебер';
+        ensureAudio();
+        startOverlay.classList.add('hidden');
+        resetGame();
+      });
+
+      openMoralBtn.addEventListener('click', () => showEndPanel('panelMoral'));
+      backToReportBtn.addEventListener('click', () => showEndPanel('panelReport'));
+
+      openArchiveFromReportBtn.addEventListener('click', () => renderArchive('panelReport'));
+      openArchiveFromMoralBtn.addEventListener('click', () => renderArchive('panelMoral'));
+      backFromArchiveBtn.addEventListener('click', () => showEndPanel(state.archiveReturnPanel));
+
+      restartFromReportBtn.addEventListener('click', resetGame);
+      restartFromMoralBtn.addEventListener('click', resetGame);
+    })();
+  </script>
+</body>
+</html>
