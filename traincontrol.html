@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#141413" />
+  <meta name="color-scheme" content="dark" />
   <title>Обліковець. Станція №4</title>
   <style>
     :root {
+      color-scheme: dark;
+
       /* Сучасна темна палітра (шапка та нижня панель гри) */
       --ui-bg: #141413;
       --ui-surface: #1d1d1b;
@@ -39,10 +43,17 @@
     html, body {
       height: 100%;
       width: 100%;
-      background: #0c0c0b;
+      background-color: #141413;
       color: var(--ui-text);
       font-family: var(--font-ui);
+      color-scheme: dark;
       overflow: hidden;
+    }
+
+    button, input {
+      -webkit-appearance: none;
+      appearance: none;
+      font-family: inherit;
     }
 
     .hidden {
@@ -84,7 +95,7 @@
     }
 
     .train-label {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: -0.01em;
       color: var(--ui-text);
@@ -94,7 +105,7 @@
       display: flex;
       align-items: center;
       gap: 7px;
-      font-size: 12.5px;
+      font-size: 13.5px;
       color: var(--ui-muted);
     }
 
@@ -127,13 +138,13 @@
     }
 
     .station-title {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
       color: var(--ui-muted);
     }
 
     .station-count {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 800;
       line-height: 1.05;
       letter-spacing: -0.02em;
@@ -142,7 +153,7 @@
     }
 
     .station-count small {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 500;
       color: var(--ui-muted);
     }
@@ -191,9 +202,9 @@
 
     .dir-badge {
       display: inline-block;
-      padding: 2px 7px;
+      padding: 2px 8px;
       border: 1.5px solid var(--ink);
-      font-size: 13.5px;
+      font-size: 14.5px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       background: rgba(30, 27, 23, 0.05);
@@ -201,24 +212,24 @@
     }
 
     .meta-info {
-      font-size: 12.5px;
+      font-size: 14px;
       color: var(--ink-soft);
       text-align: right;
       white-space: nowrap;
     }
 
-    /* Таблиця вагонів — строго однорядкові записи, шрифт 15.5px */
+    /* Таблиця вагонів — строго однорядкові записи, збільшений шрифт 16.5px */
     .wagon-table {
       width: 100%;
       table-layout: fixed;
       border-collapse: collapse;
-      font-size: 15.5px;
-      line-height: 1.26;
+      font-size: 16.5px;
+      line-height: 1.28;
     }
 
     .wagon-table th {
       text-align: left;
-      font-size: 11.5px;
+      font-size: 12.5px;
       text-transform: uppercase;
       letter-spacing: 0.02em;
       color: var(--ink-soft);
@@ -234,11 +245,11 @@
     }
 
     .wagon-table th:nth-child(2) {
-      width: 104px;
+      width: 108px;
     }
 
     .wagon-table td {
-      padding: 5px 3px;
+      padding: 5.5px 3px;
       border-bottom: 1px dashed rgba(30, 27, 23, 0.28);
       vertical-align: middle;
     }
@@ -276,19 +287,19 @@
 
     @media (max-width: 390px) {
       .wagon-table {
-        font-size: 14.5px;
+        font-size: 15.5px;
       }
       .wagon-table th:nth-child(2) {
-        width: 96px;
+        width: 100px;
       }
     }
 
     @media (max-width: 350px) {
       .wagon-table {
-        font-size: 13.5px;
+        font-size: 14.5px;
       }
       .wagon-table th:nth-child(2) {
-        width: 88px;
+        width: 92px;
       }
     }
 
@@ -352,9 +363,9 @@
 
     /* Примітки тим самим моноширинним шрифтом */
     .blank-notes {
-      margin-top: 7px;
-      font-size: 12.2px;
-      line-height: 1.32;
+      margin-top: 8px;
+      font-size: 13.5px;
+      line-height: 1.35;
       color: var(--ink-soft);
       font-family: var(--font-doc);
     }
@@ -385,7 +396,7 @@
     }
 
     .input-label {
-      font-size: 13.5px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--ui-text);
     }
@@ -393,19 +404,19 @@
     .stepper {
       display: flex;
       align-items: center;
-      background: #121210;
+      background-color: #121210;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 10px;
       overflow: hidden;
     }
 
     .step-btn {
-      width: 42px;
-      height: 38px;
-      background: transparent;
+      width: 44px;
+      height: 40px;
+      background-color: #121210;
       border: none;
       color: var(--ui-text);
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 600;
       cursor: pointer;
       display: flex;
@@ -414,19 +425,20 @@
     }
 
     .step-btn:active {
-      background: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.12);
     }
 
     .count-input {
-      width: 54px;
-      height: 38px;
-      background: transparent;
+      width: 56px;
+      height: 40px;
+      background-color: #121210;
       border: none;
       border-left: 1px solid rgba(255, 255, 255, 0.1);
       border-right: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0;
       color: var(--ui-text);
       font-family: var(--font-ui);
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 800;
       text-align: center;
       outline: none;
@@ -446,14 +458,14 @@
     }
 
     .act-btn {
-      height: 44px;
+      height: 46px;
       border: none;
       border-radius: 10px;
       font-family: var(--font-ui);
-      font-size: 13.5px;
+      font-size: 15px;
       font-weight: 700;
       cursor: pointer;
-      color: #fff;
+      color: #ffffff;
       transition: transform 0.08s, opacity 0.15s;
     }
 
@@ -466,9 +478,9 @@
       pointer-events: none;
     }
 
-    .btn-in { background: #266b43; }
-    .btn-out { background: #27538c; }
-    .btn-rej { background: #8a2c26; }
+    .btn-in { background-color: #266b43; }
+    .btn-out { background-color: #27538c; }
+    .btn-rej { background-color: #8a2c26; }
 
     /* =========================================================================
        4. РЕТРО-ЕКРАНИ (СТАРТ, ЗВІТ, МОРАЛЬ, АРХІВ)
@@ -507,7 +519,7 @@
     }
 
     .retro-title {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 900;
       text-transform: uppercase;
       border-bottom: 2px solid var(--ink);
@@ -521,8 +533,8 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      font-size: 14px;
-      line-height: 1.4;
+      font-size: 15px;
+      line-height: 1.42;
       margin-bottom: 18px;
     }
 
@@ -547,7 +559,7 @@
 
     .retro-field label {
       display: block;
-      font-size: 12.5px;
+      font-size: 13.5px;
       font-weight: 700;
       margin-bottom: 7px;
       text-transform: uppercase;
@@ -555,33 +567,35 @@
 
     .retro-input {
       width: 100%;
-      height: 42px;
-      background: #f2ebd9;
+      height: 44px;
+      background-color: #f2ebd9;
       border: 1.5px solid var(--ink);
+      border-radius: 0;
       padding: 0 10px;
       font-family: var(--font-doc);
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--ink);
       outline: none;
     }
 
     .retro-input:focus {
-      background: #faf5e8;
+      background-color: #faf5e8;
     }
 
     .retro-btn {
       width: 100%;
-      min-height: 44px;
+      min-height: 46px;
       padding: 10px 12px;
       font-family: var(--font-doc);
-      font-size: 14.5px;
+      font-size: 15.5px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       cursor: pointer;
       border: 2px solid var(--ink);
-      background: var(--ink);
+      border-radius: 0;
+      background-color: var(--ink);
       color: var(--paper);
       transition: opacity 0.15s, transform 0.08s;
     }
@@ -591,12 +605,12 @@
     }
 
     .retro-btn.secondary {
-      background: transparent;
+      background-color: transparent;
       color: var(--ink);
     }
 
     .retro-btn.moral-btn {
-      background: var(--stamp-rej);
+      background-color: var(--stamp-rej);
       border-color: var(--stamp-rej);
       color: #f7efe0;
     }
@@ -613,9 +627,9 @@
     .retro-stat-list {
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 10px;
       margin-bottom: 14px;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .retro-stat-row {
@@ -633,8 +647,8 @@
 
     /* Екран «Мораль» */
     .moral-doc p {
-      font-size: 14px;
-      line-height: 1.46;
+      font-size: 15px;
+      line-height: 1.48;
       margin-bottom: 12px;
       color: var(--ink);
     }
@@ -644,7 +658,7 @@
       padding: 10px 12px;
       background: rgba(140, 29, 24, 0.09);
       border-left: 4px solid var(--stamp-rej);
-      font-size: 13.8px;
+      font-size: 14.5px;
       line-height: 1.48;
       font-weight: 700;
     }
@@ -661,7 +675,7 @@
       border: 1.5px solid var(--ink);
       padding: 9px 10px;
       background: rgba(255, 255, 255, 0.16);
-      font-size: 12.5px;
+      font-size: 13.5px;
     }
 
     .arch-head {
@@ -748,8 +762,8 @@
       flex-direction: column;
       gap: 9px;
       margin-bottom: 16px;
-      font-size: 14.5px;
-      line-height: 1.38;
+      font-size: 15.5px;
+      line-height: 1.4;
       font-weight: 700;
       color: var(--ink);
     }
@@ -779,7 +793,7 @@
 
       <div class="top-right">
         <span class="station-title">Вагонів на станції:</span>
-        <div class="station-count" id="stationCount">86 <small>/ 100</small></div>
+        <div class="station-count" id="stationCount">88 <small>/ 100</small></div>
       </div>
     </header>
 
@@ -910,7 +924,7 @@
       const TOTAL_TRAINS = 10;
       const MAX_CAPACITY = 100;
       const MAX_REPRIMANDS = 3;
-      const START_WAGONS = 86;
+      const START_WAGONS = 88;
 
       const state = {
         playerName: 'К. Вебер',
@@ -983,7 +997,7 @@
       }
 
       /* =======================================================================
-         Пули вантажів (кожен рядок <= 21 символа для гарантованого 1 рядка)
+         Пули вантажів (кожен рядок <= 19 символів для гарантованого 1 рядка)
          ======================================================================= */
       const NORMAL_CARGO = {
         'ТВ': [
@@ -995,8 +1009,8 @@
           'Інструмент колійний',
           'Цемент у мішках',
           "Тара дерев'яна",
-          'Консерви, партія №14',
-          'Цукор, мішки'
+          'Консерви, ящики',
+          'Цукор у мішках'
         ],
         'ПВ': [
           "Вугілля кам'яне",
@@ -1019,9 +1033,9 @@
 
       const HIDDEN_PEOPLE_CARGO = [
         'Пасажири (транзит)',
-        'Пасажири, без багажу',
-        'Цивільні (переїзд)',
-        'Пасажири (пересел.)',
+        'Пасажири, без речей',
+        'Цивільні пасажири',
+        'Переселенці, гр. Б',
         'Пасажири (плановий)'
       ];
 
@@ -1029,7 +1043,7 @@
         'Багаж без власників',
         'Особисті речі',
         'Валізи та клунки',
-        'Домашній скарб, мішки'
+        'Домашні речі, мішки'
       ];
 
       function randInt(min, max) {
@@ -1056,7 +1070,7 @@
 
       /* =======================================================================
          Генерація ешелону
-         - 7–11 вагонів, регулярні пропуски номерів у колонці №
+         - 6–10 вагонів, регулярні пропуски номерів у колонці №
          - У перших 3 ешелонах (0..2) НЕМАЄ ані людей, ані особистих речей
          - З 4-го ешелону (index >= 3) речі з'являються ЛИШЕ у складах із людьми
          ======================================================================= */
@@ -1072,7 +1086,7 @@
           dir = Math.random() < 0.52 ? 'IN' : 'OUT';
         }
 
-        const count = randInt(7, 11);
+        const count = randInt(6, 10);
         const hasSkip = index >= 1 && Math.random() < 0.72;
         const skipAt = hasSkip ? randInt(2, count - 1) : -1;
 
