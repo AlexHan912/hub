@@ -52,7 +52,7 @@ p{max-width:68ch;margin:.4rem 0}
 .sl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:10px 0;border-bottom:1px solid var(--line)}
 .sl label{font-weight:600}.sl output{font:600 .95rem var(--mono);color:var(--accent)}
 .sl input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--accent)}
-.sl small{grid-column:1/-1;color:var(--mute)}
+.sl small{grid-column:1/-1;color:var(--mute)}.scmp .line{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px;align-items:baseline}.scmp .line b{text-align:right;white-space:normal;min-width:0;overflow-wrap:anywhere}.scmp .line span{min-width:0}.scmp.sc2 .line,.scmp.sc2 .line.hl{grid-template-columns:1fr auto}.scmp.sc2 .line span{grid-column:auto}.scmp.sc2 .line b{white-space:nowrap}@media(max-width:600px){.scmp .line{grid-template-columns:1fr 1fr}.scmp .line span{grid-column:1/-1}.scmp .line.tot span{display:none}}.scmp .line.tot b{color:var(--mute);font-weight:600}.scmp .line.hl{background:color-mix(in srgb,var(--gold) 14%,transparent);border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);border-radius:8px;padding:8px 10px;margin:4px 0}.scmp .line.hl span,.scmp .line.hl b{color:var(--gold);font-weight:700}.sl .bizm{grid-column:1/-1;border:1px solid var(--line,rgba(127,127,127,.25));border-left:4px solid #8e5bd1;border-radius:10px;padding:12px 14px;margin-bottom:12px}.sl .bizm b{font:700 1rem var(--disp)}.sl .bizm ol{margin:6px 0 6px 1.2em;padding:0}.sl .bizm li{margin:3px 0}.sl .bizm small{display:block}
 .sgrid{display:grid;gap:0 28px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .bar{display:flex;height:34px;border-radius:6px;overflow:hidden;border:1px solid var(--line);margin:10px 0}
 .bar i{display:block;min-width:2px}
@@ -115,6 +115,7 @@ details{margin-top:16px}summary{cursor:pointer;font-weight:600}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .tag{font-size:.72rem;background:var(--soft);padding:1px 7px;border-radius:99px;color:var(--mute)}
 .src{color:var(--mute);font-size:.82rem}
+.nco{margin:0 0 14px}.nfold{margin:14px 0 0;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.nfold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;padding:12px 14px}.nfold>summary::-webkit-details-marker{display:none}.nfold>summary::before{content:'▸';color:var(--gold);font-size:1rem;transition:transform .15s}.nfold[open]>summary::before{transform:rotate(90deg)}.nfold>summary h3.flowh{margin:0;flex:1 1 220px}.nfold>summary>b{font:700 1rem var(--mono);color:#2fbf71;white-space:nowrap}.nfold>.salsplit{margin:0 12px 12px}@media(max-width:620px){.nfold{border:0;background:none;border-radius:0;border-top:1px solid var(--line)}.nfold>summary{padding:12px 0}.nfold>.salsplit{margin:0 0 8px}.nfold>summary>b{padding-left:20px}.nfold .salsplit .line b{font-size:.86rem;white-space:nowrap}}.gblocks.gvsw{grid-template-columns:1fr auto 1fr;align-items:stretch}.gvs{align-self:center;font:800 1.3rem var(--disp);color:var(--gold);padding:0 4px;letter-spacing:.04em}@media(max-width:620px){.gblocks.gvsw{grid-template-columns:1fr}.gvs{justify-self:center;padding:2px 0}}.nql{margin:0;padding-left:1.2em;display:grid;gap:4px}.nql ul{margin:4px 0 0;padding-left:1.2em;display:grid;gap:2px}.nql b{color:var(--gold);white-space:nowrap}.nql strong{color:var(--fg);font-weight:700}.ruleset .nql b{color:var(--gold)}.ruleset .nql strong{color:#fff}.gbrs{display:grid;gap:2px;margin:6px 0 4px}.gbr{display:flex;justify-content:space-between;gap:10px;font-size:.88rem;border-top:1px dashed var(--line);padding-top:3px}.gb .gbr span{color:var(--mute);font-size:.88rem;text-transform:none;letter-spacing:0}.gbr em{font-style:normal;font-weight:700;color:var(--fg);white-space:nowrap}.salsplit .line.itog{margin-top:6px;padding:10px 12px;border:1px solid color-mix(in srgb,#16a34a 60%,transparent);border-radius:8px;background:color-mix(in srgb,#16a34a 14%,transparent)}.salsplit .line.itog span,.salsplit .line.itog b{color:#2fbf71;font-weight:700}.salsplit .line.itog b{font-size:1.1rem}.gbr.mo{margin-top:4px;border-top:1px solid var(--line)}.gbr.mo em{color:#2f9e77}.gb i.gbc{display:block;font-style:normal;font-size:.8rem;color:var(--mute);margin-top:6px}.salbig #salCmp:not(:empty){margin:36px 0 18px}#nomadBox h3.nbigh{font:700 1.25rem var(--disp);color:var(--fg);text-transform:none;letter-spacing:0;margin:8px 0 12px}.ncamp{margin:28px 0 6px}.ncamp>h3.flowh{font:700 1.25rem var(--disp);color:var(--fg);text-transform:none;letter-spacing:0;margin:0 0 12px}#s2 #salCmp:not(:empty){margin:36px 0 18px}#salCmp .scmp .line b{font:700 1.05rem var(--body);color:var(--gold)}#salCmp .scmp .line span{font-size:.95rem}#salCmp>h3.flowh{font:700 1.25rem var(--disp);color:var(--fg);text-transform:none;letter-spacing:0;margin:0 0 10px}.salbig #salCmp b{font:500 1rem var(--body);color:var(--fg);line-height:1.35}.salbig #salCmp .line span{color:var(--mute);font-size:.9rem}.salbig #salCmp .line.tot b{color:var(--mute);font-weight:600}.salbig .sl.slnote>label{font:700 1.25rem var(--disp);color:var(--fg)}.salbig .sl.slnote>output{font-size:1.15rem;align-self:center}.sl.slnote>input[type=range]{margin-top:12px}.sl.slnote .bizm{margin:12px 0 4px}.salbig #salCmp .line.hl b,.salbig #salCmp .line.hl span{color:var(--gold);font-weight:700}.nstrat .dyn:empty{display:none}.nstrat>label{display:block;font:700 1.25rem var(--disp)!important;color:var(--fg)!important;margin:0 0 10px}.nstrat{margin:0 0 22px;padding-bottom:18px;border-bottom:1px solid var(--line)}.salbig.nmb{background:none;padding:0;border:0;border-radius:0;gap:16px}.salbig.nmb #salOw:empty,.salbig.nmb #livWarn:empty{display:none}.salbig.nmb>.nstrat,.salbig.nmb .sl.slnote,.ncamp{border:1px solid var(--line);border-radius:10px;padding:16px 18px 18px;background:var(--soft,var(--panel));margin:0}.salbig.nmb #mainSl{margin:0}.ncamp{margin-top:16px}.cesec{margin:8px 0 26px}.cesec>h3.flowh{font:700 1.25rem var(--disp);color:var(--fg);text-transform:none;letter-spacing:0;margin:0 0 12px}.cesels{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.cesels label{display:flex;flex-direction:column;gap:6px;font-weight:600;color:var(--mute);font-size:.85rem;min-width:0}.cesels select{font:600 1rem var(--body);color:var(--fg);background:var(--panel);border:2px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0;width:100%}.cework{margin:12px 0 0;color:var(--mute)}.cesec.cegoal{background:var(--soft);border-radius:14px;padding:18px 20px}.cework b{color:var(--fg)}#ceStrat,#ceCamp{margin-bottom:12px}.ceyr{position:relative;padding-bottom:46px}.ceyr input[type=range]{width:100%;margin:6px 0 0;accent-color:var(--accent)}.ceticks{position:absolute;left:0;right:0;top:34px;height:44px}.cetk{all:unset;position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;cursor:pointer;font-size:.72rem;color:var(--mute);white-space:nowrap;line-height:1.25}.cetk.last{transform:translateX(-85%)}.cetk b{color:var(--fg);font-weight:700}.cetk span{color:#2fbf71;font-weight:600}.cetk.on b{color:var(--gold)}.cetk.on span{color:var(--gold)}.cetk::before{content:'';width:2px;height:6px;background:var(--line);margin-bottom:2px}.cetbl .line.pu{border:1px solid #8e5bd1;background:rgba(142,91,209,.14);border-radius:10px;padding:10px 12px;margin:6px 0}.cetbl .line.pu span,.cetbl .line.pu b{color:#b58cf0}.ceblk{margin-top:14px;border-radius:12px;padding:12px 14px}.ceblk h4{margin:0;font-size:1.05rem}.ceblk>summary{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;cursor:pointer;list-style:none}.ceblk>summary::-webkit-details-marker{display:none}.ceblk>summary::before{content:'▸';color:var(--mute);font-size:.9rem;transition:transform .15s}.ceblk[open]>summary::before{transform:rotate(90deg)}.ceblk>summary b{margin-left:auto;font:700 1.05rem var(--body);white-space:nowrap}.ceblk>summary b.neg{color:#ef6b7d}.ceblk[open]>summary{margin-bottom:8px}.ceblk h5{margin:12px 0 2px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}.prbar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:4px 0 10px}.prbar i{display:block;height:100%}.prlg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px 14px;margin-bottom:6px}.prlg em{font-style:normal;color:var(--mute);font-size:.85rem;display:flex;align-items:center;gap:6px}.prlg strong{display:block;font:700 1rem var(--body)}.prchk{display:flex;align-items:center;gap:10px;margin:14px 0 4px;font-weight:600;cursor:pointer}.prchk{align-items:flex-start}.prchk input{flex:none;margin-top:2px;width:18px;height:18px;accent-color:var(--gold)}#prPjBox[hidden]{display:none}#prBox .sl label{font-weight:400}.prvs{display:flex;align-items:center;gap:14px;margin:-8px 0 18px;color:var(--gold);font:800 1.3rem var(--disp);letter-spacing:.08em}.prvs::before,.prvs::after{content:'';flex:1;height:1px;background:var(--line)}.prvs span{font-size:1rem;letter-spacing:.02em;text-align:center;padding:6px 14px;border:1px solid var(--gold);border-radius:999px}.pryt{display:block;margin-bottom:10px}.prig{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}@media(max-width:560px){.prig{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.pri{padding:8px 10px;gap:4px 8px}.pri svg{width:22px;height:22px}.pri b{font-size:.95rem}.pri small{font-size:.72rem}}.pri{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px 10px;background:var(--soft);border-radius:12px;padding:10px 14px;min-width:0}.pri svg{width:30px;height:30px;flex:none}.pri>span{display:flex;flex-direction:column;line-height:1.1}.pri b{font:700 1.08rem var(--disp);color:var(--fg);white-space:nowrap}.pri .spk{grid-column:1/-1;width:100%;height:26px;display:block}.pri .spk rect{fill:currentColor;opacity:.35}.pri .spk rect.on{opacity:1}.pri{color:var(--mute)}.pic{color:var(--gold)}.pil{color:#3fd0d0}.pit{color:#ef6b7d}.pim{color:#46c08f}.pip{color:#f08ad0}.pif{color:#8e5bd1}.pib{color:#9fb0c4}.pik{color:#f2c230}.prhd{display:flex;align-items:baseline;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;margin:0 0 12px}.prhd>h3.flowh{margin:0!important;font:700 1.25rem var(--disp);color:var(--fg);text-transform:none;letter-spacing:0}.prdef{all:unset;cursor:pointer;font:500 .8rem var(--body);color:var(--mute);border-bottom:1px dashed currentColor;white-space:nowrap}.prdef:hover,.prdef:focus-visible{color:var(--gold)}.pri{position:relative}.prinf{all:unset;position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;border:1px solid currentColor;color:var(--mute);font:700 .7rem/18px var(--body);text-align:center;cursor:pointer;opacity:.7}.prinf:hover,.prinf:focus-visible,.pri.tip .prinf{opacity:1;color:var(--fg)}.pritip{display:none;position:absolute;z-index:5;top:32px;left:6px;right:6px;padding:10px 12px;border-radius:10px;background:var(--panel);border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.35);color:var(--fg);font:400 .82rem/1.4 var(--body);text-transform:none;letter-spacing:0;white-space:normal}.pri>.pritip{display:none}.pri.tip>.pritip{display:block}@media(hover:hover){.pri>.prinf:hover+.pritip{display:block}}@media(max-width:560px){.prinf{top:4px;right:4px;width:16px;height:16px;line-height:16px}.pritip{width:min(220px,calc(100vw - 48px))}.pri:nth-child(odd)>.pritip{right:auto}.pri:nth-child(even)>.pritip{left:auto}}.pri b{padding-right:18px}.prdet{margin-top:18px;border:1px solid var(--line);border-radius:12px;padding:0 14px}.prdet>summary{cursor:pointer;padding:12px 0;font-weight:700;color:var(--fg)}.prdet[open]{padding-bottom:14px}.pri small{font:500 .8rem var(--body);color:var(--mute)}.pim svg{color:#46c08f}.pip svg{color:#f08ad0}.pic svg{color:var(--gold)}.pik svg{color:#f2c230}.pib svg{color:#9fb0c4}.pif svg{color:#8e5bd1}.pil svg{color:#3fd0d0}.pit svg{color:#ef6b7d}.prrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;align-items:end}.prrow3{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:700px){.prrow,.prrow3{grid-template-columns:minmax(0,1fr)}}.prsls .sl output{display:none}.prstr{grid-template-columns:minmax(0,320px) minmax(0,1fr);align-items:center;margin-bottom:14px}.prstr .prnote{margin:0}.prstr .prnote b{color:var(--fg);font-weight:600}@media(max-width:700px){.prstr{grid-template-columns:minmax(0,1fr)}}.prsls .sl{grid-template-columns:minmax(0,1fr)}.cegoal .prbar{margin-top:14px}.cesels.cecity{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr)}@media(max-width:700px){.cesels.cecity{grid-template-columns:minmax(0,1fr)}}.prlg .prpc{color:var(--gold);font-weight:800}.prsls{align-items:end}.prsls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 18px}.prsls .sl{min-width:0}@media(max-width:700px){.prsls{grid-template-columns:minmax(0,1fr)}}.prnote{display:block;color:var(--mute);font-size:.82rem;margin-top:8px}.prchart{margin:6px 0 4px}.prchart h4{margin:0 0 4px;font-size:.95rem;color:var(--fg)}.prchart svg{width:100%;height:170px;display:block;cursor:pointer}.prlns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.prln{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--mute);font:500 .8rem var(--body);cursor:pointer;min-width:0}.prln i{width:12px;height:3px;border-radius:2px;flex:none}.prln b{color:var(--mute);font-weight:700}.prln[aria-pressed=true]{background:var(--soft);color:var(--fg);border-color:transparent}.prln[aria-pressed=true] b{color:var(--fg)}.prln[aria-pressed=false] i{opacity:.35}.prax{display:flex;justify-content:space-between;color:var(--mute);font-size:.78rem}.cesub{display:block;font:500 .8rem var(--body);color:var(--mute);margin-top:2px}.setrate{font:600 1rem var(--body);color:var(--fg);background:var(--panel);border:2px solid var(--line);border-radius:10px;padding:8px 12px;width:140px;margin-top:6px}.cecom{border:1px solid rgba(240,180,41,.55);background:rgba(240,180,41,.08)}.cecom h4,.cecom>summary b,.cecom .line.tt span,.cecom .line.tt b{color:var(--gold)}.cecom .line{border-bottom:1px dashed var(--line)}.ceinf>summary b{color:#b58cf0}.celife>summary b{color:#46c08f}.cetax>summary b{color:#ef6b7d}.ceblk .line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:6px 0}.ceblk .line span{color:var(--mute);font-size:.95rem}.ceblk .line b{font:700 1rem var(--body);white-space:nowrap;text-align:right}.ceblk small{display:block;margin-top:6px;color:var(--mute);font-size:.85rem}.ceinf{border:1px solid #8e5bd1;background:rgba(142,91,209,.12)}.ceinf h4,.ceinf .line.tt span,.ceinf .line.tt b{color:#b58cf0}.ceinf .line{border-bottom:1px dashed rgba(142,91,209,.35)}.ceinf .line.tt.neg span,.ceinf .line.tt.neg b{color:#ef6b7d}.celife{border:1px solid #2f9e77;background:rgba(47,158,119,.12)}.celife h4,.celife .line.tt span,.celife .line.tt b{color:#46c08f}.celife .line{border-bottom:1px dashed rgba(47,158,119,.35)}.ceblk .line.tt{border-bottom:0}.cetax{margin-top:14px;border:1px solid #d1495b;background:rgba(209,73,91,.10);border-radius:12px;padding:12px 14px}.cetax h4{margin:0;color:#ef6b7d;font-size:1.05rem}.cetax .line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:6px 0;border-bottom:1px dashed rgba(209,73,91,.35)}.cetax .line:last-child{border-bottom:0}.cetax .line span{color:var(--mute);font-size:.95rem}.cetax .line b{font:700 1rem var(--body);white-space:nowrap;text-align:right}.cetax .line.tt span,.cetax .line.tt b{color:#ef6b7d}.cetbl .line b{white-space:nowrap;font:700 1rem var(--body)}.cetbl .line span{font-size:.95rem}@media(max-width:600px){.scmp.sc2.cetbl .line{grid-template-columns:minmax(0,1fr) auto}.scmp.sc2.cetbl .line span{grid-column:auto}}@media(max-width:560px){.ceyr{padding-bottom:0}.ceticks{position:static;height:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:10px}.cetk{position:static;left:auto!important;transform:none!important;border:1px solid var(--line);border-radius:8px;padding:6px 4px;font-size:.78rem}.cetk.on{border-color:var(--gold)}.cetk::before{display:none}}.lplan{margin-top:26px}.lprow{margin:14px 0 18px}.lprow h4{margin:0 0 4px;font-size:1rem;color:var(--fg)}.lprow p{margin:0 0 10px;color:var(--mute);font-size:.92rem}.lprow p b{color:var(--fg)}.lpic{display:flex;flex-wrap:wrap;gap:6px}.lpi{width:30px;height:30px;display:block;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}.lpi.house{--m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 1 11h3v10h6v-6h4v6h6V11h3z'/%3E%3C/svg%3E")}.lpi.car{--m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M4 11 6 5.5A2 2 0 0 1 7.9 4h8.2a2 2 0 0 1 1.9 1.5L20 11a2 2 0 0 1 2 2v5h-2v2h-3v-2H7v2H4v-2H2v-5a2 2 0 0 1 2-2zm2.3 0h11.4l-1.4-4.5H7.7zM6.5 16a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z'/%3E%3C/svg%3E")}.lpi.coin{--m:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z'/%3E%3Ccircle cx='12' cy='12' r='4.5'/%3E%3C/svg%3E")}.lpk{display:block;margin-top:6px;color:var(--mute);font-size:.8rem}.lplg{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:.85rem;color:var(--mute)}.lplg span{display:inline-flex;align-items:center;gap:6px}.lplg i{width:10px;height:10px;border-radius:3px;display:inline-block}.lplg b{color:var(--fg);font-weight:700}@media(max-width:560px){.lpi{width:24px;height:24px}.lpic{gap:4px}}.pres{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}.pres h4{margin:0 0 8px;font-size:.95rem;color:var(--fg)}.prl{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:2px 12px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line)}.prl:last-child{border-bottom:0}.prl span{color:var(--fg)}.prl em{font-style:normal;color:var(--mute);text-align:right;white-space:nowrap}.prl b{text-align:right;white-space:nowrap;font-weight:700}.prl b.up{color:#2fbf71}.prl b.dn{color:var(--mute)}.prl small{grid-column:1/-1;color:var(--mute);font-size:.82rem}.prl small.prs{display:block;margin-top:2px}@media(max-width:560px){.prl{grid-template-columns:minmax(0,1fr)}.prl em,.prl b{text-align:left}}.salbig.nmb>.ncamp{margin:0}.salbig.nmb{grid-template-columns:minmax(0,1fr)}.salbig.nmb>*{min-width:0}.salbig .ncamp .choice b{font:700 .98rem var(--disp);color:var(--fg);white-space:normal;line-height:1.3}.salbig .ncamp .choice span{color:var(--fg);font-size:.9rem;white-space:pre-line;line-height:1.55}.salbig .ncamp>h3.flowh{font:700 1.25rem var(--disp);color:var(--fg);text-transform:none;letter-spacing:0;margin:0 0 12px}@media(max-width:560px){.salbig.nmb>.nstrat,.salbig.nmb .sl.slnote,.ncamp{padding:12px 10px 14px}}
 .setw{position:relative}.setmenu{position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:180px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;gap:2px;box-shadow:0 8px 24px rgba(0,0,0,.2)}.setmenu[hidden]{display:none}.sm{font:600 .85rem var(--body);background:none;color:var(--fg);border:0;border-radius:8px;padding:8px 10px;text-align:left;cursor:pointer}.sm:hover{background:var(--soft,var(--line))}.theme{font:600 .8rem var(--body);background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:3px 10px;cursor:pointer}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .lead{font-size:1.05rem}
@@ -171,10 +172,24 @@ details{margin-top:16px}summary{cursor:pointer;font-weight:600}
 .plt tr.x td.r:nth-child(2){padding-left:20px!important}
 .plt tr.x2 td.r:nth-child(2){padding-left:34px!important}
 }
+.nq{margin:8px 0 4px;padding:12px 16px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;line-height:1.55;font-size:.95rem}
+.nqh{margin-top:18px}
+.sgrid>.sl.wide{grid-column:1/-1}.sl .strat{grid-column:1/-1;margin:8px 0 10px}.salbig .strat .choice b{font:700 .98rem var(--disp);color:var(--fg);white-space:normal;line-height:1.3}.salbig .strat .choice[aria-pressed=true] b{color:var(--gold)}.salbig .strat .choice span{color:var(--mute);font-size:.88rem}.sl .sbstrat{grid-column:1/-1;margin-bottom:8px}.sl .slg{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px 16px;margin:0 0 6px}.sl .slg div{display:grid;gap:1px}.sl .slg em{font-style:normal;font-size:.86rem;color:var(--mute)}.sl .slg .sw{display:inline-block;width:10px;height:10px;margin-right:6px}.sl .slg strong{font-size:1.05rem;color:var(--fg);font-weight:700}.ncond{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.ncx{margin:4px 0 0;color:var(--mute);font-size:.9rem;line-height:1.45}.nlive{display:block;margin-top:6px;color:var(--mute);line-height:1.4}
+.dual{grid-column:1/-1;position:relative;height:30px;margin-top:2px}
+.dual .dtrk{position:absolute;left:10px;right:10px;top:12px;height:6px;border-radius:3px;pointer-events:none}
+.dual input[type=range]{position:absolute;left:0;top:0;width:100%;height:30px;margin:0;background:transparent;pointer-events:none;-webkit-appearance:none;appearance:none}
+.dual input[type=range]::-webkit-slider-runnable-track{background:transparent;height:30px;border:0}
+.dual input[type=range]::-moz-range-track{background:transparent;border:0}
+.dual input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;width:20px;height:20px;margin-top:5px;border-radius:50%;background:var(--panel);border:3px solid var(--accent);cursor:pointer}
+.dual input[type=range]::-moz-range-thumb{pointer-events:auto;width:14px;height:14px;border-radius:50%;background:var(--panel);border:3px solid var(--accent);cursor:pointer}
+.dlg{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.82rem;color:var(--mute);align-items:center}
+.dlg span{display:inline-flex;align-items:center;gap:6px}
+.nmain{margin:14px 0 10px}
+.nmain p{margin:6px 0 0;font-size:1rem;line-height:1.5;color:var(--fg)}.nmain p.npar b{font:inherit;font-weight:800;color:#2fbf71;white-space:nowrap}.nmain p.gb .npar{font-size:.9rem;line-height:1.45;color:var(--fg);margin:10px 0 4px}.gb .npar b{font:inherit;font-weight:800;color:#2fbf71;display:inline}.npar{margin-top:10px;padding:10px 14px;border-left:4px solid #2f9e77;border-radius:8px;background:color-mix(in srgb,#2f9e77 16%,transparent)}.nmain .nout{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;margin:8px 0 2px;padding:8px 12px;border-left:3px solid #2f9e77;border-radius:8px;background:var(--panel)}.nmain .nout i{font-style:normal;font-weight:700;font-size:.92rem;color:var(--fg)}.nmain .nout strong{font:700 1.35rem var(--disp);color:#2f9e77;white-space:nowrap}.nmain .nout small{flex-basis:100%;color:var(--mute);font-size:.84rem;line-height:1.4}
 </style>
 <!--BODY-->
 <div id="app">
- <div class="top"><div class="topbar"><div class="brand">юніт економіка громадянина 2026</div><div class="topact"><button class="theme" id="resetBtn" type="button">Почати спочатку</button><div class="setw"><button class="gear" id="setBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Налаштування" title="Налаштування">⚙</button><div class="setmenu" id="setMenu" hidden><button type="button" class="sm" data-go="7">Опис моделі</button><button type="button" class="sm" data-go="6">Налаштування</button></div></div></div></div><div class="dots" id="dots"></div></div>
+ <div class="top"><div class="topbar"><div class="brand">юніт економіка громадянина 2026</div><div class="topact"><button class="theme" id="resetBtn" type="button">Почати спочатку</button><button class="theme" id="nhBtn" type="button" data-go="9">NomadHub</button><div class="setw"><button class="gear" id="setBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Налаштування" title="Налаштування">⚙</button><div class="setmenu" id="setMenu" hidden><button type="button" class="sm" data-go="7">Опис моделі</button><button type="button" class="sm" data-go="6">Налаштування</button></div></div></div></div><div class="dots" id="dots"></div></div>
 
  <section class="step on card" id="s1">
   <h2>Спершу мета</h2>
@@ -189,9 +204,12 @@ details{margin-top:16px}summary{cursor:pointer;font-weight:600}
 
  <section class="step card" id="s2">
   <h2>Обери шлях до своєї мети</h2>
-  <div class="q"><h3>Як заробляємо</h3><div class="grid" id="pathGrid"></div></div>
+  <div class="q"><div class="grid" id="pathGrid"></div></div>
   <div class="q" id="pathRules"></div>
-  <div class="q" id="qFinBox"><h3>Як платимо за мету</h3><div class="grid" id="qPay"></div></div>
+  <div class="q" id="nomadBox" style="display:none"></div>
+  <div class="q" id="qFinBox"><h3 id="qFinH">Як платимо за мету</h3><div class="grid" id="qPay"></div></div>
+  <div class="q" id="nomadCond" style="display:none"></div>
+  <div id="salCmp"></div>
   <div class="nav"><button class="btn ghost" data-go="1" type="button">Назад до мети</button><button class="btn" data-go="3" type="button">Далі: зарплата</button></div>
  </section>
 
@@ -215,14 +233,21 @@ details{margin-top:16px}summary{cursor:pointer;font-weight:600}
 
  <section class="step card" id="s6">
   <h2>Налаштування</h2>
+  <div class="q"><h3>Курс долара для NomadHub</h3><p>Суми на сторінці NomadHub показуються в доларах за цим курсом, грн за $1.</p><input type="number" id="setRate" class="setrate" min="1" step="0.1"></div>
   <div class="q"><h3>Шляхи</h3><p>Увімкнені шляхи показуються на кроці «Шлях». Позначені «у розробці» ще не завершені.</p><div id="setPaths"></div></div>
   <div class="nav"><button class="btn ghost" id="setBack" type="button">Назад</button><span></span></div>
+ </section>
+
+ <section class="step card" id="s9">
+  <h2>NomadHub</h2>
+  <div id="prBox"></div>
+  <div class="nav"><button class="btn ghost" id="prBack" type="button">Назад</button><span></span></div>
  </section>
 
  <section class="step card" id="s7">
   <h2>Опис моделі</h2>
   <div class="inputs" id="modelBox"></div>
-  <div class="nav"><button class="btn ghost" id="modBack" type="button">Назад</button><span></span></div>
+  <div class="nav"><button class="btn ghost" id="modBack" type="button">Назад</button><button class="btn" id="modCopy" type="button">Скопіювати текст для ШІ</button></div>
  </section>
 
  <section class="step card" id="s5">
@@ -263,7 +288,7 @@ details{margin-top:16px}summary{cursor:pointer;font-weight:600}
 //LOGIC-START
 const T={pdfo:.18,vz:.05,vzMil:.015,esvEmp:.22,esvCap:172940,mzp:8647,pm:3209,deputyPm:3328,profit:.18,divPdfo:.05,divVz:.05,vat:.20,esvFop:1902.34,es1:332.80,es2:1729.40,vz12:864.70,es3:.05,es3vat:.03,vz3:.01,fopLim:[1444049,7211598,10091049]};
 const FAM={solo:1,pair:1.8,kid:2.5};
-const CITY={kyiv:{name:'Київ',ppm2:1400,rent:25000},reg:{name:'Обласний центр',ppm2:900,rent:15000},small:{name:'Мале місто',ppm2:500,rent:8000}};
+const CITY={kyiv:{name:'Київ',ppm2:1400,rent:25000,wMax:55000},reg:{name:'Обласний центр',ppm2:900,rent:15000,wMax:38000},small:{name:'Мале місто',ppm2:500,rent:8000,wMax:26000}};
 const FLATS=[{id:'rent',name:'Оренда 1-кімнатної',area:40,rent:true},{id:'one',name:'1-кімнатна',area:40},{id:'two',name:'2-кімнатна',area:60},{id:'house',name:'Будинок',area:120}];
 const CARS=[
  {id:'none',name:'Без авто',usd:0,age:0,tag:''},
@@ -276,7 +301,8 @@ const PATHS={
  civil:{name:'Працівник бюджетної сфери',desc:'Бюджетна сфера: вчитель, лікар, військовий або держслужбовець. Роботодавець — держава, зарплата в межах вилки.',share:'≈ 5% (сума трьох професій нижче)'},
  fop:{name:'ФОП (2 група)',desc:'Самозайнятий на 2 групі єдиного податку. Чистий прибуток до 90 000 грн на місяць.',share:'≈ 17% (2,2 млн діючих ФОП, Опендатабот, 1.08.2026; частина суміщає з роботою)'},
  owner:{name:'Бізнесмен',desc:'Власник ТОВ: створює робочі місця, які приносять прибуток.',share:'≈ 1–1,7% працюючих компаній (222 тис. із виручкою за 2025, Опендатабот). У реєстрі максимум 6,3% (830 тис. ТОВ, Держстат), частина фіктивні'},
- deputy:{name:'Народний депутат (Верховна Рада)',desc:'450 народних депутатів України: оклад 10–12 прожиткових мінімумів плюс надбавки.',share:'450 осіб ≈ 0,003%'}
+ deputy:{name:'Народний депутат (Верховна Рада)',desc:'450 народних депутатів України: оклад 10–12 прожиткових мінімумів плюс надбавки.',share:'450 осіб ≈ 0,003%'},
+ nomad:{name:'NomadHub',desc:'ТОВ, у якому кожен учасник працює й володіє часткою. Учасники живуть у кампусі за містом і користуються авто з автопарку.',share:'новий формат'}
 };
 const LIVBAND={
  worker:{lo:14000,hi:30000},fop:{lo:18000,hi:45000},owner:{lo:25000,hi:90000},deputy:{lo:35000,hi:120000},
@@ -287,6 +313,7 @@ function salaryLimit(S){
  if(S.path==='worker')return mk(Math.round(T.mzp*nf()),55000);
  if(S.path==='fop')return mk(8000,FOP_MAX);
  if(S.path==='civil'){const b=bandNet(S);return mk(b.lo,b.hi);}
+ if(S.path==='nomad'){const hi=nomadNmax(S.chosenV||nomadVrange(S).hi,S),lo=nomadMinN(S);return mk(Math.min(lo,hi),Math.max(lo,hi));}
  if(S.path==='deputy'){const f=nf();return mk(Math.round(10*T.deputyPm*f/100)*100,Math.round(12*T.deputyPm*3.5*f/100)*100);}
  return null;
 }
@@ -300,7 +327,7 @@ const SECTORS={
 const DEF={sector:'teacher',lifeShare:50,bizMode:'credit',cashGoal:1000000,repairYears:25,repairCap:30,path:'worker',startAge:22,city:'kyiv',family:'solo',flat:'rent',car:'none',cat:'none',finMode:'credit',
  fx:44.85,ppm2:1400,area:40,carUsd:0,rentUah:25000,living:20000,
  mortRate:18,mortDown:0,carRate:13.74,carDown:0,carDep:7,carCap:75,depRate:5,
- infl:0,wageGrowth:0,saveYears:10,dti:40,chosenN:24000,autoN:false,
+ infl:0,wageGrowth:0,saveYears:10,dti:40,chosenN:24000,autoN:false,chosenV:0,infra:70,camp:'town',cmpPath:'worker',bizP:50,infraP:30,bizYield:12,
  fz:50,cons:85,
  fopGroup:2,expenses:0,vatLimit:1000000,
  nWork:7,profShare:0,workerMult:1,invMonths:12,
@@ -328,7 +355,7 @@ function costs(S){
  const rentPre=(!rent&&S.finMode==='save'&&flat>0)?S.rentUah:0;
  return {rent,rentPre,flat,car,cash:S.cashGoal||0,living,mortL,carL,pm,cp,pay:pm+cp};
 }
-function rentDue(S){const f=FLATS.find(x=>x.id===S.flat)||FLATS[1];return (f.rent||S.finMode==='save')?S.rentUah:0;}
+function rentDue(S){if(S.path==='nomad')return nomadRent(S);const f=FLATS.find(x=>x.id===S.flat)||FLATS[1];return (f.rent||S.finMode==='save')?S.rentUah:0;}
 function requiredInfo(S,id){
  const C=costs(S);
  if(S.finMode!=='credit'){
@@ -427,6 +454,10 @@ function calcPath(id,N,S,solve){
   o.notes.push('Працівників: '+n+'. Кожен отримує '+R0(r.Nw)+' грн на руки'+(r.bonusNet>0?' і премію '+R0(r.bonusNet/n)+' грн':'')+'. Виручка на одного працівника '+R0(prodD())+' грн/міс, у фонд зарплати йде '+pct0(r.share)+' (вартість працівника '+R0(costOf(r.Gw))+' грн). Власнику на руки: '+R0(r.net)+' грн.');
   if(one.net<=0)o.warn.push('При такій зарплаті працівника відсотки за кредитом з'+'їдають увесь прибуток власника.');
   if(r.Nw+r.bonusNet/n<3*T.pm)o.warn.push('Працівник отримує '+R0(r.Nw+r.bonusNet/n)+' грн: менше за три прожиткові мінімуми, на власну мету він не накопичить.');
+ }else if(id==='nomad'){
+  const B=nomadBase(S,N);
+  o.gross=B.G;o.V=B.V;o.stateTake=B.vatOut+B.wageTax+B.pt;
+  o.parts={'Держава: ПДВ':B.vatOut,'Держава: податки із зарплати':B.wageTax,'Держава: податок на прибуток':B.pt,'Учаснику на руки':N,'Компанія: інфраструктура':B.infra,'Компанія: бізнес':B.biz};
  }else{
   const d=deputyPay(S);
   o.N=d.N;o.gross=d.gross;o.budgetCost=d.budgetCost;
@@ -440,6 +471,7 @@ function calcPath(id,N,S,solve){
  return o;
 }
 function plan(S,id,NA){
+ if(id==='nomad')return planNomad(S,NA);
  const C=costs(S),off=officialN(id,NA,S);
  const surplus=NA-C.living-(S.finMode==='credit'?C.pay:0);
  const mode=S.finMode==='credit'?'credit':'save',reason=null;
@@ -511,6 +543,105 @@ function plan(S,id,NA){
  if(mode!=='credit'){const sv=NA-C.living-C.rentPre;if(sv>0&&S.infl===0&&S.wageGrowth===0){carMonths=C.car>0?Math.ceil(C.car/sv-1e-9):0;flatMonths=C.flat>0?Math.ceil((C.car+C.flat)/sv-1e-9):carMonths;cashMonths=C.cash>0?Math.ceil((C.car+C.flat+C.cash)/sv-1e-9):null;}}
  return {mode,reason,noGoal,rows,reached,reachedMonths,blocked:reached===null&&(mode==='credit'?blockedC:blockedS),carMonths,flatMonths,cashMonths,savePerMonth:NA-C.living,C,surplus,boughtAge:mode==='credit'?S.startAge:(reached!==null?S.startAge+reached:null),flatAge:mode==='credit'?S.startAge:(reached!==null?S.startAge+reached:null),carAge:mode==='credit'?S.startAge:(carYr!==null?S.startAge+carYr:null),carYear:carYr};
 }
+//NOMAD-START
+const NOMAD={depFlatY:10,depCarY:10,depInfraY:10,exitTax:T.pdfo+T.vz,payY:12.5};
+const vkOf=()=>T.vat/(1+T.vat);
+const CMP_OK=['worker','fop','civil'],CMP_LIFE=50;
+const cmpS=(S,id)=>({...S,path:id,finMode:'save',pay:'save',lifeShare:S.cmpLife!=null?S.cmpLife:CMP_LIFE});
+const CMPW={worker:'найманий працівник',fop:'ФОП',civil:'працівник бюджетної сфери'},CMPG={worker:'найманого працівника',fop:'ФОП',civil:'працівника бюджетної сфери'};
+const CAMP=[{id:'room',name:'Гостьовий номер',loc:'у гостьовому номері',usd:10000,k:4},{id:'town',name:'Таунхаус',loc:'у таунхаусі',usd:25000,k:4},{id:'house',name:'Окремий будинок',loc:'в окремому будинку',usd:50000,k:4}];
+const campOf=S=>CAMP.find(c=>c.id===S.camp)||CAMP[1];
+const campTotal=S=>campOf(S).usd*S.fx;
+const nomadRent=S=>Math.floor(campPrice(S)/(NOMAD.payY*12));
+const carShareP=S=>S.carUsd>0?Math.min(campTotal(S),S.carUsd*S.fx/campOf(S).k):0;
+const campPrice=S=>campTotal(S)-carShareP(S);
+const nomadMinN=S=>Math.round(T.mzp*nf(S))+nomadRent(S);
+const campName=S=>campOf(S).name.toLowerCase();
+function cmpList(){let l=CMP_OK;try{l=CMP_OK.filter(k=>EN[k]);}catch(e){}return l.length?l:['worker'];}
+function cmpId(S){const l=cmpList();return l.includes(S.cmpPath)?S.cmpPath:l[0];}
+function nomadNmax(V,S){const Rw=V/(1+T.vat),G=Rw/(1+T.esvEmp)<=T.esvCap?Rw/(1+T.esvEmp):Rw-T.esvEmp*T.esvCap;return Math.floor(G*nf(S)/100)*100;}
+function nomadHalfN(V,S){const Rw=V/(1+T.vat),f=Rw/2,G=f/(1+T.esvEmp)<=T.esvCap?f/(1+T.esvEmp):f-T.esvEmp*T.esvCap;return Math.round(G*nf(S)/500)*500;}
+function cmpN(S,id,V){
+ const TT={...S,path:id},lim=salaryLimit(TT),f=N=>calcPath(id,N,TT).V;
+ let lo=lim.lo,hi=lim.hi;
+ if(f(hi)<=V+0.5)return hi;if(f(lo)>=V-0.5)return lo;
+ for(let k=0;k<40;k++){const m=(lo+hi)/2;if(f(m)<V)lo=m;else hi=m;}
+ return Math.round((lo+hi)/2);
+}
+function nomadVrange(S){
+ const w=N=>chain({path:'worker'},costOf(N/nf()),'tov').V;
+ let lo=Math.ceil(w(Math.round(T.mzp*nf()))/1000)*1000,hi=Math.round(w(55000));
+ if(S){
+  lo=Math.max(lo,Math.ceil(costOf(nomadMinN(S)/nf(S))*(1+T.vat)/1000)*1000);
+  const id=cmpId(S),TT={...S,path:id},l=salaryLimit(TT),clo=Math.ceil(calcPath(id,l.lo,TT).V/1000)*1000,chi=Math.round(calcPath(id,l.hi,TT).V);
+  if(Math.max(lo,clo)<=Math.min(hi,chi)){lo=Math.max(lo,clo);hi=Math.min(hi,chi);}
+ }
+ return {lo,hi};
+}
+function nomadBase(S,NA){
+ const V=S.chosenV||nomadVrange(S).hi,Rw=V/(1+T.vat),vatOut=V-Rw,N=NA,G=N/nf(S),fund=costOf(G),wageTax=fund-N;
+ const P=Math.max(0,Rw-fund),b=S.bizP/100,i=S.infraP/100,d=Math.max(0,1-b-i),D=P*d,pt=(P-D)*T.profit;
+ const rent=nomadRent(S),rentNet=rent/(1+T.vat);
+ return {V,Rw,vatOut,N,G,fund,wageTax,P,D,pt,biz:P*b*(1-T.profit),infra:P*i*(1-T.profit),rent,rentNet,rentVat:rent-rentNet,dPct:Math.round(d*100)};
+}
+function nomadCmp(S){
+ const id=cmpId(S),V=S.chosenV||nomadVrange(S).hi,N=cmpN(S,id,V),TT={...cmpS(S,id),chosenN:N};
+ const C2=costs(TT),fi=TT.finMode==='credit'?C2.mortL*TT.mortRate/1200+C2.carL*TT.carRate/1200:0;
+ TT.living=Math.round(Math.max(0,N-rentDue(TT)-fi)*TT.lifeShare/100);
+ const res=calcPath(id,N,TT),pl=plan(TT,id,N);aggregate(res,N,pl,TT);
+ return {id,N,V:res.V,res,pl,S:TT};
+}
+function cmpLiving(S){
+ const id=cmpId(S),TT=cmpS(S,id),lm=salaryLimit(TT),N=S.cmpNfix?Math.min(lm.hi,Math.max(lm.lo,S.cmpNfix)):lm.hi,TN={...TT,chosenN:N},V=Math.round(calcPath(id,N,TN).V);
+ const C2=costs(TN),cr=TN.finMode==='credit',fi=cr?C2.mortL*TN.mortRate/1200+C2.carL*TN.carRate/1200:0,rent=rentDue(TN);
+ return {id,N,V,rent,fi,cr,loan:cr&&C2.mortL+C2.carL>0,living:Math.round(Math.max(0,N-rent-fi)*TT.lifeShare/100)};
+}
+function nomadSync(S){
+ const c=cmpLiving(S),mz=Math.round(T.mzp*nf(S)),live=Math.max(c.living,mz);
+ S.chosenV=c.V;S.chosenN=Math.min(nomadNmax(c.V,S),live+nomadRent(S));
+ return {...c,live,mz};
+}
+function nomadSim(S,NA){
+ const B=nomadBase(S,NA),vk=vkOf(),C=costs(S),carS=C.car>0?carShareP(S):0,yM=S.bizYield/1200,LC=NOMAD.depCarY*12,LH=NOMAD.depFlatY*12,living=S.living;
+ const st={t:0,biz:0,bizPaid:0,infraCash:0,book:0,depSum:0,vatPool:0,loss:0,leftCar:carS,leftHouse:campPrice(S),carM:null,carBuyM:null,placeM:null,pers:0,A:{gen:0,vatPay:0,vatCr:0,wageTax:0,profitTax:0,daily:0,infraIn:0,bizIn:0,fInc:0,fDaily:0,fInfra:0,fTax:0,rentCo:0,life:0,hero:0,cvat:0,dep:0}};
+ const exp={};
+ const buy=(x,L)=>{st.vatPool+=x*vk;const net=x*(1-vk),d=net/L;st.book+=net;st.depSum+=d;exp[st.t+L]=(exp[st.t+L]||0)+d;};
+ const step=()=>{
+  const t=++st.t,A=st.A,dep=st.depSum;
+  st.book=Math.max(0,st.book-dep);if(exp[t]){st.depSum=Math.max(0,st.depSum-exp[t]);delete exp[t];}
+  st.vatPool+=B.D*vk;let vatDue=B.vatOut+B.rentVat;const use=Math.min(st.vatPool,vatDue);st.vatPool-=use;vatDue-=use;
+  let base=B.P-B.D*(1-vk)+B.rentNet-dep;
+  if(base<0){st.loss-=base;base=0;}else{const u=Math.min(st.loss,base);st.loss-=u;base-=u;}
+  const pt=base*T.profit,fcf=B.V+B.rent-vatDue-B.fund-B.D-pt,inB=Math.min(B.biz,Math.max(0,fcf-use))+Math.min(use,Math.max(0,fcf)),inI=Math.max(0,fcf-inB);
+  const fY=st.biz*yM,fu=B.dPct/100,fi=S.infraP/100,fD=fY*fu,fI=fY*fi*(1-T.profit),fT=fY*fi*T.profit;
+  st.biz=st.biz+fY*(1-fu-fi)+inB;st.bizPaid+=inB;st.infraCash+=inI+fI;st.vatPool+=fD*vk;st.fDm=fD;
+  A.fInc+=fY;A.fDaily+=fD;A.fInfra+=fI;A.fTax+=fT;
+  while(st.infraCash>0.01){
+   if(st.leftCar>0.5){const x=Math.min(st.infraCash,st.leftCar);buy(x,LC);st.leftCar-=x;st.infraCash-=x;if(st.leftCar<=0.5){st.leftCar=0;st.carBuyM=t;if(st.carM===null)st.carM=t;}}
+   else if(st.leftHouse>0.5){const x=Math.min(st.infraCash,st.leftHouse);buy(x,LH);st.leftHouse-=x;st.infraCash-=x;if(st.leftHouse<=0.5){st.leftHouse=0;if(st.placeM===null)st.placeM=t;}}
+   else{buy(st.infraCash,LH);st.infraCash=0;}
+  }
+  if(carS>0&&st.carBuyM!==null&&t-st.carBuyM>=LC){st.leftCar=carS;st.carBuyM=null;}
+  const lifeM=Math.min(living,Math.max(0,NA-B.rent)),persAdd=Math.max(0,NA-B.rent-living);st.pers+=persAdd;
+  A.gen+=B.V;A.vatPay+=vatDue;A.vatCr+=use;A.wageTax+=B.wageTax;A.profitTax+=pt;A.daily+=B.D;A.infraIn+=inI;A.bizIn+=inB;A.rentCo+=B.rent;A.life+=lifeM;A.hero+=NA;A.cvat+=lifeM*S.cons/100*vk;A.dep+=dep;
+ };
+ return {B,st,step};
+}
+function nomadPlaceM(S,NA){const s=nomadSim(S,NA);for(let k=0;k<RETIRE*12&&s.st.placeM===null;k++)s.step();return s.st.placeM;}
+function planNomad(S,NA){
+ const cmp=nomadCmp(S),cp=cmp.pl,C=costs(S),sim=nomadSim(S,NA),maxY=Math.max(1,RETIRE-S.startAge);
+ const cr=cp.rows,nY=(cp.reached!==null||cp.noGoal)?cr.length:Math.max(cr.length,maxY),cm=cp.mode==='credit';
+ const capOf=c=>cm?c.worth:(c.prop||0)+(c.cash||0);
+ const rows=[];
+ for(let y=1;y<=nY;y++){
+  const c=cr[Math.min(y,cr.length)-1],months=y<=cr.length?c.months:12;
+  for(let m=0;m<months;m++)sim.step();
+  const st=sim.st,share=st.biz+st.book+st.infraCash+st.vatPool;
+  rows.push({y,age:S.startAge+y,inc:NA,liv:S.living+sim.B.rent,months,carP:0,flatP:0,rentIn:0,livY:S.living*months,rentPaid:sim.B.rent*months,paid:0,interest:0,prin:0,debt:0,debtM:0,debtC:0,flatV:0,carV:0,prop:st.book,worth:share+st.pers,share,bizCash:st.biz,bizPaid:st.bizPaid,infraBook:st.book,infraCash:st.infraCash,vatPool:st.vatPool,cashSaved:st.pers,cash:st.pers,carBought:st.carM!==null,placeBought:st.placeM!==null,cmpRow:c,cmpCap:capOf(c),target:0,cashLeft:0,pay:0,nm:{...st.A}});
+ }
+ return {mode:'save',nomad:true,campus:true,reason:null,noGoal:cp.noGoal,rows,reached:cp.reached,reachedMonths:cp.reachedMonths,blocked:false,cmp,C,base:sim.B,carM:sim.st.carM,placeM:sim.st.placeM,carMonths:null,flatMonths:null,cashMonths:null,savePerMonth:NA-sim.B.rent-S.living,surplus:0,boughtAge:null,flatAge:null,carAge:null,carYear:null};
+}
+//NOMAD-END
 //LOGIC-END
 
 //FLOW-START
@@ -535,6 +666,11 @@ function aggregate(res,NA,pl,S){
  });
  return fl;
 }
+function aggregateNomad(pl){
+ pl.rows.forEach(r=>{const a=r.nm,dir=a.vatPay+a.wageTax+a.profitTax;
+  r.cum={gen:a.gen,state:dir+a.cvat,stateDir:dir,cvat:a.cvat,vatLife:a.cvat,vatPay:a.vatPay,vatCr:a.vatCr,wageTax:a.wageTax,profitTax:a.profitTax,int:0,hero:a.hero,rent:0,rentCo:a.rentCo,infra:a.infraIn,biz:a.bizIn,daily:a.daily,member:Math.max(0,a.hero-a.rentCo-a.cvat),liv:a.life,goal:0,emp:0};});
+ return {V:pl.base.V,emp:0,empLabel:'',state:0,hero:pl.base.N,biz:0,equip:0};
+}
 //FLOW-END
 const S={...DEF};
 const $=id=>document.getElementById(id);
@@ -550,40 +686,43 @@ function go(n){
  if(n===3&&step!==4)setPathDefaults(S.path);
  if(n>=6&&step<6)backStep=step;
  step=n;
- for(let i=0;i<8;i++){const el=$('s'+i);if(el)el.classList.toggle('on',i===n);}
+ for(let i=0;i<10;i++){const el=$('s'+i);if(el)el.classList.toggle('on',i===n);}
  renderDots();
  stopRun();
- if(n===2){metaVis();renderRules();const pg=$('pathGrid');if(pg&&pg._draw)pg._draw();}
+ if(n===2){metaVis();renderRules();renderNomadBox();const pg=$('pathGrid');if(pg&&pg._draw)pg._draw();}
  if(n===3)renderPathOpts();
  if(n===4)startRun();
  if(n===5)renderShare();
  if(n===6)renderSettings();
  if(n===7)renderModel();
+ if(n===9)renderPR();
  window.scrollTo(0,0);
 }
-document.addEventListener('click',e=>{if(e.target.closest('[data-rulesopen]')){rulesOpen=true;renderRules();const rb=$('pathRules');if(rb)setTimeout(()=>rb.scrollIntoView({behavior:'smooth',block:'nearest'}),50);return;}if(e.target.closest('[data-rules]')){rulesOpen=false;renderRules();return;}{const xb=e.target.closest('[data-close]');if(xb){const k=xb.dataset.close;if(k==='own')ownOpen=false;if(k==='spend')spendOpen=false;if(k==='calc')calcOpen=false;if(k==='share')shareOpen=false;if(RD)counters();return;}}{const sb=e.target.closest('[data-spend]');if(sb){const k=sb.dataset.spend;{const was=spendOpen===k;ownOpen=false;calcOpen=false;shareOpen=false;spendOpen=was?false:k;}if(RD)counters();return;}}{const cb=e.target.closest('[data-calc]');if(cb){const k=cb.dataset.calc;{const was=calcOpen===k;ownOpen=false;spendOpen=false;shareOpen=false;calcOpen=was?false:k;}if(RD)counters();return;}}{const ob=e.target.closest('[data-own]');if(ob){const k=ob.dataset.own;{const was=ownOpen===k;spendOpen=false;calcOpen=false;shareOpen=false;ownOpen=was?false:k;}if(RD)counters();return;}}{const hb=e.target.closest('[data-share]');if(hb){const k=hb.dataset.share;{const was=shareOpen===k;ownOpen=false;spendOpen=false;calcOpen=false;shareOpen=was?false:k;}if(RD)counters();return;}}if(e.target.closest('[data-tax]')){taxOpen=!taxOpen;if(RD)counters();return;}const b=e.target.closest('[data-go]');if(b&&!(b.classList.contains('dot')&&+b.dataset.go===step))go(+b.dataset.go);});
+let rulesPrev=null;document.addEventListener('click',e=>{if(e.target.closest('[data-rulesopen]'))rulesPrev=rulesOpen?S.path:null;},true);
+document.addEventListener('click',e=>{if(e.target.closest('[data-rulesopen]')){rulesOpen=rulesPrev!==S.path;rulesPrev=null;renderRules();const rb=$('pathRules');if(rb&&rulesOpen)setTimeout(()=>rb.scrollIntoView({behavior:'smooth',block:'nearest'}),50);return;}if(e.target.closest('[data-rules]')){rulesOpen=false;renderRules();return;}{const xb=e.target.closest('[data-close]');if(xb){const k=xb.dataset.close;if(k==='own')ownOpen=false;if(k==='spend')spendOpen=false;if(k==='calc')calcOpen=false;if(k==='share')shareOpen=false;if(RD)counters();return;}}{const sb=e.target.closest('[data-spend]');if(sb){const k=sb.dataset.spend;{const was=spendOpen===k;ownOpen=false;calcOpen=false;shareOpen=false;spendOpen=was?false:k;}if(RD)counters();return;}}{const cb=e.target.closest('[data-calc]');if(cb){const k=cb.dataset.calc;{const was=calcOpen===k;ownOpen=false;spendOpen=false;shareOpen=false;calcOpen=was?false:k;}if(RD)counters();return;}}{const ob=e.target.closest('[data-own]');if(ob){const k=ob.dataset.own;{const was=ownOpen===k;spendOpen=false;calcOpen=false;shareOpen=false;ownOpen=was?false:k;}if(RD)counters();return;}}{const hb=e.target.closest('[data-share]');if(hb){const k=hb.dataset.share;{const was=shareOpen===k;ownOpen=false;spendOpen=false;calcOpen=false;shareOpen=was?false:k;}if(RD)counters();return;}}if(e.target.closest('[data-tax]')){taxOpen=!taxOpen;if(RD)counters();return;}const b=e.target.closest('[data-go]');if(b&&!(b.classList.contains('dot')&&+b.dataset.go===step))go(+b.dataset.go);});
 function choices(id,items,key,onChange){
  const el=$(id);
  const draw=()=>{el.innerHTML='';items.filter(it=>!it.show||it.show()).forEach(it=>{
   const b=document.createElement('button');b.type='button';b.className='choice';b.setAttribute('aria-pressed',String(S[key]===it.v));
   const bad=it.bad&&it.bad();b.className+=bad?' bad':'';b.innerHTML=(bad?'<i class="badge">Мета недосяжна</i>':'')+'<b></b><span></span>'+(it.foot?'<i class="foot"></i>':'');const ft=b.querySelector('.foot');if(ft)ft.textContent=it.foot;if(it.after)b.insertAdjacentHTML('beforeend',it.after);const bi=b.querySelector('b');bi.textContent=it.t;const sp=b.querySelector('span');if(it.html){sp.className='hl';sp.innerHTML=it.html;}else sp.textContent=it.d||'';
-  b.onclick=()=>{S[key]=it.v;if(onChange)onChange(it.v);draw();};el.appendChild(b);});};
+  b.onclick=()=>{if(it.jump){it.jump();return;}S[key]=it.v;if(onChange)onChange(it.v);draw();};el.appendChild(b);});};
  el._draw=draw;draw();
 }
-const ROLEPC={worker:'≈ 60–70%',civil:'≈ 5%',fop:'≈ 17%',owner:'≈ 1,5%',deputy:'≈ 0,003%'};
+const ROLEPC={worker:'≈ 60–70%',civil:'≈ 5%',fop:'≈ 17%',owner:'≈ 1,5%',deputy:'≈ 0,003%',nomad:'новий формат'};
 function depItems(){return [
  '<b>Авто:</b> втрачає '+DEF.carDep+'% від початкової ціни на рік, але не більше '+DEF.carCap+'%.',
  '<b>Квартира:</b> нова, від забудовника (з ПДВ '+Math.round(T.vat*100)+'%): '+DEF.repairCap+'% вартості це новий ремонт та побутова техніка, які знецінюються повністю за '+DEF.repairYears+' років.'
 ];}
 function creditItems(){return ['<b>Кредит класичний</b> - відсотки на залишок боргу, тіло рівними частинами;','<b>Спрощення моделі</b> - перший внесок 0%; строк до пенсії, без аналізу видачі.'];}
-function metaVis(){const hide=S.flat==='rent'&&S.car==='none';const f=$('qFinBox');if(f)f.style.display=hide?'none':'';
+function metaVis(){const hide=(S.flat==='rent'&&S.car==='none')||S.path==='nomad';const f=$('qFinBox');if(f)f.style.display=hide?'none':'';
+ {const fh=$('qFinH');if(fh)fh.textContent=S.path==='nomad'?'Як платить за мету '+CMPW[cmpId(S)]:'Як платимо за мету';}
  if(S.flat==='rent'&&(S.pay==='k3'||S.pay==='k7')){S.pay='none';S.cat='none';S.mortRate=18;}
  const p=$('qPay');if(p&&p._draw)p._draw();}
 function drawFlat(){
  choices('qFlat',FLATS.map(f=>({v:f.id,t:f.rent?f.name:f.name+', '+f.area+' м²',d:f.rent?fm(S.rentUah)+' грн/міс':'$'+fm(f.area*S.ppm2)})),'flat',v=>{S.area=FLATS.find(f=>f.id===v).area;metaVis();});
 }
 function initQuiz(){
- choices('pathGrid',Object.entries(PATHS).sort((a,b)=>(+['civil','owner','deputy'].includes(a[0]))-(+['civil','owner','deputy'].includes(b[0]))).map(([v,p])=>({v,t:roleCard(v).t,html:(roleCard(v).s?'<em class="cs">'+roleCard(v).s+'</em>':'')+'<ul class="cl">'+roleCard(v).b.map(x=>'<li>'+x+'</li>').join('')+'</ul>',show:()=>EN[v],foot:ROLEPC[v]+' зайнятих',after:'<span class="lnk cl-l" role="link" data-rulesopen="1">Умови контракту</span>',bad:()=>unreachable(v)})),'path',v=>{setPathDefaults(v);renderRules();});
+ choices('pathGrid',Object.entries(PATHS).sort((a,b)=>(+['civil','owner','deputy'].includes(a[0]))-(+['civil','owner','deputy'].includes(b[0]))).map(([v,p])=>({v,t:roleCard(v).t,html:(roleCard(v).s?'<em class="cs">'+roleCard(v).s+'</em>':'')+'<ul class="cl">'+roleCard(v).b.map(x=>'<li>'+x+'</li>').join('')+'</ul>',show:()=>EN[v],foot:v==='nomad'?ROLEPC[v]:ROLEPC[v]+' зайнятих',after:v==='nomad'?'<span class="lnk cl-l">Відкрити NomadHub →</span>':'<span class="lnk cl-l" role="link" data-rulesopen="1">Умови контракту</span>',bad:()=>v==='nomad'?false:unreachable(v),jump:v==='nomad'?nhFromGame:null})),'path',v=>{setPathDefaults(v);metaVis();renderRules();renderNomadBox();});
  ensurePath();setPathDefaults(S.path);
  const as=$('qAgeSl');as.value=S.startAge;const ageHint=()=>{$('qAgeOut').textContent='зараз '+S.startAge+' / до пенсії '+(RETIRE-S.startAge);};$('qAgeHint').textContent='Умовний пенсійний вік: '+RETIRE+' років';ageHint();
  as.oninput=()=>{S.startAge=+as.value;ageHint();};
@@ -595,13 +734,15 @@ function initQuiz(){
  S.pay=S.finMode==='save'?'save':(S.cat||'none');
   const UL=a=>'<ul class="cl">'+a.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
  const carTxt='Автокредит '+String(Math.round(DEF.carRate*10)/10).replace('.',',')+'%';
- choices('qPay',[{v:'none',t:'Ринковий кредит',html:UL(['Перший внесок 0%','Іпотека 18%',carTxt])},{v:'k3',t:'Пільговий кредит',html:'<strong>Військовий, медик, педагог, науковець.</strong>'+UL(['Перший внесок 0%','єОселя 3%',carTxt]),show:()=>S.flat!=='rent'},{v:'k7',t:'Пільговий кредит',html:'<strong>Перша квартира, ВПО.</strong>'+UL(['Перший внесок 0%','єОселя 7%',carTxt]),show:()=>S.flat!=='rent'},{v:'save',t:'Без кредиту',html:'Накопичуємо:'+UL(['на авто','на житло','потрібну суму'])}],'pay',v=>{S.finMode=v==='save'?'save':'credit';if(v!=='save'){S.cat=v;S.mortRate=v==='k3'?3:v==='k7'?7:18;}if(step===2){renderRules();const pg=$('pathGrid');if(pg&&pg._draw)pg._draw();}});
+ choices('qPay',[{v:'none',t:'Ринковий кредит',html:UL(['Перший внесок 0%','Іпотека 18%',carTxt])},{v:'k3',t:'Пільговий кредит',html:'<strong>Військовий, медик, педагог, науковець.</strong>'+UL(['Перший внесок 0%','єОселя 3%',carTxt]),show:()=>S.flat!=='rent'},{v:'k7',t:'Пільговий кредит',html:'<strong>Перша квартира, ВПО.</strong>'+UL(['Перший внесок 0%','єОселя 7%',carTxt]),show:()=>S.flat!=='rent'},{v:'save',t:'Без кредиту',html:'Накопичуємо:'+UL(['на авто','на житло','потрібну суму'])}],'pay',v=>{S.finMode=v==='save'?'save':'credit';if(v!=='save'){S.cat=v;S.mortRate=v==='k3'?3:v==='k7'?7:18;}if(step===2){renderRules();renderNomadCond();const pg=$('pathGrid');if(pg&&pg._draw)pg._draw();}});
 }
 const SL=[
  {k:'fz',where:'path',t:'Яку частку прибутку віддати найманим, %',min:10,max:90,step:1,h:'Частка після сплати ПДВ, яка йде у фонд зарплати. З неї платяться всі податки на зарплату. Решта прибутку лишається роботодавцю',show:S=>false,locked:S=>false,dyn:S=>S.path==='worker'?'Для найманого це фіксовано: 50% його праці йде у фонд зарплати, змінити не можна':'Роботодавцю лишається '+(100-S.fz)+'% прибутку до податку на прибуток і дивідендів'},
  {k:'chosenN',where:'path',t:'Зарплата в межах статистичного ліміту',min:6658,max:55000,step:500,lim:S=>salaryLimit(S),h:'',show:S=>S.path==='worker'},
  {k:'chosenN',where:'path',t:'Зарплата на руки (в межах вилки), грн на місяць',min:5000,max:50000,step:500,lim:S=>salaryLimit(S),h:'',show:S=>S.path==='civil',after:()=>{S.autoN=false;}},
  {k:'chosenN',where:'path',t:'Чистий прибуток ФОП, грн на місяць',min:8000,max:150000,step:500,lim:S=>salaryLimit(S),h:'',show:S=>S.path==='fop'},
+ {k:'bizP',where:'path',t:'Обери хаб зі стратегією, що відгукується:',show:S=>S.path==='nomad',mk:(sl,cb)=>mkStrat(sl,cb)},
+ {k:'bizYield',where:'path',t:'Дохідність інвестицій бізнес фонду, % на рік',min:12,max:30,step:1,wide:true,show:S=>S.path==='nomad',vt:(S,v)=>v+'%',after:()=>{if(window._stratPaint)window._stratPaint();},h:'',note:'<b>Як працює бізнес хабу</b><ol><li>Прибуток учасників формує спільний фонд, який інвестує у власні проєкти.</li><li><strong>Спільнота життєздатна, якщо разом примножує спільний капітал від 12% на рік.</strong></li></ol><small>Модель враховує лише середній приріст; надприбутки й невдачі не враховуються.</small>'},
  {k:'nWork',where:'path',t:'Скільки людей найняти / інвестиційний кредит',min:1,max:50,step:1,h:'Одне робоче місце коштує стільки, скільки працівник коштує роботодавцю за рік (в кредит на 5 років під загальну ставку з мети). Обладнання повністю амортизується за 5 років, потім купується нове',show:S=>S.path==='owner',vt:(S,v)=>{const n=Math.round(v),r=ownerFrom(S,n);return n+' / '+fm(r.invest)+' грн на '+EQUIP_Y+' р.'+(r.own?', власні кошти':' під '+fmRate(r.bizR)+'%');},dyn:S=>{const r=ownerFrom(S,Math.round(S.nWork)),m=calcPath('owner',requiredNet(S,'owner'),S,true).n;return 'Власнику на руки '+fm(r.net)+' грн після платежу за кредитом '+fm(r.loanPay)+' грн на місяць (обладнання '+fm(r.equip)+' + відсотки '+fm(r.loanInt)+'). Для мети потрібно щонайменше '+m+' осіб.';}},
  {k:'fx',t:'Курс UAH/USD',min:38,max:60,step:.05,h:'44,85 (The Page, 11.08.2026)'},
  {k:'ppm2',t:'Ціна житла, $ за м²',min:300,max:3500,step:10,h:'Київ первинка $1 400 за м²',show:S=>!costs(S).rent},
@@ -632,7 +773,7 @@ const ownCat=p=>p>0.6?'Жлоб':p>=0.4?'Скряга':'Гарний робот�
 const fmRate=x=>(Math.round(x*100)/100).toString().replace('.',',');
 function valText(sl,v){if(sl.vt)return sl.vt(S,v);const u=sl.u||'';return (u==='×'?'×'+String(v).replace('.',','):Number(v).toLocaleString('uk-UA',{maximumFractionDigits:2}))+(u==='×'?'':'');}
 function mkSl(sl,onChange){
- const d=document.createElement('div');d.className='sl';
+ const d=document.createElement('div');d.className='sl'+(sl.wide?' wide':'');
  d.innerHTML='<label for="sl_'+sl.k+'"></label><output></output><input type="range" id="sl_'+sl.k+'"><small></small><small class="dyn"></small>';
  d.firstChild.textContent=sl.t;
  const inp=d.querySelector('input'),out=d.querySelector('output'),dy=d.querySelector('.dyn');
@@ -646,11 +787,14 @@ function mkSl(sl,onChange){
  const lk=sl.locked&&sl.locked(S);if(lk){S[sl.k]=50;inp.value=50;inp.disabled=true;d.style.opacity='.55';}
  out.textContent=valText(sl,S[sl.k])+(lk?' (фіксовано)':'');d.querySelector('small').textContent=sl.h||'';
  const dyn=()=>{dy.textContent=sl.dyn?sl.dyn(S):'';};dyn();
+ if(sl.note){const nt=document.createElement('div');nt.className='bizm';nt.innerHTML=sl.note;d.classList.add('slnote');d.appendChild(nt);if(!sl.h)d.querySelector(':scope>small').remove();}
  inp.oninput=()=>{S[sl.k]=vals?vals[+inp.value]:+inp.value;out.textContent=valText(sl,S[sl.k]);if(sl.after)sl.after();dyn();onChange(sl);};
+ if(sl.rerender)inp.onchange=()=>{const y=window.scrollY;renderPathOpts();window.scrollTo(0,y);const ni=$('sl_'+sl.k);if(ni)ni.focus({preventScroll:true});};
  return d;
 }
-function fixedInt(S){if(S.finMode!=='credit')return 0;const C=costs(S);return C.mortL*S.mortRate/1200+C.carL*S.carRate/1200;}
+function fixedInt(S){if(S.finMode!=='credit'||S.path==='nomad')return 0;const C=costs(S);return C.mortL*S.mortRate/1200+C.carL*S.carRate/1200;}
 function syncLiving(NA){
+ if(S.path==='nomad'){S.living=Math.max(0,NA-nomadRent(S));return;}
  const f=FLATS.find(x=>x.id===S.flat)||FLATS[1],rent=rentDue(S);
  S.living=Math.round(Math.max(0,NA-rent-fixedInt(S))*S.lifeShare/100);
 }
@@ -665,7 +809,8 @@ function limitText(k){
 }
 function renderSplit(){
  const g=$('mainSl');if(!g)return;
- const d=document.createElement('div');d.className='sl';d.innerHTML='<label for="qLifeSl">Витрати на життя % / На мету %</label><output id="qLifeOut"></output><input type="range" id="qLifeSl" min="0" max="100" step="1">';
+ if(S.path==='nomad'){updateSalaryCard();return;}
+ const d=document.createElement('div');d.className='sl';d.innerHTML='<label for="qLifeSl">'+(S.path==='nomad'?'Витрати на життя % / Особисті накопичення %':'Витрати на життя % / На мету %')+'</label><output id="qLifeOut"></output><input type="range" id="qLifeSl" min="0" max="100" step="1">';
  g.appendChild(d);
  const ls=$('qLifeSl');ls.value=S.lifeShare;
  ls.oninput=()=>{S.lifeShare=+ls.value;updateSalaryCard();};
@@ -675,8 +820,9 @@ function unreachable(v){
  const TT={...S,path:v};let NA;
  if(v==='deputy')NA=deputyPay(TT).N;
  else if(v==='owner'){NA=0;for(let n=1;n<=50;n++)NA=Math.max(NA,ownerFrom(TT,n).net);}
+ else if(v==='nomad')return false;
  else NA=salaryLimit(TT).hi;
- const f=FLATS.find(x=>x.id===S.flat)||FLATS[1],rent=rentDue(S);
+ const f=FLATS.find(x=>x.id===S.flat)||FLATS[1],rent=rentDue(TT);
  TT.living=Math.round(Math.max(0,NA-rent-fixedInt(TT))*S.lifeShare/100);
  const pp=plan(TT,v,NA);return !pp.noGoal&&pp.reached===null;
 }
@@ -711,25 +857,26 @@ function spendCalcHtml(k,spend,inte,A){
  const C=costs(S),car=k==='car',cd=A&&A.cd,x=A&&A[k];if(!x||!x.row)return '';
  const ln=(t,v,col,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span><i class="sw" style="background:'+col+'"></i>'+t+'</span><b>'+v+'</b></div>';
  const col=car?'#6c8ea4':'#8a6d3b',loan=car?C.carL:C.mortL,rate=car?S.carRate:S.mortRate;
- let h='<div class="salsplit vload own" style="border-left-color:#d1495b"><button type="button" class="rx" data-close="spend" aria-label="Закрити">✕</button><h4>Реальні витрати: '+(car?'авто':'житло')+'</h4>';
+ let h='<div class="salsplit vload own" style="border-left-color:#d1495b"><button type="button" class="rx" data-close="spend" aria-label="Закрити">✕</button><h4>'+(S.path==='nomad'?'Реальні витрати компанії: ':'Реальні витрати: ')+(car?'авто':'житло')+'</h4>';
  if(cd){
   h+=ln(car?'Тіло автокредиту':'Тіло іпотеки',fm(loan)+' грн',col);
   h+=ln('Відсотки банку ('+String(rate).replace('.',',')+'% річних)',fm(inte)+' грн','#d1495b');
   h+=ln('Кредит виплачено за',yrs(x.row.y),col);
- }else h+=ln('Ціна '+(car?'авто':'квартири'),fm(spend)+' грн',col);
- h+=ln('Реальні витрати',fm(spend)+' грн','#16a34a','tot fin');
+ }else h+=ln('Ціна '+(car?'авто':'квартири'),fm(S.path==='nomad'?(car?C.car:C.flat):spend)+' грн',col);
+ if(S.path==='nomad')h+=ln('Податковий кредит з ПДВ: 1/6 ціни повертається компанії','−'+fm((car?C.car:C.flat)*vkOf())+' грн','#2f9e77');
+ h+=ln(S.path==='nomad'?'Реальні витрати компанії':'Реальні витрати',fm(spend)+' грн','#16a34a','tot fin');
  return h+'</div>';
 }
 function genCalcHtml(k,spend,c,r,nd){
- const f=c.hero>0?c.gen/c.hero:0,fx=f.toFixed(3).replace('.',','),pa=S.path,yy=yrs(r.y),tx=Math.max(0,c.gen-c.hero);
- const full=pa==='fop'?'Повний дохід за '+yy+' (до податків і ЄСВ)':pa==='owner'?'Повний дохід бізнесу за '+yy:'Повна зарплата за '+yy+' (брутто + ЄСВ)';
- const tax=pa==='fop'?'Податки й ЄСВ':pa==='owner'?'Податки, зарплати працівників, обладнання':'Податки з зарплати (ПДФО, ВЗ, ЄСВ)';
+ const nm=S.path==='nomad',net=nm?c.gen-(c.stateDir||0):c.hero,f=net>0?c.gen/net:0,fx=f.toFixed(3).replace('.',','),pa=S.path,yy=yrs(r.y),tx=Math.max(0,c.gen-net);
+ const full=nm?'Створено учасником за '+yy+' (з ПДВ)':pa==='fop'?'Повний дохід за '+yy+' (до податків і ЄСВ)':pa==='owner'?'Повний дохід бізнесу за '+yy:'Повна зарплата за '+yy+' (брутто + ЄСВ)';
+ const tax=nm?'Податки: ПДВ після податкового кредиту, з ЗП, на прибуток':pa==='fop'?'Податки й ЄСВ':pa==='owner'?'Податки, зарплати працівників, обладнання':'Податки з зарплати (ПДФО, ВЗ, ЄСВ)';
  const ln=(t,v,col,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span><i class="sw" style="background:'+col+'"></i>'+t+'</span><b>'+v+'</b></div>';
  const tile=(lab,v,col)=>'<div class="wtile" style="--c:'+col+'"><span>'+lab+'</span><b>'+fm(v)+' грн</b></div>';
  const pc=x=>(c.gen?x/c.gen*100:0)+'%';
  return '<div class="salsplit vload wcalc"><button type="button" class="rx" data-close="calc" aria-label="Закрити">✕</button>'
-  +'<div class="wtop">'+tile('Щоб отримати на руки',spend,'var(--good)')+'<i class="warr">→</i>'+tile('Потрібно створити прибуток',nd,'var(--gold)')+'</div>'
-  +'<div class="sbar"><i style="width:'+pc(tx)+';background:#d1495b"></i><i style="width:'+pc(c.hero)+';background:#2f9e77"></i></div>'
+  +'<div class="wtop">'+tile(nm?'Щоб компанія витратила':'Щоб отримати на руки',spend,'var(--good)')+'<i class="warr">→</i>'+tile('Потрібно створити прибуток',nd,'var(--gold)')+'</div>'
+  +'<div class="sbar"><i style="width:'+pc(tx)+';background:#d1495b"></i><i style="width:'+pc(net)+';background:#2f9e77"></i></div>'
   +ln(full,fm(c.gen)+' грн','#8e5bd1')
   +ln(tax,'− '+fm(tx)+' грн','#d1495b','sub')
   +ln('Потрібно створити: '+fm(spend)+' × '+fx,fm(nd)+' грн','#8e5bd1','tot fin')
@@ -738,10 +885,10 @@ function genCalcHtml(k,spend,c,r,nd){
 function shareCalcHtml(k,x,spend,inte,nd,cd){
  const car=k==='car',val=x.val;
  const ln=(t,v,col,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span><i class="sw" style="background:'+col+'"></i>'+t+'</span><b>'+v+'</b></div>';
- return '<div class="salsplit vload own" style="border-left-color:#2f9e77"><button type="button" class="rx" data-close="share" aria-label="Закрити">✕</button><h4>У власність переходить '+pct(val/nd)+' створеного прибутку</h4>'
+ return '<div class="salsplit vload own" style="border-left-color:#2f9e77"><button type="button" class="rx" data-close="share" aria-label="Закрити">✕</button><h4>'+(S.path==='nomad'?'У твою частку переходить ':'У власність переходить ')+pct(val/nd)+' створеного прибутку</h4>'
   +ln((car?'Вартість авто':'Вартість житла')+' '+(cd?'на момент погашення кредиту (отримання права власності)':'на момент покупки'),fm(val)+' грн','#6c8ea4')
-  +ln('Створений '+(S.path==='fop'?'ФОП':'працівником')+' прибуток',fm(nd)+' грн','#8e5bd1')
-  +ln('У власність переходить: '+fm(val)+' ÷ '+fm(nd),pct(val/nd),'#2f9e77','tot fin')
+  +ln('Створений '+(S.path==='fop'?'ФОП':S.path==='nomad'?'учасником':'працівником')+' прибуток',fm(nd)+' грн','#8e5bd1')
+  +ln((S.path==='nomad'?'У частку переходить: ':'У власність переходить: ')+fm(val)+' ÷ '+fm(nd),pct(val/nd),'#2f9e77','tot fin')
   +'</div>';
 }
 function wageCalcHtml(NAt){
@@ -766,38 +913,211 @@ function minGoalTo60(NA,rent,inte){
  while(hi-lo>1){const m=(lo+hi)>>1;if(run(m).reached!==null)lo=m;else hi=m;}
  const k=lo;return {bad:true,min:NA-(rent+Math.round(Math.max(0,NA-rent-inte)*k/100))};
 }
+const fmMn=n=>(n/1e6).toFixed(Math.abs(n)>=1e7?1:2).replace('.',',')+' млн';
+const cap1=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const carName=c=>c.name.replace(/ \$.*$/,'');
+const FLGEN={one:'1-кімнатної',two:'2-кімнатної',house:'будинку'},CITYIN={kyiv:'в Києві',reg:'в обласному центрі',small:'в малому місті'};
+function nomadQuote(){
+ const C=costs(S),car=CARS.find(x=>x.id===S.car)||CARS[0],cin=CITYIN[S.city]||'',c=campOf(S);
+ const B=x=>'<b>'+x+'</b>',home=C.rent?'Оренда 1-кімнатної '+cin+': '+B(fm(S.rentUah)+' грн на місяць'):cap1((FLGEN[S.flat]||'квартира').replace('1-кімнатної','1-кімнатна').replace('2-кімнатної','2-кімнатна').replace('будинку','будинок'))+' '+cin+': '+B(fm(C.flat)+' грн');
+ const usd=v=>'$'+fm(Math.round(v/S.fx/100)*100),homeU=(FLGEN[S.flat]||'квартира').replace('1-кімнатної','1-кімнатну').replace('2-кімнатної','2-кімнатну').replace('будинку','будинок')+' '+cin+' '+B(usd(C.flat));
+ const li=[
+  'Не купує квартиру й авто: живе в кампусі спільноти за містом і має доступ до інфраструктури',
+  'Замість:<ul>'+(C.rent?'<li><strong>Оренда</strong> 1-кімнатної '+cin+' '+B(fm(S.rentUah)+' грн на місяць')+(C.car>0?' та <strong>накопичення з ЗП на</strong> '+carName(car)+' '+B(usd(C.car)):'')+'</li>':(C.flat+C.car>0?'<li><strong>Накопичення з ЗП на:</strong> '+[C.flat>0?homeU:'',C.car>0?carName(car)+' '+B(usd(C.car)):''].filter(x=>x).join(' та ')+'</li>':''))
+   +'<li><strong>Хаб інвестує в нового учасника</strong> '+B('$'+fm(c.usd))+': '+campName(S)+(C.car>0?' + 1/'+c.k+' авто':'')+'</li></ul>',
+  'Вхід безкоштовний, але в першу чергу потрібно відпрацювати інвестицію, далі йде прибуток',
+  'Оренда житла у своїй компанії: '+B(fm(nomadRent(S))+' грн на місяць')+', більша частина повертається в частку',
+  'Корпоративна їжа й побут за рахунок компанії: '+B(fm(Math.round(nomadBase(S,S.chosenN).D))+' грн на місяць'),
+  'Податки: ПДВ мінус ПДВ на інфраструктуру й авто, з ЗП і на прибуток '+Math.round(T.profit*100)+'%',
+  'Вихід вільний: хаб викуповує частку, податки '+Math.round(T.profit*100)+'% + '+Math.round(NOMAD.exitTax*100)+'%',
+  ''];
+ return '<ul class="nql">'+li.filter(x=>x).map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+}
+function renderNomadBox(){
+ const box=$('nomadBox');if(!box)return;
+ renderNomadCond();
+ if(S.path!=='nomad'){box.innerHTML='';box.style.display='none';return;}
+ box.style.display='';S.cmpPath=cmpId(S);if(!CAMP.some(c=>c.id===S.camp))S.camp='town';
+ box.innerHTML='<h3 class="nbigh">З ким порівняти</h3><div class="grid" id="qCmp"></div>';
+ const q=()=>{if(rulesOpen)renderRules();};q();
+ choices('qCmp',cmpList().map(k=>{const TT=cmpS(S,k),l=salaryLimit(TT);return {v:k,t:k==='fop'?'Підприємець без найманих працівників':roleCard(k).t,html:'<ul class="cl">'+['Накопичення без кредиту',(k==='fop'?'Чистий прибуток '+fm(l.hi)+' грн (максимальний)':'Зарплата '+fm(l.hi)+' грн (максимальна)'),CMP_LIFE+'/'+(100-CMP_LIFE)+' на мрію й на життя','Створений прибуток '+fm(calcPath(k,l.hi,TT).V)+' грн'].map(x=>'<li>'+x+'</li>').join('')+'</ul>'};}),'cmpPath',()=>{setPathDefaults('nomad');metaVis();q();renderNomadCond();});
+}
+function nomadCondText(c){
+ const fop=c.id==='fop',rent=nomadRent(S);
+ return 'Порівнюємо за однаковим створеним прибутком і однаковими грошима на життя. '+cap1(CMPW[c.id])+(fop?' з чистим прибутком ':' із зарплатою ')+fm(c.N)+' грн на руки накопичує на мету без кредиту'+(c.rent>0?', платить оренду житла '+fm(c.rent)+' грн':'')+' і ділить решту '+CMP_LIFE+'/'+(100-CMP_LIFE)+' на мрію й на життя: на життя йому лишається '+fm(c.living)+' грн на місяць. '
+  +(c.living>=c.mz?'Ти отримуєш на життя стільки ж':'Це менше за мінімальну зарплату, тому ти отримуєш на життя мінімальну '+fm(c.mz)+' грн')
+  +' і ще оренду кампусу '+fm(rent)+' грн, яку платиш своїй компанії. Решта прибутку лишається в компанії.';
+}
+function renderNomadCond(){
+ const box=$('nomadCond'),sc=$('salCmp');if(!box)return;
+ if(S.path!=='nomad'){box.innerHTML='';box.style.display='none';if(sc)sc.innerHTML='';return;}
+ const c=nomadSync(S),rent=nomadRent(S),fop=c.id==='fop';
+ if(sc)sc.innerHTML=salCmpNow(currentNA(),rentDue(S));
+ box.innerHTML='';box.style.display='none';return;
+ const t=(k,v,sub,col)=>'<div class="gb" style="--c:'+col+'"><span>'+k+'</span><b>'+v+'</b><small>'+sub+'</small></div>';
+ box.style.display='';
+ box.innerHTML='<h3>Умови для порівняння</h3><div class="gblocks ncond">'
+  +t('Прибуток, який ти створюєш у компанії, з ПДВ',fm(c.V)+' грн на місяць','максимум для шляху «'+roleCard(c.id).t+'»: '+(fop?'чистий прибуток ':'зарплата ')+fm(c.N)+' грн на руки','var(--gold)')
+  +t('Твоя зарплата на руки, фіксована',fm(S.chosenN)+' грн на місяць','витрати на життя '+fm(S.chosenN-rent)+' грн + оренда кампусу '+fm(rent)+' грн','#2f9e77')
+  +'</div>';
+}
+function nomadLiveNote(){
+ const c=nomadSync(S);
+ return '<small class="nlive">Фіксовано: на життя стільки ж, скільки в '+CMPG[c.id]+' ('+fm(c.living)+' грн)'+(c.living<c.mz?', але не менше мінімальної зарплати '+fm(c.mz)+' грн':'')+'. <button type="button" class="lnk" data-go="2">Умови порівняння</button></small>';
+}
+const STRAT=[{id:'down',t:'Стратегія Дауншифтинг',b:20,i:50,d:'Спокійне життя: більше інвестицій в оточуючу інфраструктуру'},{id:'life',t:'Стратегія Лайфстайл',b:50,i:30,d:'Збалансований розподіл між інвестиціями у бізнес та інфраструктуру'},{id:'fire',t:'Стратегія FIRE',b:80,i:10,d:'Для швидкого накопичення капіталу й раннього виходу на пенсію'}];
+const STRAT_DEF=STRAT.find(x=>x.id==='life');
+function mkStrat(sl,onChange){
+ if(!STRAT.some(s=>s.b===S.bizP&&s.i===S.infraP)){S.bizP=STRAT_DEF.b;S.infraP=STRAT_DEF.i;}
+ const d=document.createElement('div');d.className='sl wide';
+ d.innerHTML='<label></label><div class="grid strat"></div><div class="sbar sbstrat"><i style="background:#2f9e77"></i><i style="background:#8e5bd1"></i><i style="background:#c9a227"></i><i style="background:#6c8ea4"></i></div><div class="slg"></div><small class="dyn"></small>';
+ d.firstChild.textContent=sl.t;
+ const g=d.querySelector('.strat'),bars=d.querySelectorAll('.sbstrat i'),lg=d.querySelector('.slg'),dy=d.querySelector('.dyn');
+ const paint=()=>{const B=nomadBase(S,S.chosenN),v=[S.chosenN,B.biz,B.D,B.infra],tot=v.reduce((a,x)=>a+x,0)||1,n=['Зарплата на руки, фіксовано','Бізнес '+S.bizP+'% ('+S.bizYield+'% річних)','Побут '+B.dPct+'% (корпоративна їжа й побут, щомісяця)','Інфраструктура '+S.infraP+'% (амортизація '+NOMAD.depInfraY+' років)'],c=['#2f9e77','#8e5bd1','#c9a227','#6c8ea4'];
+  bars.forEach((x,k)=>{x.style.width=(v[k]/tot*100)+'%';});
+  lg.innerHTML=n.map((t,k)=>'<div><em><i class="sw" style="background:'+c[k]+'"></i>'+t+'</em><strong>'+fm(v[k])+' грн</strong></div>').join('');
+  dy.textContent=sl.dyn?sl.dyn(S):'';};
+ const draw=()=>{g.innerHTML='';STRAT.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='choice';b.setAttribute('aria-pressed',String(S.bizP===s.b&&S.infraP===s.i));b.innerHTML='<b></b><span></span>';b.querySelector('b').textContent=s.t+' '+s.b+'/'+(100-s.b-s.i)+'/'+s.i;b.querySelector('span').textContent=s.d;b.onclick=()=>{S.bizP=s.b;S.infraP=s.i;draw();paint();onChange(sl);};g.appendChild(b);});};
+ draw();paint();window._stratPaint=paint;
+ return d;
+}
+function nomadGoalBlocks(ev,ix){
+ ev=ev||{};ix=ix||0;
+ const C=costs(S),car=CARS.find(x=>x.id===S.car)||CARS[0],id=cmpId(S),goal=C.flat+C.car+C.cash;
+ const cl=cmpLiving(S),live=Math.max(cl.living,Math.round(T.mzp*nf(S))),pm=' грн на місяць';
+ const rows=a=>'<div class="gbrs">'+a.filter(x=>x[1]>0).map(x=>'<div class="gbr'+(x[2]?' '+x[2]:'')+'"><span>'+x[0]+'</span><em>'+fm(x[1])+(x[2]?pm:' грн')+'</em></div>').join('')+'</div>';
+ const dn=e=>e&&e.i<ix,t=(k,v,sub,c,e,dl,xh)=>'<div class="gb'+(dn(e)?' done':'')+'" style="--c:'+c+'"><span>'+k+'</span><b>'+v+'</b>'+(xh||'')+(dn(e)?'<i class="gd">✓ '+(dl?dl+' ':'')+'за '+yrs(e.age-S.startAge)+' у віці '+e.age+'</i>':'')+(sub?'<small>'+sub+'</small>':'')+'</div>';
+ let h='';
+ const cp=campOf(S);
+ h+=t('Інвестиція хабу на 1 учасника',fm(campTotal(S))+' грн','','#8a6d3b',ev.flat,'відпрацьовано','<i class="gbc">Отримуєш у перший день</i>'+rows([[cp.name,campPrice(S)],['1/'+cp.k+' авто: доступ до автопарку',C.car>0?carShareP(S):0],['ЗП на особисті потреби',live,'mo']]));
+ return '<div class="gblocks gvsw">'+h+'<div class="gvs" aria-hidden="true">VS</div><div class="gb gt'+(dn(ev.total)?' done':'')+'"><span>Мета '+CMPG[id]+'</span><b>'+(goal>0?fm(goal)+' грн':'—')+'</b>'+(goal>0?rows([['Квартира',C.flat],['Авто',C.car],['Накопичити',C.cash],[(id==='fop'?'Дохід':'ЗП')+' на особисті потреби',cl.living,'mo']]):'')+(dn(ev.total)?'<i class="gd">✓ досягнуто за '+yrs(ev.total.age-S.startAge)+' у віці '+ev.total.age+'</i>':'')+'<small class="gbl"><button type="button" class="lnk" data-go="1">змінити мету</button></small></div></div>';
+}
+function nomadMainText(r,isLast){
+ const pl=RD.pl,cp=pl.cmp.pl,id=pl.cmp.id,C=pl.C,B=x=>'<b>'+x+'</b>',live=' живеш '+campOf(S).loc+', маєш необмежений доступ до інфраструктури хабу';
+ const verb=cp.mode==='credit'?(C.flat>0?'виплатить іпотеку':C.car>0?'виплатить автокредит':'досягне мети'):(()=>{const cs=C.cash>=1e6?fmMn(C.cash).replace(/,0+ /,' ')+' грн':fm(C.cash)+' грн',a=[C.flat>0?(S.flat==='house'?'будинок':'квартира'):'',C.car>0?'авто':'',C.cash>0?cs:''].filter(x=>x);return a.length?'накопичить на мету ('+(a.length>1?a.slice(0,-1).join(', ')+(/[аеєиіїоуюяАЕЄИІЇОУЮЯ]$/.test(a[a.length-2])?' й ':' і ')+a[a.length-1]:a[0])+')':'досягне мети';})();
+ const biz=', а твоя частка в компанії коштує '+B(fmMn(r.share)+' грн')+'.';
+ if(!isLast)return 'Тобі '+B(yrs(r.age))+': ти вже '+B(yrs(r.y))+live+biz;
+ if(pl.noGoal)return 'У меті немає ні житла, ні авто, ні накопичення, тож рахуємо '+B(yrs(r.y))+'. Увесь цей час ти'+live+biz;
+ if(pl.reached!==null)return 'Коли '+CMPW[id]+' у '+B(yrs(r.age))+' '+verb+', ти вже '+B(yrs(r.y))+live+biz;
+ return cap1(CMPW[id])+' до пенсії мети не досягає. У '+B(yrs(r.age))+' ти вже '+B(yrs(r.y))+live+biz;
+}
+function nomadOut(r){const gain=Math.max(0,r.bizCash-r.bizPaid),tax=gain*T.profit,out=r.share-tax,sh=Math.max(0,r.share),et=NOMAD.exitTax;return {gain,tax,out,saleTax:sh*et,sale:sh*(1-et),coTax:Math.max(0,out)*et,co:Math.max(0,out)*(1-et)};}
+function nomadMainHtml(r,isLast){
+ const o=nomadOut(r),mm=v=>(v>=1e6?fmMn(v):fm(v))+' грн';
+ return '<div class="salbig mainblk nmain"><span>Твоя частка в компанії у віці '+r.age+'</span><b>'+fmMn(r.share)+' грн</b>'
+  +'<p class="npar">'+nomadMainText(r,isLast)+'</p></div>';
+}
+function nomadCoHtml(NA){
+ const B=nomadBase(S,NA),red='#d1495b',w=v=>(B.V?v/B.V*100:0)+'%';
+ const ln=(t,v,col,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span><i class="sw" style="background:'+col+'"></i>'+t+'</span><b>'+fm(v)+' грн</b></div>';
+ return '<div class="salsplit vload nco" style="border-left-color:#6c8ea4"><h4>Компанія NomadHub, на місяць</h4>'
+  +'<div class="sbar">'+[[B.vatOut,red],[B.wageTax,'#e5808d'],[B.pt,'#b03a4b'],[NA,'#2f9e77'],[B.D,'#c9a227'],[B.infra,'#6c8ea4'],[B.biz,'#8e5bd1']].map(x=>'<i style="width:'+w(x[0])+';background:'+x[1]+'"></i>').join('')+'</div>'
+  +ln('Створений тобою прибуток, з ПДВ',B.V,'var(--gold)','tot')
+  +ln('ПДВ '+Math.round(T.vat*100)+'% при продажі',B.vatOut,red,'sub')
+  +ln('Податки з ЗП (ПДФО + ВЗ + ЄСВ)',B.wageTax,'#e5808d','sub')
+  +ln('Зарплата тобі на руки (з неї оренда кампусу '+fm(B.rent)+' грн)',NA,'#2f9e77','sub')
+  +ln('Прибуток компанії до податку',B.P,'var(--mute)','tot')
+  +ln('Податок на прибуток '+Math.round(T.profit*100)+'% з бізнесу й інфраструктури',B.pt,'#b03a4b','sub')
+  +ln('Бізнес хабу '+S.bizP+'%: дохідність '+S.bizYield+'% на рік',B.biz,'#8e5bd1','sub')
+  +ln('Побут '+B.dPct+'%: корпоративна їжа й побут, витрачається щомісяця, до податку на прибуток',B.D,'#c9a227','sub')
+  +ln('Інфраструктура хабу '+S.infraP+'%: кампус і автопарк, амортизація в середньому '+NOMAD.depInfraY+' років',B.infra,'#6c8ea4','sub')
+  +'<small>Дивідендів немає: усе, крім зарплати й податків, входить у твою частку. Корпоративну їжу й побут оплачує компанія (частка «Побут»), дозвілля й особисті поїздки учасник оплачує із зарплати. Оренда кампусу, ПДВ-кредит і економія від амортизації теж ідуть в інфраструктуру.</small></div>';
+}
+const NOPEN={};
+document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.dataset&&d.dataset.nk)NOPEN[d.dataset.nk]=d.open;},true);
+const NFo=(k,t,sum)=>'<details class="nfold" data-nk="'+k+'"'+(NOPEN[k]?' open':'')+'><summary><h3 class="flowh">'+t+'</h3>'+(sum?'<b>'+sum+'</b>':'')+'</summary>';
+function nomadShareHtml(r){
+ if(!r)return '';
+ const ln=(t,v,col,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span><i class="sw" style="background:'+col+'"></i>'+t+'</span><b>'+v+'</b></div>';
+ const tax=Math.max(0,r.share)*NOMAD.exitTax,A=r.nm,o=nomadOut(r);
+ return NFo('share','Твоя частка в компанії у віці '+r.age,fm(r.share)+' грн')+'<div class="salsplit vload" style="border-left-color:#16a34a">'
+  +ln('Бізнес: внесено '+fm(r.bizPaid)+' грн, дохідність '+S.bizYield+'% на рік',fm(r.bizCash)+' грн','#8e5bd1')
+  +ln('Інфраструктура: вкладено без ПДВ (твоє місце, частка авто, місця для нових учасників)',fm(r.infraBook+A.dep)+' грн','#6c8ea4')
+  +ln('Амортизація інфраструктури в середньому '+NOMAD.depInfraY+' років: проїдено','− '+fm(A.dep)+' грн','#d1495b','sub')
+  +ln('Інфраструктура за залишковою вартістю',fm(r.infraBook)+' грн','#6c8ea4','sub')
+  +(r.infraCash>0.5?ln('Гроші інфраструктури, ще не вкладені',fm(r.infraCash)+' грн','#6c8ea4'):'')
+  +(r.vatPool>0.5?ln('Податковий кредит з ПДВ, ще не використаний',fm(r.vatPool)+' грн','#6c8ea4'):'')
+  +ln('Частка в компанії',fm(r.share)+' грн','#16a34a','tot fin itog')
+  +'</div></details>'+NFo('exit','Вихід з компанії у віці '+r.age,fm(o.co)+' грн на руки')+'<div class="salsplit vload" style="border-left-color:#2f9e77">'
+  +ln('Частка в компанії',fm(r.share)+' грн','#16a34a','tot')
+  +ln('Хаб продає активи: податок на прибуток '+Math.round(T.profit*100)+'% з доходу бізнесу','− '+fm(o.tax)+' грн','#d1495b','sub')
+  +ln('Хаб виплачує тобі частку',fm(o.out)+' грн','#16a34a','sub')
+  +ln('З виплати: ПДФО + ВЗ '+Math.round(NOMAD.exitTax*100)+'%','− '+fm(o.coTax)+' грн','#d1495b','sub')
+  +ln('На руки після виходу',fm(o.co)+' грн','#2f9e77','tot')
+  +'<small>Частку викуповує хаб, учасник забирає всю частку й сплачує податки. Внески в бізнес та інфраструктуру вже пройшли податок на прибуток, коли компанія їх заробила, тому '+Math.round(T.profit*100)+'% береться лише з доходу бізнесу.</small></div></details>';
+}
+function nomadCmpHtml(r){
+ const c=r&&r.cmpRow;if(!c||!RD)return '';
+ const pl=RD.pl,id=pl.cmp.id,cm=pl.cmp.pl.mode==='credit',cash=cm?(c.cashSaved||0):(c.cash||0),int=c.cum?c.cum.int:0;
+ const ln=(t,v,col,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span><i class="sw" style="background:'+col+'"></i>'+t+'</span><b>'+v+'</b></div>';
+ return NFo('cmp','Для порівняння: '+CMPW[id]+' у віці '+c.age,fm(r.cmpCap)+' грн')+'<div class="salsplit vload" style="border-left-color:#7f8ea3">'
+  +(c.flatV>0.5?ln('Квартира за поточною вартістю',fm(c.flatV)+' грн','#8a6d3b'):'')
+  +(c.carV>0.5?ln('Авто за поточною вартістю',fm(c.carV)+' грн','#6c8ea4'):'')
+  +(cash>0.5?ln('Накопичення',fm(cash)+' грн','#c2569b'):'')
+  +(c.debt>0.5?ln('Борг банку','− '+fm(c.debt)+' грн','#d1495b'):'')
+  +ln('Капіталізація: майно мінус борги плюс накопичення',fm(r.cmpCap)+' грн','#7f8ea3','tot fin')
+  +(int>0.5?ln('Сплачено банку відсотків',fm(int)+' грн','#d1495b'):'')
+  +ln(id==='fop'?'Чистий прибуток на руки':'Зарплата на руки',fm(pl.cmp.N)+' грн на місяць','#2f9e77')
+  +ln('З них на життя',fm(pl.cmp.S.living)+' грн на місяць','#e0a526')
+  +'</div></details>'+nomadSalCmpHtml(r);
+}
+function nomadSalCmpHtml(r){
+ const pl=RD.pl,TT=pl.cmp.S,N2=pl.cmp.N,rent2=rentDue(TT),liv2=TT.living;
+ const h=salCmpTbl(pl.cmp.id,r.inc,pl.base.rent,N2,rent2,liv2,Math.max(0,N2-rent2-liv2),pl.cmp.V);
+ return h.replace(/^<h3 class="flowh">(.*?)<\/h3>/,(m,t)=>NFo('sal',t,'на життя '+fm(liv2)+' грн'))+'</details>';
+}
+function salCmpNow(NA,rent){
+ const c=cmpLiving(S);
+ return salCmpTbl(c.id,NA,rent,c.N,c.rent,c.living,Math.max(0,c.N-c.rent-c.fi-c.living),c.V,1);
+}
+function salCmpTbl(id,inc,rent,N2,rent2,liv2,goal2,V,short){
+ const liv=inc-rent,w=CMPW[id],r={inc};
+ const pT=id==='fop'?'Створений прибуток, однаково':'Створений прибуток для компанії, однаково';
+ if(short)return '<h3 class="flowh">Ти і '+w+'</h3><div class="scmp sc2">'+(V?'<div class="line hl"><span>'+pT.replace(', однаково','')+'</span><b>однаково '+fm(V)+' грн</b></div>':'')+'<div class="line hl"><span>Витрати на життя 50% від зарплати</span><b>однаково '+fm(liv)+' грн</b></div></div>';
+ const row=(t,a,b2,cls)=>'<div class="line'+(cls?' '+cls:'')+'"><span>'+t+'</span><b>'+a+'</b><b>'+b2+'</b></div>';
+ return '<h3 class="flowh">Ти і '+w+': однаковий прибуток, однаково на життя</h3><div class="salsplit vload scmp" style="border-left-color:#2f9e77">'
+  +'<div class="line tot"><span>На місяць</span><b>Ти</b><b>'+cap1(w)+'</b></div>'
+  +(V?row(pT,fm(V)+' грн',fm(V)+' грн','hl'):'')
+  +row(id==='fop'?'На руки (у ФОП чистий прибуток)':'Зарплата на руки',fm(r.inc)+' грн',fm(N2)+' грн')
+  +row('Житло',(rent>0?'оренда '+fm(rent)+' грн':'—'),(rent2>0?'оренда '+fm(rent2)+' грн':'—'))
+  +row('На мрію',"мета в компанії",fm(goal2)+' грн накопичення')
+  +row('Витрати на життя, однаково',fm(liv)+' грн',fm(liv2)+' грн','hl')
+  +'</div>';
+}
 function updateSalaryCard(){
  if($('pathGrid')&&$('pathGrid')._draw)$('pathGrid')._draw();
  const el=$('livCard');if(!el)return;
- const NA=currentNA(),rentNow=rentDue(S),inte0=fixedInt(S),rem=Math.max(0,NA-rentNow-inte0),lvO=Math.round(rem*S.lifeShare/100),liv=Math.min(NA,rentNow+lvO),goal=NA-liv,pl=NA?liv/NA:0,pg=1-pl;
+ const NA=currentNA(),rentNow=rentDue(S),inte0=fixedInt(S),rem=Math.max(0,NA-rentNow-inte0),lvO=S.path==='nomad'?rem:Math.round(rem*S.lifeShare/100),liv=Math.min(NA,rentNow+lvO),goal=NA-liv,pl=NA?liv/NA:0,pg=1-pl;
  const own=S.path==='owner'||S.path==='deputy'?'Дохід на руки':'Зарплата на руки';
  {const ls=$('qLifeSl');if(ls){ls.min=0;ls.max=100;ls.value=S.lifeShare;}}
- $('qLifeOut').textContent=(rem?Math.round(lvO/rem*100):0)+'% / '+(rem?100-Math.round(lvO/rem*100):0)+'%';
- const C=costs(S),inte=C.mortL*S.mortRate/1200+C.carL*S.carRate/1200;
+ if($('qLifeOut'))$('qLifeOut').textContent=(rem?Math.round(lvO/rem*100):0)+'% / '+(rem?100-Math.round(lvO/rem*100):0)+'%';
+ const C=costs(S),nmP=S.path==='nomad',inte=nmP?0:C.mortL*S.mortRate/1200+C.carL*S.carRate/1200;
  let warn='';
  if(rem>0&&lvO<T.pm)warn+='<div class="warn bad">На життя лишається '+fm(lvO)+' грн на місяць, це менше за прожитковий мінімум ('+fm(T.pm)+' грн).</div>';
  else if(rem<=0)warn+='<div class="warn bad">Після оренди й відсотків банку на життя не лишається нічого, прожитковий мінімум '+fm(T.pm)+' грн.</div>';
- if(!C.noGoal&&!(C.flat+C.car+C.cash===0)){
+ if(!nmP&&!(C.flat+C.car+C.cash===0)){
   const mg=minGoalTo60(NA,rentNow,inte0);
   if(mg!==null&&mg.bad)warn+='<div class="warn bad">Не вистачить, щоб досягти мети до пенсії ('+RETIRE+' років). '+(mg.min===null?'Навіть увесь залишок на мету не покриває її: потрібна більша ЗП.':'Мінімальна сума на мету: '+fm(mg.min)+' грн на місяць.')+'</div>';
  }
  let ow='';
+ if(nmP)ow='';
  if(S.path==='owner'){const o=ownerFrom(S,Math.max(1,Math.round(S.nWork))),im=o.invest*o.bizR/1200,bm=Math.max(0,o.loanPay-im);
   ow='<div class="salsplit"><div class="line"><span>Дохід власника до інвест кредиту</span><b>'+fm(o.c.ownerNet)+' грн</b></div>'
   +(o.own?'':'<div class="line"><span><i class="sw" style="background:#d1495b"></i>Відсотки інвест кредиту, '+fm(o.n)+' робочих місць (обов\'язкові, зменшити не можна)</span><b style="color:#d1495b">'+fm(im)+' грн</b></div>')
   +'<div class="line"><span><i class="sw" style="background:#6c8ea4"></i>'+(o.own?'Знос обладнання (відкладаємо на нове), '+fm(o.n)+' робочих місць':'Тіло інвест кредиту (обладнання)')+'</span><b>'+fm(bm)+' грн</b></div></div>';}
- const cr=S.finMode==='credit',rr=Math.min(liv,rentNow),lv=liv-rr,ip=cr?Math.min(goal,inte):0;
+ const cr=S.finMode==='credit'&&!nmP,rr=Math.min(liv,rentNow),lv=liv-rr,ip=cr?Math.min(goal,inte):0;
 const sbEl=$('salBig');
- if(sbEl&&$('salV')){$('salOw').innerHTML=ow;$('salT').textContent=own+', грн на місяць';$('salV').textContent=fm(NA)+' грн';}
+ if(sbEl&&$('salV')){sbEl.querySelector('.mtot').style.display=nmP?'none':'';el.style.display=nmP?'none':'';$('salOw').innerHTML=ow;$('salT').textContent=(nmP?'Зарплата на руки, фіксована':own)+', грн на місяць';$('salV').textContent=fm(NA)+' грн';}
  el.innerHTML='<div class="salsplit"><div class="sbar"><i style="width:'+(NA?lv/NA*100:0)+'%;background:#e0a526"></i><i style="width:'+(NA?rr/NA*100:0)+'%;background:#8a6d3b"></i><i style="width:'+(NA?ip/NA*100:0)+'%;background:#d1495b"></i><i style="width:'+(NA?(goal-ip)/NA*100:0)+'%;background:#2f9e77"></i></div>'
-  +'<div class="line"><span><i class="sw" style="background:#e0a526"></i>Витрати на життя в місяць</span><b>'+fm(lv)+' грн</b></div>'
-  +(rr>0?'<div class="line"><span><i class="sw" style="background:#8a6d3b"></i>Оренда (обов\'язкова)</span><b style="color:#8a6d3b">'+fm(rr)+' грн</b></div>':'')
+  +'<div class="line"><span><i class="sw" style="background:#e0a526"></i>'+(nmP?'Витрати на особисті потреби + доступ до інфраструктури (авто, дозвілля, харчування)':'Витрати на життя в місяць')+'</span><b>'+fm(lv)+' грн</b></div>'
+  +(rr>0?'<div class="line"><span><i class="sw" style="background:#8a6d3b"></i>'+(nmP?'Оренда кампусу своїй компанії (більша частина повертається після сплати податків)':'Оренда (обов\'язкова)')+'</span><b style="color:#8a6d3b">'+fm(rr)+' грн</b></div>':'')
   +(cr&&inte>0?'<div class="line"><span><i class="sw" style="background:#d1495b"></i>Відсотки банку (обов\'язкові)</span><b style="color:#d1495b">'+fm(inte)+' грн'+(goal<inte?'<small class="short">бракує '+fm(inte-goal)+' грн</small>':'')+'</b></div>':'')
-  +'<div class="line"><span><i class="sw" style="background:#2f9e77"></i>'+(cr&&C.mortL+C.carL>0?'Тіло кредиту':'На накопичення мети')+'</span><b>'+fm(Math.max(0,goal-(cr?inte:0)))+' грн</b></div></div>';
+  +(nmP?'':'<div class="line"><span><i class="sw" style="background:#2f9e77"></i>'+(cr&&C.mortL+C.carL>0?'Тіло кредиту':'На накопичення мети')+'</span><b>'+fm(Math.max(0,goal-(cr?inte:0)))+' грн</b></div>')+(nmP?nomadLiveNote():'')+'</div>';
  const wl=$('livWarn');if(wl)wl.innerHTML=warn;
 }
 function setPathDefaults(p){
-  if(p==='owner'){let best=1,bn=-1;for(let n=1;n<=50;n++){const v=ownerFrom({...S,path:p},n).net;if(v>bn){bn=v;best=n;}}S.nWork=best;}
+  if(p==='nomad'){S.cmpPath=cmpId(S);nomadSync(S);}
+  else if(p==='owner'){let best=1,bn=-1;for(let n=1;n<=50;n++){const v=ownerFrom({...S,path:p},n).net;if(v>bn){bn=v;best=n;}}S.nWork=best;}
   else if(p!=='deputy')S.chosenN=salaryLimit({...S,path:p}).hi;
  }
 function roleCard(k){
@@ -807,14 +1127,15 @@ function roleCard(k){
   civil:{t:'Працівник бюджетної сфери',s:'Зарплата після сплати податків:',b:Object.entries(SECTORS).map(([v,x])=>x.name+' до '+m(bandNet({...S,sector:v}).hi))},
   fop:{t:'Підприємець',b:['ФОП 2 група','Без найманих працівників','Прибуток до '+m(FOP_MAX)]},
   owner:{t:'Бізнесмен',b:['Ціль - створення робочих місць, які приносять прибуток']},
-  deputy:{t:'Народний депутат',b:['Депутат Верховної Ради','Зарплата до '+m(mx('deputy'))]}
+  deputy:{t:'Народний депутат',b:['Депутат Верховної Ради','Зарплата до '+m(mx('deputy'))]},
+  nomad:{t:'NomadHub',b:['ТОВ, де працівник є співвласником','Без роботодавця','Життя у кампусі, доступ до інфраструктури']}
  }[k]||{t:PATHS[k].name,b:[]};
 }
-const EN_DEF={worker:true,fop:true,civil:false,owner:false,deputy:false},EN={...EN_DEF};
+const EN_DEF={worker:true,fop:true,civil:false,owner:false,deputy:false,nomad:true},EN={...EN_DEF};
 try{const j=JSON.parse(localStorage.getItem('shEn')||'null');if(j)Object.keys(EN).forEach(k=>{if(typeof j[k]==='boolean')EN[k]=j[k];});}catch(e){}
 if(!Object.values(EN).some(Boolean))Object.assign(EN,EN_DEF);
 let backStep=1;
-const SETDESC={worker:'Приватна компанія (ТОВ), офіційна зарплата',fop:'ФОП 2 група, без найманих працівників',civil:'Вчитель, лікар, військовий, держслужбовець',owner:'Власник ТОВ, створює робочі місця',deputy:'Депутат Верховної Ради'};
+const SETDESC={worker:'Приватна компанія (ТОВ), офіційна зарплата',fop:'ФОП 2 група, без найманих працівників',civil:'Вчитель, лікар, військовий, держслужбовець',owner:'Власник ТОВ, створює робочі місця',deputy:'Депутат Верховної Ради',nomad:'ТОВ учасників: працівник і співвласник, кампус за містом і автопарк на балансі компанії'};
 function ensurePath(){if(!EN[S.path]){const f=Object.keys(PATHS).find(k=>EN[k]);if(f){S.path=f;setPathDefaults(f);}}}
 function contractBlk(p,ul){
  return '<div class="ib"><h3>Контракт найманого працівника</h3>'+ul([
@@ -824,6 +1145,40 @@ function contractBlk(p,ul){
   'Залишок працівник отримує на руки.'
  ])+'</div>';
 }
+function nhModelItems(p){
+ const D=PR0,u=v=>'$'+fm(v),cs=CAMP.map(x=>x.name.toLowerCase()+' '+u(x.usd)+(x.id===D.camp?' (за замовчуванням)':'')).join(', ');
+ const st=PRST.map(x=>x.t+(x.id==='life'?' (за замовчуванням)':'')).join(', ');
+ return [
+  'Форма власності: NomadHub — ТОВ на загальній системі оподаткування (ПДВ '+p(T.vat)+', податок на прибуток '+p(T.profit)+'). Кожен учасник працевлаштований у ТОВ за трудовим договором і водночас є його співвласником. ФОП не використовуються, дивіденди не виплачуються.',
+  'Сторінка NomadHub порівнює два сценарії однієї людини на однаковому горизонті: найманий працівник у місті й учасник NomadHub, який створює стільки ж чистого прибутку.',
+  'Найманий працівник: '+Object.values(CITY).map(c=>c.name+' (зарплата до '+fm(c.wMax)+' грн, оренда '+fm(c.rent)+' грн)').join(', ')+'. Контракт 50/50, зарплата на руки після оренди ділиться на життя й на мету (житло, авто), накопичення без кредиту.',
+  'Фонд зарплати — повна витрата компанії: нарахована зарплата + ЄСВ '+p(T.esvEmp)+'. З нарахованої утримуються ПДФО '+p(T.pdfo)+' і ВЗ '+p(T.vz)+'. Так рахуються обидва сценарії.',
+  'Зарплата учасника на руки фіксована: на життя стільки ж, скільки в найманого працівника, плюс оренда кампусу.',
+  'Прибуток після ПДВ і фонду зарплати щомісяця ділиться за стратегією бізнес фонд / соцпакет / будівництво / нові резиденти: '+st+', або повзунками вручну.',
+  'Соцпакет: неперсоніфіковані обіди, медицина, страхування, спортзал за рахунок компанії. Витрачається в тому ж місяці, зменшує податок на прибуток, ПДВ з покупок у кредит не йде. Соцпакет входить у рівень життя учасника.',
+  'Кампус за містом. Компанія будує житло й здає учасникам з ПДВ: оренда 8% вартості на рік (1/150 на місяць), учасник платить її із зарплати.',
+  'Бізнес фонд: дохідність — припущення 1% на місяць (12% річних), можна задати 12–30%. Дохід фонду щомісяця ділиться за тією ж стратегією; з частин на будівництво й нових резидентів сплачується податок на прибуток '+p(T.profit)+'.',
+  'Житло й авто купуються з ПДВ, ПДВ іде в податковий кредит. Для податку на прибуток амортизація за '+NOMAD.depInfraY+' років.',
+  'У капіталі житло й будівництво рахуються за ринковою вартістю: ремонт і техніка (30% вартості) знецінюються за 25 років, решта 70% зберігає вартість.',
+  'Авто (1/4 у кожному пакеті) знецінюється на 7% на рік; через '+NOMAD.depCarY+' років його продають за 30% ціни, решту на нове дає інфраструктура.',
+  'Нові резиденти: вхід безкоштовний, громада інвестує в учасника пакет: '+cs+'; у кожному пакеті 1/4 авто. Новий учасник додається, коли у фонді «Нові резиденти» накопичується сума пакета.',
+  'Засновники — стартові учасники ('+D.start+' за замовчуванням, 1–100). Кожен вкладає вартість обраного пакета. Вклад безвідсотковий і повертається засновникам з фонду «Нові резиденти» раніше, ніж приймаються нові учасники.',
+  'Максимум учасників '+D.mx+' (10–500); коли його досягнуто, фонд «Нові резиденти» йде в бізнес фонд.',
+  'Додаткові проекти (вимкнені за замовчуванням): учасники віддають 1–50% робочого часу ('+D.ps+'% за замовчуванням), основний прибуток зменшується на ту ж частку. Кожні '+fm(PJ_H)+' трудогодин (1 учасник = '+PJ_MH+' годин на місяць) запускають проект з прибутком $500–10 000 на місяць ($'+fm(D.fa)+' за замовчуванням), який діє 5–10 років ('+D.pl+' за замовчуванням). Прибуток проектів ділиться за стратегією.',
+  'Капітал спільноти: бізнес фонд + ринкова вартість житла, будівництва й авто + ПДВ-кредит + фонд «Нові резиденти» − неповернутий вклад засновників.',
+  'Частка засновника: внесок прибутку за місяць ділиться порівну між усіма учасниками, дохід капіталу (дохідність фонду, знецінення) пропорційно частці.',
+  'Вихід: житло, авто й соцпакет лишаються громаді. Учасник отримує лише викуп частки й сам несе всі супутні податки: податок на прибуток '+p(T.profit)+' з доходу бізнесу, далі ПДФО '+p(T.pdfo)+' + ВЗ '+p(T.vz)+' з виплати.',
+  'Рівень життя: найманий — зарплата на руки після оренди й мети; учасник — зарплата на руки після оренди кампусу плюс соцпакет на одного.',
+  'Суми в доларах рахуються за курсом з «Налаштувань» ('+NH_RATE+' грн за $).'
+ ];
+}
+function modelText(){
+ const b=$('modelBox');let t='Опис моделі гри «Шлях героя» (юніт економіка громадянина 2026). Суми в гривнях на місяць, якщо не вказано інше.\n';
+ b.querySelectorAll('.ib').forEach(x=>{const h=x.querySelector('h3');t+='\n## '+(h?h.textContent:'')+'\n';x.querySelectorAll('li').forEach(li=>{t+='- '+li.textContent.replace(/\s+/g,' ').trim()+'\n';});});
+ t+='\n## Поточні параметри сторінки NomadHub\n- місто '+((CITY[PR.city]||{}).name||PR.city)+', житло '+((FLATS.find(f=>f.id===PR.flat)||{}).name||PR.flat)+', авто '+((CARS.find(c=>c.id===PR.car)||{}).name||PR.car)+'\n- зарплата найманого '+fm(PR.wN)+' грн, на життя / на мету '+PR.ls+'% / '+(100-PR.ls)+'%\n- стратегія бізнес фонд '+PR.b+'%, побут '+PR.u+'%, інфраструктура '+(100-PR.b-PR.u-PR.nr)+'%, нові резиденти '+PR.nr+'%\n- дохідність бізнес фонду '+PR.yld+'% річних, пакет '+((CAMP.find(x=>x.id===PR.camp)||{}).name||PR.camp)+', на старті '+PR.start+', максимум '+PR.mx+'\n- додаткові проекти '+(PR.pj?'увімкнено: '+PR.ps+'% часу, $'+fm(PR.fa)+'/міс., '+PR.pl+' років':'вимкнено')+'\n';
+ return t;
+}
+async function copyText(t){try{await navigator.clipboard.writeText(t);return true;}catch(e){try{const a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();const ok=document.execCommand('copy');a.remove();return ok;}catch(e2){return false;}}}
 function renderModel(){
  const p=x=>Math.round(x*100)+'%',ul=a=>'<ul>'+a.map(x=>'<li>'+x+'</li>').join('')+'</ul>',blk=(t,a)=>'<div class="ib"><h3>'+t+'</h3>'+ul(a)+'</div>';
  $('modelBox').innerHTML=blk('Реальні податки й ставки 2026',[
@@ -837,11 +1192,249 @@ function renderModel(){
  ])+blk('Спрощення, які суттєво не впливають на кінцевий результат розрахунків',[
   'Ціни, зарплати й ставки не змінюються протягом гри: інфляції та зростання зарплат немає.',
   'Банк завжди схвалює кредит, перший внесок 0%, строк кредиту до пенсії.',
-  'Матеріали й інші витрати бізнесу не враховуються: уся виручка дорівнює створеній цінності.',
+  'Матеріали й інші витрати бізнесу не враховуються: рахується лише чистий прибуток, який створює людина. Ця сума з ПДВ, ПДВ у ній 1/6 (20% зверху ціни).',
   'ПДВ у витратах на життя нараховується на '+DEF.cons+'% витрат.'
- ])+contractBlk(p,ul)+blk('Як знецінюються авто й квартира',depItems())+blk('Умови кредиту',creditItems());
+ ])+contractBlk(p,ul)+blk('Модель NomadHub',nhModelItems(p))+blk('Як знецінюються авто й квартира',depItems())+blk('Умови кредиту',creditItems());
+}
+const CE={city:'kyiv',wN:55000,ls:50,flat:'one',car:'car20',camp:'town',strat:'life',yld:12,start:10,add:10,y:10,Y:30};
+const fmBig=v=>Math.abs(v)>=1e9?(v/1e9).toFixed(1).replace('.',',')+' млрд':Math.abs(v)>=1e6?fmMn(v):fm(Math.round(v));
+let NH_RATE=45;try{const v=+localStorage.getItem('nhRate');if(v>0)NH_RATE=v;}catch(e){}
+const fmU=v=>{const u=Math.abs(v)/NH_RATE;return '$'+(u>=1e6?(u<1e7?(u/1e6).toFixed(1).replace('.',','):fm(Math.round(u/1e6)))+' млн':fm(Math.round(u)));};
+function ceCalc(){
+ const fl=FLATS.find(f=>f.id===CE.flat)||FLATS[1],cr=CARS.find(c=>c.id===CE.car)||CARS[0],sg=STRAT.find(x=>x.id===CE.strat)||STRAT[1];
+ const cy=CITY[CE.city]||CITY.kyiv,TT={...S,city:CE.city,ppm2:cy.ppm2,rentUah:cy.rent,path:'nomad',cmpPath:'worker',flat:fl.id,area:fl.area,car:cr.id,carUsd:cr.usd,cashGoal:0,camp:CE.camp,bizP:sg.b,infraP:sg.i,bizYield:CE.yld,cmpNfix:CE.wN,cmpLife:CE.ls};
+ nomadSync(TT);
+ const NA=TT.chosenN,sim=nomadSim(TT,NA),snap=[null];
+ for(let y=1;y<=CE.Y;y++){for(let m=0;m<12;m++)sim.step();const st=sim.st,A=st.A;
+  snap.push({share:st.biz+st.book+st.infraCash+st.vatPool,biz:st.biz,bizPaid:st.bizPaid,infra:st.book+st.infraCash,vat:st.vatPool,gen:A.gen,tax:A.vatPay+A.wageTax+A.profitTax+A.fTax,vatP:A.vatPay,wT:A.wageTax,pT:A.profitTax+A.fTax,cv:A.cvat,inI:A.infraIn+A.fInfra,dl:A.daily+A.fDaily,dMo:st.fDm||0,place:st.placeM!==null,car:st.carM!==null});}
+ let wY=null,wN=0,wV=0,wL=0,wR=0;try{const cm=nomadCmp(TT);wN=cm.N;wV=cm.V;wL=cm.S.living;wR=rentDue(cm.S);if(cm.pl.reached!=null)wY=cm.pl.reached-1+(cm.pl.reachedMonths||12)/12;}catch(e){}
+ return {TT,NA,snap,wY,wN,wV,wL,wR,camp:campOf(TT),B:nomadBase(TT,NA),house:campPrice(TT),carS:(costs(TT).car>0?carShareP(TT):0),pkg:campPrice(TT)+(costs(TT).car>0?carShareP(TT):0)};
+}
+function renderCE(){
+ const box=$('ceBox');if(!box)return;
+ if(!box._built){
+  const opt=(arr,cur)=>arr.map(x=>'<option value="'+x.id+'"'+(x.id===cur?' selected':'')+'>'+x.name+(x.area?', '+x.area+' м²':'')+'</option>').join('');
+  box.innerHTML='<div class="cesec cegoal"><h3 class="flowh">Мета найманого працівника</h3><div class="cesels cecity"><label>Місто<select id="ceCity">'+Object.entries(CITY).map(([v,cy])=>'<option value="'+v+'"'+(v===CE.city?' selected':'')+'>'+cy.name+' · $'+fm(cy.ppm2)+'/м² · оренда $'+fm(Math.round(cy.rent/NH_RATE))+'</option>').join('')+'</select></label><label>Житло<select id="ceFlat">'+opt(FLATS.filter(f=>!f.rent),CE.flat)+'</select></label><label>Авто<select id="ceCar">'+opt(CARS,CE.car)+'</select></label></div>'+'<div class="prrow prw"><div class="sl"><label>Зарплата працівника на місяць</label><output id="ceWo"></output><input type="range" id="ceW" min="'+Math.ceil(T.mzp*nf()/500)*500+'" max="55000" step="500" value="'+CE.wN+'"></div>'+'<div class="sl"><label>Витрати на життя % / На мету %</label><output id="ceLo"></output><input type="range" id="ceL" min="0" max="100" step="5" value="'+CE.ls+'"></div></div>'+'<div class="sbar prbar" id="ceSb"></div><div class="slg prlg" id="ceSl"></div><p class="cework" id="ceWork"></p></div>'
+   +'<div class="cesec"><h3 class="flowh">Хаб спільноти</h3><div class="grid" id="ceStrat"></div><div class="grid" id="ceCamp"></div>'
+   +'<div class="sl"><label>Дохідність бізнес фонду, % на рік</label><output id="ceYo"></output><input type="range" id="ceYld" min="12" max="30" step="1" value="'+CE.yld+'"></div>'
+   +'<div class="sl"><label>Учасників на старті</label><output id="ceSo"></output><input type="range" id="ceStart" min="1" max="500" step="1" value="'+CE.start+'"></div>'
+   +'<div class="sl"><label>Нових учасників щороку</label><output id="ceAo"></output><input type="range" id="ceAdd" min="0" max="50" step="1" value="'+CE.add+'"></div></div>'
+   +'<div class="cesec"><h3 class="flowh" id="ceYh"></h3><div class="ceyr"><input type="range" id="ceYr" min="1" max="'+CE.Y+'" step="1" value="'+CE.y+'"><div class="ceticks" id="ceTicks"></div></div><div id="ceTbl"></div></div>';
+  const ch=(id,list,key,val)=>{const g=$(id);g.innerHTML='';list.forEach(x=>{const b=document.createElement('button');b.type='button';b.className='choice';b.dataset.v=x.id;b.innerHTML='<b></b><span></span>';b.querySelector('b').textContent=x.t;b.querySelector('span').textContent=x.d;b.onclick=()=>{CE[key]=x.id;g.querySelectorAll('.choice').forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.v===CE[key])));ceUpd(true);};b.setAttribute('aria-pressed',String(x.id===CE[key]));g.appendChild(b);});};
+  ch('ceStrat',STRAT.map(x=>({id:x.id,t:x.t.replace('Стратегія ','')+' '+x.b+'/'+(100-x.b-x.i)+'/'+x.i,d:'Бізнес '+x.b+'%, побут '+(100-x.b-x.i)+'%, інфраструктура '+x.i+'%'})),'strat');
+  ch('ceCamp',CAMP.map(x=>({id:x.id,t:x.name,d:'Інвестиція хабу $'+fm(x.usd)})),'camp');
+  $('ceCity').onchange=e=>{CE.city=e.target.value;const wm=(CITY[CE.city]||CITY.kyiv).wMax;CE.wN=wm;const ws=$('ceW');ws.value=wm;CEC=ceCalc();ceSyncY();ceUpd(false);};
+  $('ceFlat').onchange=e=>{CE.flat=e.target.value;CEC=ceCalc();ceSyncY();ceUpd(false);};
+  $('ceCar').onchange=e=>{CE.car=e.target.value;CEC=ceCalc();ceSyncY();ceUpd(false);};
+  $('ceW').oninput=e=>{CE.wN=+e.target.value;CEC=ceCalc();ceSyncY();ceUpd(false);};
+  $('ceL').oninput=e=>{CE.ls=+e.target.value;CEC=ceCalc();ceSyncY();ceUpd(false);};
+  box._built=1;CEC=ceCalc();ceSyncY();
+  $('ceYld').oninput=e=>{CE.yld=+e.target.value;ceUpd(true);};
+  $('ceAdd').oninput=e=>{CE.add=+e.target.value;ceUpd(false);};
+  $('ceStart').oninput=e=>{CE.start=+e.target.value;ceUpd(false);};
+  $('ceYr').oninput=e=>{CE.y=+e.target.value;ceUpd(false);};
+  $('ceTicks').onclick=e=>{const t=e.target.closest('[data-y]');if(!t)return;CE.y=+t.dataset.y;$('ceYr').value=CE.y;ceUpd(false);};
+  box._built=true;
+ }
+ ceUpd(true);
+}
+let CEC=null;
+function ceSyncY(){if(!CEC)return;const w=CEC.wY;CE.y=Math.min(CE.Y,Math.max(1,w!=null?Math.ceil(w):CE.Y));const e=$('ceYr');if(e)e.value=CE.y;}
+function ceUpd(re){
+ if(re||!CEC)CEC=ceCalc();
+ const c=CEC,y=CE.y,A=CE.add,S0=CE.start,N=S0+A*(y-1),sn=c.snap,wt=t=>(t===y?S0:0)+(t<y?A:0);
+ $('ceYo').textContent=CE.yld+'%';$('ceAo').textContent=CE.add;$('ceSo').textContent=CE.start;
+ $('ceWo').textContent=fmU(c.wN);{const gl=Math.max(0,c.wN-c.wR-c.wL),tot=Math.max(1,c.wL+c.wR+gl),sg=[['Оренда',c.wR,'#8a6d3b'],['Витрати на життя',c.wL,'#e3a62a'],['На мету',gl,'#2f9e77']];$('ceSb').innerHTML=sg.map(x=>'<i style="width:'+(x[1]/tot*100).toFixed(2)+'%;background:'+x[2]+'"></i>').join('');$('ceSl').innerHTML=sg.map(x=>'<div><em><i class="sw" style="background:'+x[2]+'"></i>'+x[0]+' <b class="prpc">'+fmU(x[1])+'</b></em></div>').join('');}$('ceLo').textContent=CE.ls+'% / '+(100-CE.ls)+'%';{const gp='без кредиту';$('ceWork').innerHTML='Працівник щомісяця генерує <b>'+fmU(Math.round(c.wV))+'</b> прибутку для системи. Витрати на життя <b>'+fmU(c.wL)+'</b>.<br>'+(c.wY!=null?'Накопичить на мету без кредиту у віці <b>'+Math.ceil(S.startAge+c.wY)+'</b> за '+yrs(Math.ceil(c.wY)).replace(/^(\d+)/,'<b>$1</b>')+'.':'Не накопичить на цю мету без кредиту до '+RETIRE+' років.');}
+ $('ceYh').textContent='Через '+yrs(y)+': твоя частка '+fmU(sn[y].share);
+ const T5=[];for(let k=5;k<=CE.Y;k+=5)T5.push(k);
+ $('ceTicks').innerHTML=T5.map(k=>{const f=(k-1)/(CE.Y-1);return '<button type="button" class="cetk'+(k===y?' on':'')+(k===CE.Y?' last':'')+'" data-y="'+k+'" style="left:calc('+(f*100).toFixed(2)+'% + '+(8-16*f).toFixed(1)+'px)"><b>'+k+' р.</b><span>'+fmU(sn[k].share)+'</span></button>';}).join('');
+ let gen=0,tax=0,biz=0,infra=0,vat=0,cap=0,pl=0,cr=0,vatP=0,wT=0,pT=0,cv=0,inI=0,dl=0;
+ for(let t=1;t<=y;t++){const z=sn[t],w=wt(t);gen+=z.gen*w;tax+=z.tax*w;vatP+=z.vatP*w;wT+=z.wT*w;pT+=z.pT*w;cv+=z.cv*w;inI+=z.inI*w;dl+=z.dl*w;biz+=z.biz*w;infra+=z.infra*w;vat+=z.vat*w;cap+=z.share*w;if(z.place)pl+=w;if(z.car)cr+=w;}
+ let wk=0;if(c.wY!=null)for(let t=Math.ceil(c.wY);t<=y;t++)wk+=wt(t);const o=nomadOut({bizCash:sn[y].biz,bizPaid:sn[y].bizPaid,share:sn[y].share});
+ const row=(k,v,cl)=>'<div class="line'+(cl?' '+cl:'')+'"><span>'+k+'</span><b>'+v+'</b></div>';
+ const blk=(k,cl,t,sum,body,sc)=>'<details class="ceblk '+cl+'" data-ck="'+k+'"'+(CEO[k]===true?' open':'')+'><summary><h4>'+t+'</h4><b'+(sc?' class="'+sc+'"':'')+'>'+sum+'</b></summary>'+body+'</details>';
+ const B=c.B,liv=Math.max(0,c.NA-B.rent);
+ let ren=0;for(let t=1;t<=y;t++)ren+=wt(t)*Math.floor((t*12-1)/(NOMAD.depCarY*12));
+ const hs=N*c.house,cs=(N+ren)*c.carS,left=inI-hs-cs,neg=left<0,nm=c.camp.name.toLowerCase();
+ $('ceTbl').innerHTML=
+  blk('me','celife','Персонально: через '+yrs(y),fmU(sn[y].share),
+    row('Твоя частка з першого року',fmU(sn[y].share),'tt')
+   +row('На руки при виході',fmU(o.co))
+   +'<h5>На місяць</h5>'
+   +row('Зарплата на руки',fmU(c.NA))
+   +row('Оренда кампусу','− '+fmU(B.rent))
+   +row('На життя',fmU(liv))
+   +row('Корпоративний побут (їжа й побут) на одного','+ '+fmU(Math.round(B.D+sn[y].dMo)))
+   +(sn[y].dMo>0.5?'<small>З них з прибутку від роботи '+fmU(Math.round(B.D))+', з доходу бізнес фонду '+fmU(Math.round(sn[y].dMo))+'.</small>':'')
+   +row('Разом на життя учасника',fmU(Math.round(liv+B.D+sn[y].dMo)),'tt'))
+ +blk('com','cecom','Спільнота на '+y+'-й рік<small class="cesub">'+fm(N)+' учасників ('+S0+' на старті, +'+A+' щороку)</small>',fmU(cap),
+    row('Створено прибутку',fmU(gen))
+   +row('Бізнес фонд',fmU(biz))
+   +row('Інфраструктура, залишкова вартість',fmU(infra+vat))
+   +row('Капітал спільноти',fmU(cap),'tt')
+   +row('Середня частка учасника',fmU(cap/N))
+   +'<small>За '+yrs(y)+' на побут усіх учасників витрачено '+fmU(dl)+'.</small>')
+ +blk('inf','ceinf','Інфраструктура за '+yrs(y),(neg?'не вистачає ':'')+fmU(Math.abs(left)),
+    row('Усього інвестовано',fmU(inI))
+   +row('Житло учасників: '+fm(N)+' × '+nm,(neg?'− ':'')+fmU(hs))
+   +(c.carS>0?row('Авто: 1/'+c.camp.k+' на учасника, оновлення раз на '+NOMAD.depCarY+' років ('+fm(Math.ceil(N/c.camp.k))+' в автопарку)',(neg?'− ':'')+fmU(cs)):'')
+   +row(neg?'Не вистачає':'Залишок на спільну інфраструктуру',(neg?'− ':'')+fmU(Math.abs(left)),neg?'tt neg':'tt')
+   +row('У звичайному житті мали б житло й авто',fm(wk)+' з '+fm(N)+' людей')
+   +'<small>'+(neg?'Потрібен стартовий капітал щонайменше '+fmU(-left)+'.':'Цього вистачить ще на стільки пакетів «'+c.camp.name+'»: '+fm(Math.floor(left/c.pkg))+'.')+' Залишкова вартість інфраструктури з урахуванням амортизації: '+fmU(infra+vat)+'.</small>',neg?'neg':'')
+ +blk('tax','cetax','Податки державі за '+yrs(y),fmU(vatP+wT+pT+cv),
+    row('ПДВ',fmU(vatP))+row('Податки із зарплат (ПДФО, ВЗ, ЄСВ)',fmU(wT))+row('Податок на прибуток',fmU(pT))+(cv>0.5?row('ПДВ у покупках на життя',fmU(cv)):'')+row('Разом',fmU(vatP+wT+pT+cv),'tt'));
+}
+const CEO={};document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.dataset&&d.dataset.ck)CEO[d.dataset.ck]=d.open;},true);
+const PR={mx:250,city:'kyiv',wN:55000,ls:50,pj:false,ps:25,fa:2000,pl:7,flat:'one',car:'car20',camp:'room',b:50,u:20,nr:15,yld:12,start:10,y:10,Y:30};const PR0={...PR},PRDEF={goal:['city','flat','car','wN','ls'],str:['b','u','nr'],nr:['camp','start','mx'],biz:['yld','pj','ps','fa','pl']};
+const PRL={M:1,share:1,life:1,pj:1};const PJ_H=10000,PJ_MH=168;const PRST=[{id:'down',t:'Дауншифтинг 20/30/35/15',b:20,u:30,nr:15,d:'Більше на соцпакет і спільну інфраструктуру, громада росте спокійно.'},{id:'life',t:'Лайфстайл 50/20/15/15',b:50,u:20,nr:15,d:'Баланс: капітал, рівень життя і зростання громади.'},{id:'fire',t:'FIRE 80/10/4/6',b:80,u:10,nr:6,d:'Максимум у бізнес фонд: найбільша частка, мінімум соцпакету, громада росте повільніше.'}];const PRC=['#8e5bd1','#c9a227','#6c8ea4','#86d9a8'];
+function prBase(){
+ const fl=FLATS.find(f=>f.id===PR.flat)||FLATS[1],cr=CARS.find(c=>c.id===PR.car)||CARS[0],iP=100-PR.b-PR.u;
+ const cy=CITY[PR.city]||CITY.kyiv,TT={...S,city:PR.city,ppm2:cy.ppm2,rentUah:cy.rent,path:'nomad',cmpPath:'worker',flat:fl.id,area:fl.area,car:cr.id,carUsd:cr.usd,cashGoal:0,camp:PR.camp,bizP:PR.b,infraP:iP,bizYield:PR.yld,cmpNfix:PR.wN,cmpLife:PR.ls};
+ nomadSync(TT);const NA=TT.chosenN,B=nomadBase(TT,NA);
+ let wY=null,wN=0,wV=0,wL=0,wR=0;try{const cm=nomadCmp(TT);wN=cm.N;wV=cm.V;wL=cm.S.living;wR=rentDue(cm.S);if(cm.pl.reached!=null)wY=cm.pl.reached-1+(cm.pl.reachedMonths||12)/12;}catch(e){}
+ const carS=costs(TT).car>0?carShareP(TT):0,house=campPrice(TT);
+ return {TT,NA,B,wY,wN,wV,wL,wR,house,carS,pkg:house+carS,camp:campOf(TT),iP};
+}
+function prSim(){
+ const c=prBase(),pk=PR.pj?PR.ps/100:0,B=pk>0?nomadBase({...c.TT,chosenV:c.TT.chosenV*(1-pk)},c.NA):c.B,vk=vkOf(),yM=PR.yld/1200,L=NOMAD.depInfraY*12,u=PR.u/100,ii=c.iP/100,fn=c.iP>0?PR.nr/c.iP:0,fb=1-fn;
+ const HC=[],CC=[];let ret=0,mkP=0;
+ let t=0,M=PR.start,F=0,Fpaid=0,book=0,depSum=0,vatPool=0,loss=0,nrPool=0,debt=PR.start*c.pkg,startPaidM=debt>0?null:0,fDm=0,Pn=0,Hs=0,Pt=0,Pf=0;const pjL=[];
+ const exp={},join={0:PR.start},A={gen:0,vatPay:0,wageTax:0,profitTax:0,cvat:0,daily:0,inf:0,bld:0,renew:0,nrIn:0,newM:0,newCost:0,def:0,fr:0,nrF:0,sold:0};
+ const buy=x=>{if(!(x>0))return;vatPool+=x*vk;const net=x*(1-vk),d=net/L;book+=net;depSum+=d;exp[t+L]=(exp[t+L]||0)+d;};
+ buy(debt);HC.push([0,PR.start*c.house]);CC.push([0,PR.start*c.carS]);
+ const mk=()=>{let v=0;for(const h of HC)v+=h[1]*(0.7+0.3*Math.max(0,1-(t-h[0])/300));for(const q of CC)v+=q[1]*(1-0.07*((t-q[0])%L)/12);return v*(1-vk);};mkP=mk();
+ const snap=[{M,cap:0,share:0,F:0,book:book,mkt:mkP,ret:0,debt,nrPool:0,A:{...A},fDm:0,join:{...join},Pn:0}];
+ for(t=1;t<=PR.Y*12;t++){
+  const cap0=F+mkP+nrPool+vatPool-debt,M0=M;
+  const dep=depSum;book=Math.max(0,book-dep);if(exp[t]){depSum=Math.max(0,depSum-exp[t]);delete exp[t];}
+  let vatDue=M*(B.vatOut+B.rentVat);const use=Math.min(vatPool,vatDue);vatPool-=use;vatDue-=use;
+  let base=M*(B.P-B.D+B.rentNet)-dep;if(base<0){loss-=base;base=0;}else{const q=Math.min(loss,base);loss-=q;base-=q;}
+  const pt=base*T.profit,fcf=M*(B.V+B.rent)-vatDue-M*B.fund-M*B.D-pt;
+  const inB=Math.min(M*B.biz,Math.max(0,fcf-use))+Math.min(use,Math.max(0,fcf)),inI=Math.max(0,fcf-inB);
+  const fY=F*yM,fD=fY*u,fI=fY*ii*(1-T.profit),fT=fY*ii*T.profit;
+  while(pjL.length&&t-pjL[0]>PR.pl*12){pjL.shift();}Pn=pjL.length;
+  const Fr=Pn*PR.fa*NH_RATE,bb=PR.b/100,frD=Fr*u,frB=Fr*bb*(1-T.profit),frI=Fr*ii*(1-T.profit),frT=Fr*(bb+ii)*T.profit;
+  F=F+fY*(1-u-ii)+inB+frB;Fpaid+=inB+frB;fDm=fD+frD;
+  const I=inI+fI+frI,toB=I*fb,toN=I*fn;
+  let ren=0;for(let k=1;t-k*L>=0;k++)ren+=join[t-k*L]||0;const rc=ren*c.carS,rcN=rc*0.7,bd=Math.max(0,toB-rcN);
+  buy(bd+rc);if(bd>0)HC.push([t,bd]);A.bld+=bd;A.renew+=rcN;A.sold+=rc-rcN;if(rcN>toB)A.def+=rcN-toB;
+  nrPool+=toN;A.nrIn+=toN;
+  if(debt>0.5){const x=Math.min(debt,nrPool);debt-=x;nrPool-=x;ret+=x;if(debt<=0.5){debt=0;if(startPaidM===null)startPaidM=t;}}
+  let nw=0;const cap=Math.max(PR.mx,PR.start);if(debt<=0.5&&c.pkg>0)while(nrPool>=c.pkg&&M+nw<cap){nrPool-=c.pkg;buy(c.pkg);nw++;}if(nw){HC.push([t,nw*c.house]);CC.push([t,nw*c.carS]);}
+  if(debt<=0.5&&M+nw>=cap&&nrPool>0){F+=nrPool;Fpaid+=nrPool;A.nrF+=nrPool;nrPool=0;}
+  A.gen+=M*B.V;A.vatPay+=vatDue;A.wageTax+=M*B.wageTax;A.profitTax+=pt+fT+frT;A.daily+=M*B.D+fD+frD;A.fr+=Fr;A.inf+=I;A.cvat+=M*Math.min(c.TT.living||0,Math.max(0,c.NA-B.rent))*(c.TT.cons||0)/100*vk;
+  if(pk>0){Hs+=M*PJ_MH*pk;while(Hs>=PJ_H){Hs-=PJ_H;pjL.push(t);Pt++;}}
+  if(nw){M+=nw;join[t]=nw;A.newM+=nw;A.newCost+=nw*c.pkg;}
+  {const mkV=mk();mkP=mkV;const cap1=F+mkV+nrPool+vatPool-debt,lin=inB+inI+frB+frI,rest=cap1-cap0-lin;Pf=cap0>1?Pf*(1+rest/cap0)+lin/M0:Pf+(cap1-cap0)/M0;}
+  if(t%12===0){const cap=F+mkP+nrPool+vatPool-debt;snap.push({M,cap,share:Pf,avg:cap/M,F,Fpaid,book,mkt:mkP,ret,vatPool,debt,nrPool,A:{...A},fDm,join:{...join},Pn:pjL.length,Pt});}
+ }
+ return {c,B,snap,startPaidM};
+}
+let PRS=null;
+function nhFromGame(){
+ if(CITY[S.city])PR.city=S.city;
+ if(S.flat&&S.flat!=='rent'&&FLATS.some(f=>f.id===S.flat))PR.flat=S.flat;
+ if(CARS.some(c=>c.id===S.car))PR.car=S.car;
+ PR.ls=Math.min(100,Math.max(0,Math.round((S.lifeShare||50)/5)*5));
+ PR.wN=(CITY[PR.city]||CITY.kyiv).wMax;
+ if(S.bizYield>=12&&S.bizYield<=30)PR.yld=Math.round(S.bizYield);
+ const bx=$('prBox');if(bx)bx._built=false;PRS=null;
+ go(9);
+}
+function prSyncY(){if(!PRS)return;const w=PRS.c.wY;PR.y=Math.min(PR.Y,Math.max(1,w!=null?Math.ceil(w):PR.Y));const e=$('prYr');if(e)e.value=PR.y;}
+function renderPR(){
+ const box=$('prBox');if(!box)return;
+ if(!box._built){
+  const opt=(arr,cur)=>arr.map(x=>'<option value="'+x.id+'"'+(x.id===cur?' selected':'')+'>'+x.name+(x.area?', '+x.area+' м²':'')+'</option>').join('');
+  const sl=(id,t,min,max,v)=>'<div class="sl"><label>'+t+'</label><output id="'+id+'o"></output><input type="range" id="'+id+'" min="'+min+'" max="'+max+'" step="1" value="'+v+'"></div>';
+  box.innerHTML='<div class="cesec cegoal"><div class="prhd"><h3 class="flowh">Мета найманого працівника</h3><button type="button" class="prdef" data-def="goal">за замовчуванням</button></div><div class="cesels cecity"><label>Місто<select id="prCity">'+Object.entries(CITY).map(([v,cy])=>'<option value="'+v+'"'+(v===PR.city?' selected':'')+'>'+cy.name+' · $'+fm(cy.ppm2)+'/м² · оренда $'+fm(Math.round(cy.rent/NH_RATE))+'</option>').join('')+'</select></label><label>Житло<select id="prFlat">'+opt(FLATS.filter(f=>!f.rent),PR.flat)+'</select></label><label>Авто<select id="prCar">'+opt(CARS,PR.car)+'</select></label></div>'+'<div class="prrow prw"><div class="sl"><label>Зарплата працівника на місяць</label><output id="prWo"></output><input type="range" id="prW" min="'+Math.ceil(T.mzp*nf()/500)*500+'" max="55000" step="500" value="'+PR.wN+'"></div>'+'<div class="sl"><label>Витрати на життя % / На мету %</label><output id="prLo"></output><input type="range" id="prL" min="0" max="100" step="5" value="'+PR.ls+'"></div></div>'+'<div class="sbar prbar" id="prSb"></div><div class="slg prlg" id="prSl"></div><p class="cework" id="prWork"></p></div>'
+   +'<div class="prvs"><span>Альтернативний сценарій NomadHub</span></div><div class="cesec cegoal"><div class="prhd"><h3 class="flowh">Стратегія хабу — розподіл прибутку</h3><button type="button" class="prdef" data-def="str">за замовчуванням</button></div><div class="cesels prstr"><select id="prSt" aria-label="Стратегія хабу">'+PRST.map(x=>'<option value="'+x.id+'">'+x.t+'</option>').join('')+'<option value="own">Своя (повзунки вручну)</option></select><small class="prnote" id="prStD"></small></div><div class="sbar prbar" id="prBar"></div><div class="slg prlg" id="prLg"></div>'
+   +'<div class="prsls">'+sl('prB','Бізнес фонд, '+PR.yld+'% річних',0,100,PR.b)+sl('prU','Соцпакет, %',0,100,PR.u)+sl('prN','Інфраструктура: нові резиденти, %',0,100,PR.nr)+'</div>'
+   +'</div>'
+   +'<div class="cesec cegoal"><div class="prhd"><h3 class="flowh">Нові резиденти</h3><button type="button" class="prdef" data-def="nr">за замовчуванням</button></div><div class="grid" id="prCamp"></div>'+'<div class="prrow">'+sl('prS','Учасників на старті',1,100,PR.start)+sl('prMx','Максимум учасників',10,500,PR.mx)+'</div><small class="prnote" id="prNrN"></small></div>'
+   +'<div class="cesec cegoal"><div class="prhd"><h3 class="flowh">Бізнес хабу</h3><button type="button" class="prdef" data-def="biz">за замовчуванням</button></div>'+sl('prY','Дохідність бізнес фонду, % річних',12,30,PR.yld)+'<label class="prchk"><input type="checkbox" id="prPj"'+(PR.pj?' checked':'')+'> Проекти, що приносять додатковий прибуток, але потребують на запуск 10&nbsp;000 трудогодин</label><div class="prrow prrow3" id="prPjBox">'+sl('prFn','Трудогодин на нові проекти, %',1,50,PR.ps)+'<div class="sl"><label>Прибуток проекту / міс.</label><output id="prFao"></output><input type="range" id="prFa" min="500" max="10000" step="500" value="'+PR.fa+'"></div>'+sl('prPl','Актуальність, років',5,10,PR.pl)+'</div><small class="prnote" id="prFr"></small></div>'
+   +'<div class="cesec"><h3 class="flowh" id="prYh"></h3><div class="ceyr"><input type="range" id="prYr" min="1" max="'+PR.Y+'" step="1" value="'+PR.y+'"><div class="ceticks" id="prTicks"></div></div><details class="prdet"><summary>Таблиці</summary><div id="prTbl"></div></details></div>';
+  const g=$('prCamp');CAMP.forEach(x=>{const b=document.createElement('button');b.type='button';b.className='choice';b.dataset.v=x.id;b.innerHTML='<b></b><span></span>';b.querySelector('b').textContent=x.name;b.querySelector('span').textContent='Інвестиція в резидента $'+fm(x.usd);b.setAttribute('aria-pressed',String(x.id===PR.camp));b.onclick=()=>{PR.camp=x.id;g.querySelectorAll('.choice').forEach(q=>q.setAttribute('aria-pressed',String(q.dataset.v===PR.camp)));prUpd(true);};g.appendChild(b);});
+  const pct=(id,k)=>{$(id).oninput=e=>{let v=+e.target.value;const other=(k==='b'?PR.u+PR.nr:k==='u'?PR.b+PR.nr:PR.b+PR.u);if(v+other>100){v=100-other;e.target.value=v;}PR[k]=v;prUpd(true);};};
+  pct('prB','b');pct('prU','u');pct('prN','nr');
+  $('prSt').onchange=e=>{const x=PRST.find(q=>q.id===e.target.value);if(!x)return;PR.b=x.b;PR.u=x.u;PR.nr=x.nr;$('prB').value=x.b;$('prU').value=x.u;$('prN').value=x.nr;prUpd(true);};
+  $('prY').oninput=e=>{PR.yld=+e.target.value;prUpd(true);};
+  $('prS').oninput=e=>{PR.start=+e.target.value;prUpd(true);};
+  $('prMx').oninput=e=>{PR.mx=+e.target.value;prUpd(true);};
+  $('prPj').onchange=e=>{PR.pj=e.target.checked;prUpd(true);};
+  $('prFn').oninput=e=>{PR.ps=+e.target.value;prUpd(true);};
+  $('prFa').oninput=e=>{PR.fa=+e.target.value;prUpd(true);};
+  $('prPl').oninput=e=>{PR.pl=+e.target.value;prUpd(true);};
+  $('prCity').onchange=e=>{PR.city=e.target.value;const wm=(CITY[PR.city]||CITY.kyiv).wMax;PR.wN=wm;const ws=$('prW');ws.value=wm;PRS=prSim();prSyncY();prUpd(false);};
+  $('prFlat').onchange=e=>{PR.flat=e.target.value;PRS=prSim();prSyncY();prUpd(false);};
+  $('prCar').onchange=e=>{PR.car=e.target.value;PRS=prSim();prSyncY();prUpd(false);};
+  $('prW').oninput=e=>{PR.wN=+e.target.value;PRS=prSim();prSyncY();prUpd(false);};
+  $('prL').oninput=e=>{PR.ls=+e.target.value;PRS=prSim();prSyncY();prUpd(false);};
+  $('prYr').oninput=e=>{PR.y=+e.target.value;prUpd(false);};
+  $('prTicks').onclick=e=>{const t=e.target.closest('[data-y]');if(!t)return;PR.y=+t.dataset.y;$('prYr').value=PR.y;prUpd(false);};
+  if(!window._prTipDoc){window._prTipDoc=1;document.addEventListener('click',e=>{const b=e.target.closest('.prinf'),c=b&&b.closest('.pri'),on=c&&!c.classList.contains('tip');document.querySelectorAll('.pri.tip').forEach(q=>q.classList.remove('tip'));if(on)c.classList.add('tip');});}
+  box.querySelectorAll('[data-def]').forEach(b=>b.onclick=()=>{PRDEF[b.dataset.def].forEach(k=>PR[k]=PR0[k]);box._built=false;PRS=null;renderPR();});
+  box._built=true;PRS=prSim();prSyncY();
+ }
+ prUpd(true);
+}
+function prUpd(re){
+ if(re||!PRS)PRS=prSim();
+ const R=PRS,c=R.c,B=R.B||c.B,y=PR.y,sn=R.snap,z=sn[y],A=z.A,bl=c.iP-PR.nr;
+ {const x=PRST.find(q=>q.b===PR.b&&q.u===PR.u&&q.nr===PR.nr);$('prSt').value=x?x.id:'own';$('prStD').textContent=x?x.d:'Повзунки виставлено вручну. Обери стратегію, щоб повернути її значення.';}$('prBo').textContent=PR.b+'%';{const lb=$('prB').parentElement.querySelector('label');if(lb)lb.textContent='Бізнес фонд, '+PR.yld+'% річних';}$('prUo').textContent=PR.u+'%';$('prNo').textContent=PR.nr+'%';$('prYo').textContent=PR.yld+'%';$('prSo').textContent=PR.start;$('prFno').textContent=PR.ps+'%';$('prPlo').textContent=PR.pl;$('prSo').textContent=PR.start;$('prMxo').textContent=Math.max(PR.mx,PR.start);$('prNrN').textContent='Новий учасник додається, коли у фонді «Нові резиденти» накопичується $'+fm(c.camp.usd)+'. Зараз це '+PR.nr+'% прибутку хабу.';$('prFao').textContent='$'+fm(PR.fa);$('prPjBox').hidden=!PR.pj;{const h0=Math.round(PR.start*PJ_MH*PR.ps/100);$('prFr').textContent=PR.pj?'Один проект потребує '+fm(PJ_H)+' трудогодин (1 учасник = 8 годин на день, '+PJ_MH+' на місяць).':'';}
+ const segs=[['Бізнес фонд',PR.b,B.biz],['Соцпакет',PR.u,B.D],['Будівництво',bl,c.iP>0?B.infra*bl/c.iP:0],['Нові резиденти',PR.nr,c.iP>0?B.infra*PR.nr/c.iP:0]];
+ $('prBar').innerHTML=segs.map((x,k)=>'<i style="width:'+x[1]+'%;background:'+PRC[k]+'"></i>').join('');
+ $('prLg').innerHTML=segs.map((x,k)=>'<div><em><i class="sw" style="background:'+PRC[k]+'"></i>'+x[0]+' <b class="prpc">'+x[1]+'%</b></em></div>').join('');
+
+ $('prWo').textContent=fmU(c.wN);{const gl=Math.max(0,c.wN-c.wR-c.wL),tot=Math.max(1,c.wL+c.wR+gl),sg=[['Оренда',c.wR,'#8a6d3b'],['Витрати на життя',c.wL,'#e3a62a'],['На мету',gl,'#2f9e77']];$('prSb').innerHTML=sg.map(x=>'<i style="width:'+(x[1]/tot*100).toFixed(2)+'%;background:'+x[2]+'"></i>').join('');$('prSl').innerHTML=sg.map(x=>'<div><em><i class="sw" style="background:'+x[2]+'"></i>'+x[0]+' <b class="prpc">'+fmU(x[1])+'</b></em></div>').join('');}$('prLo').textContent=PR.ls+'% / '+(100-PR.ls)+'%';{const gp='без кредиту';$('prWork').innerHTML='Працівник щомісяця генерує <b>'+fmU(c.wV)+'</b> прибутку для системи. Витрати на життя <b>'+fmU(c.wL)+'</b>.<br>'+(c.wY!=null?'Накопичить на мету без кредиту у віці <b>'+Math.ceil(S.startAge+c.wY)+'</b> за '+yrs(Math.ceil(c.wY)).replace(/^(\d+)/,'<b>$1</b>')+'.':'Не накопичить на цю мету без кредиту до '+RETIRE+' років.');}
+ {const ic=d=>'<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>',liv0=Math.max(0,c.NA-B.rent),tx=q=>q.A.vatPay+q.A.wageTax+q.A.profitTax+q.A.cvat;
+ const CD=[['pic','<circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.5-.8-1.5-1.2-2.8-1.2-1.7 0-2.8.8-2.8 2s1.1 1.6 2.8 2 2.8.8 2.8 2-1.1 2-2.8 2c-1.3 0-2.3-.4-2.8-1.2M12 6v2M12 16v2"/>',q=>q.share,fmU,'частка засновників','Частка капіталу громади в одного засновника, учасника зі старту. Росте з доходом бізнес фонду й новими внесками прибутку. Вклад засновників повертається окремо.'],['pil','<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',q=>liv0+B.D+(q.M>0?q.fDm/q.M:0),v=>fmU(v)+'/міс.','на життя на одного','Скільки учасник має на життя за місяць: зарплата після оренди плюс соцпакет на одного.'],['pit','<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/>',(q,k)=>k>0&&q.M>0?(tx(q)-tx(sn[k-1]))/q.M/12:0,v=>fmU(v)+'/міс.','податки на одного','Податки хабу за цей рік (ПДВ, ПДФО, ЄСВ, ВЗ, податок на прибуток), у середньому на учасника на місяць.'],['pim','<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>',q=>q.M,v=>fm(Math.round(v)),'учасників','Скільки людей живе й працює в хабі. Нові приходять за рахунок фонду «Нові резиденти», доки не досягнуть максимуму.'],['pip','<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>',q=>q.Pn||0,v=>fm(Math.round(v)),'додаткових проектів','Проекти, що діють цього року. Кожен запускається після 10&nbsp;000 трудогодин і працює стільки років, скільки задано в «Актуальність».'],['pif','<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',q=>q.F,fmU,'бізнес фонд загальний','Гроші хабу в бізнесі. Приносять дохідність, задану в «Бізнес хабу».'],['pib','<path d="M3 21h18M6 21V9l6-5 6 5v12"/><path d="M10 21v-6h4v6M9 11h1M14 11h1"/>',q=>q.A.bld,fmU,'будівництво за весь час','Скільки громада вклала в житло й інфраструктуру кампусу за весь час.'],['pik','<path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/>',q=>q.cap,fmU,'капітал спільноти','Усе, чим володіє громада: бізнес фонд, залишкова вартість житла й інфраструктури та фонд нових резидентів, мінус борг.']];
+ const spk=vs=>{const mx=Math.max(...vs.map(Math.abs),0)||1,n=vs.length-1,W=100/n;return '<svg class="spk" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">'+vs.slice(1).map((v,k)=>{const h=Math.max(.6,22*Math.max(0,v)/mx);return '<rect x="'+(k*W+W*.15).toFixed(2)+'" y="'+(24-h).toFixed(2)+'" width="'+(W*.7).toFixed(2)+'" height="'+h.toFixed(2)+'"'+(k+1===y?' class="on"':'')+'/>';}).join('')+'</svg>';};
+ $('prYh').innerHTML='<span class="pryt">Через '+yrs(y)+'</span><span class="prig">'+CD.map(d=>'<span class="pri '+d[0]+'"><button type="button" class="prinf" aria-label="Що це">i</button><span class="pritip" role="tooltip">'+d[5]+'</span>'+ic(d[1])+'<span><b>'+d[3](d[2](z,y))+'</b><small>'+d[4]+'</small></span>'+spk(sn.map((q,k)=>d[2](q,k)))+'</span>').join('')+'</span>';}
+ const T5=[];for(let k=5;k<=PR.Y;k+=5)T5.push(k);
+ $('prTicks').innerHTML=T5.map(k=>{const f=(k-1)/(PR.Y-1);return '<button type="button" class="cetk'+(k===y?' on':'')+(k===PR.Y?' last':'')+'" data-y="'+k+'" style="left:calc('+(f*100).toFixed(2)+'% + '+(8-16*f).toFixed(1)+'px)"><b>'+yrs(k)+'</b></button>';}).join('');
+ const row=(k,v,cl)=>'<div class="line'+(cl?' '+cl:'')+'"><span>'+k+'</span><b>'+v+'</b></div>';
+ const blk=(k,cl,t,sum,body,sc)=>'<details class="ceblk '+cl+'" data-ck="'+k+'"'+(CEO[k]===true?' open':'')+'><summary><h4>'+t+'</h4><b'+(sc?' class="'+sc+'"':'')+'>'+sum+'</b></summary>'+body+'</details>';
+ const liv=Math.max(0,c.NA-B.rent),dMo=z.M>0?z.fDm/z.M:0,gain=Math.max(0,(z.F||0)-(z.Fpaid||0)),out=z.share*(z.cap>0?Math.max(0,z.cap-gain*T.profit)/z.cap:1)*(1-NOMAD.exitTax);
+ let wk=0;if(c.wY!=null){const lim=y*12-Math.ceil(c.wY*12);Object.keys(z.join).forEach(j=>{if(+j<=lim)wk+=z.join[j];});}
+ const dl=A.daily,st=PR.start*c.pkg,sp=R.startPaidM;
+ $('prTbl').innerHTML=
+  blk('pme','celife','Персонально: через '+yrs(y),fmU(z.share),
+    row('Твоя частка засновника',fmU(z.share),'tt')
+   +row('Середня частка учасника',fmU(z.avg||0))
+   +row('Повернуто вклад засновників',fmU((z.ret||0)/PR.start)+' з '+fmU(c.pkg))
+   +row('На руки при виході',fmU(out))
+   +'<h5>На місяць</h5>'
+   +row('Зарплата на руки',fmU(c.NA))
+   +row('Оренда кампусу','− '+fmU(B.rent))
+   +row('На життя',fmU(liv))
+   +row('Соцпакет на одного','+ '+fmU(B.D+dMo))
+   +(dMo>0.5?'<small>З них з прибутку від роботи '+fmU(B.D)+', з доходу бізнес фонду'+(PR.pj?' і проектів':'')+' '+fmU(dMo)+'.</small>':'')
+   +row('Разом на життя учасника',fmU(liv+B.D+dMo),'tt'))
+ +blk('pcom','cecom','Спільнота на '+y+'-й рік<small class="cesub">'+fm(z.M)+' учасників ('+PR.start+' на старті, +'+fm(A.newM)+' нових за рахунок громади)</small>',fmU(z.cap),
+    row('Створено прибутку',fmU(A.gen))
+   +(PR.pj?row('Проектів запущено / діють',fm(z.Pt||0)+' / '+fm(z.Pn))+row('Дохід від проектів',fmU(A.fr)):'')
+   +row('Бізнес фонд',fmU(z.F))
+   +row('Житло й інфраструктура, ринкова вартість',fmU(z.mkt||0))
+   +(z.vatPool>0.5?row('Податковий кредит ПДВ',fmU(z.vatPool)):'')
+   +(A.nrF>0.5?row('Громада заповнена: з частки «Нові резиденти» в бізнес фонд',fmU(A.nrF)):row('Накопичено на наступного резидента',fmU(z.nrPool)+' з '+fmU(c.pkg)))
+   +(z.debt>0.5?row('Вклад засновників ще не повернуто','− '+fmU(z.debt)):'')
+   +row('Капітал спільноти',fmU(z.cap),'tt')
+   +'<small>За '+yrs(y)+' на соцпакет усіх учасників витрачено '+fmU(dl)+'.</small>')
+ +blk('pinf','ceinf','Інфраструктура за '+yrs(y),fmU(A.inf),
+    row('Усього в інфраструктуру',fmU(A.inf))
+   +row('Будівництво (спільна інфраструктура)',fmU(A.bld))
+   +(A.renew>0.5?row('Оновлення авто раз на '+NOMAD.depCarY+' років',fmU(A.renew))+row('Продаж старих авто за 30% ціни',fmU(A.sold)):'')
+   +row('Стартові пакети: '+PR.start+' × '+c.camp.name.toLowerCase(),fmU(st))
+   +row('Нові резиденти: '+fm(A.newM)+' × '+c.camp.name.toLowerCase(),fmU(A.newCost))
+   +(A.def>0.5?row('Не вистачило на оновлення авто','− '+fmU(A.def),'tt neg'):'')
+   +row('У звичайному житті мали б житло й авто',fm(wk)+' з '+fm(z.M)+' людей')
+   +'<small>Частка «Нові резиденти» спершу повертає вклад засновників '+(sp!=null?'(повернуто за '+sp+' міс.)':'(ще не повернуто)')+', далі щойно накопичено '+fmU(c.pkg)+', до громади додається новий резидент. Пакет оплачено громадою, тож новий резидент не відпрацьовує його й одразу працює на спільний фонд.</small>')
+ +blk('ptax','cetax','Податки державі за '+yrs(y),fmU(A.vatPay+A.wageTax+A.profitTax+A.cvat),
+    row('ПДВ',fmU(A.vatPay))+row('Податки із зарплат (ПДФО, ВЗ, ЄСВ)',fmU(A.wageTax))+row('Податок на прибуток',fmU(A.profitTax))+(A.cvat>0.5?row('ПДВ у покупках на життя',fmU(A.cvat)):'')+row('Разом',fmU(A.vatPay+A.wageTax+A.profitTax+A.cvat),'tt'));
 }
 function renderSettings(){
+ {const ri=$('setRate');if(ri){ri.value=NH_RATE;ri.onchange=()=>{const v=+ri.value;if(v>0){NH_RATE=v;try{localStorage.setItem('nhRate',String(v));}catch(e){}}else ri.value=NH_RATE;};}}
  const dev=['civil','owner','deputy'],order=Object.keys(PATHS).sort((a,b)=>(+dev.includes(a))-(+dev.includes(b))),last=order.filter(k=>EN[k]).length===1;
  $('setPaths').innerHTML=order.map(k=>'<label class="trow"><input type="checkbox" data-en="'+k+'"'+(EN[k]?' checked':'')+(EN[k]&&last?' disabled':'')+'><span class="tn"><b>'+roleCard(k).t+(dev.includes(k)?'<i class="devb">у розробці</i>':'')+'</b><small>'+SETDESC[k]+'</small></span></label>').join('');
 }
@@ -851,7 +1444,8 @@ function condItems(k){
   civil:['Хто наймає: держава (вчитель, лікар, військовий, держслужбовець).','Зарплата в межах вилки професії, податки з неї повертаються в бюджет.','Ліміти по професіях: '+limitText('civil')+'.'],
   fop:['Працюєш на себе: ФОП 2 групи.','Чистий прибуток на руки: '+limitText('fop')+'.','Податки фіксовані, не залежать від доходу, решта твоя.'],
   owner:['Завдання роботодавця: створювати робочі місця, які приносять прибуток.','Вартість організації одного місця дорівнює річній вартості працівника для роботодавця; можна в кредит або з власних коштів.','Обладнання повністю амортизується за '+EQUIP_Y+' років, потім купується нове.','Дохід '+limitText('owner')+'.'],
-  deputy:['Хто наймає: держава.','Оклад 10–12 прожиткових мінімумів плюс надбавки.','Зарплату фінансують податки інших людей.']
+  deputy:['Хто наймає: держава.','Оклад 10–12 прожиткових мінімумів плюс надбавки.','Зарплату фінансують податки інших людей.'],
+  nomad:['Умови для порівняння: учасник створює в компанії стільки ж прибутку, скільки шлях, з яким порівнюємо, на своїй максимальній зарплаті. Шлях порівняння накопичує на мету без кредиту й ділить зарплату після оренди житла 50/50 на мрію й на життя. Зарплата учасника на руки фіксована: на життя стільки ж, скільки в того шляху (не менше мінімальної зарплати '+fm(Math.round(T.mzp*nf()))+' грн), плюс оренда кампусу. Решта прибутку лишається в компанії.','Компанія: ТОВ на загальній системі оподаткування, без ФОП. Ти одночасно працівник і співвласник.','Умови контракту:','Прибуток, створений учасником, після сплати ПДВ:<ul><li>зарплата на руки фіксована за умовами для порівняння, з неї учасник платить оренду кампусу; з фонду зарплати сплачуються всі податки на ЗП;</li><li>решта ділиться між реінвестиціями в бізнес та інвестиціями в інфраструктуру (кампус, автопарк), а також на побут (корпоративна їжа й побут, витрачається в тому ж місяці, до податку на прибуток, ПДВ з покупок іде в кредит); так само щомісяця ділиться й дохід бізнес фонду: частка побуту на побут, частка інфраструктури (після податку на прибуток) в інфраструктуру, решта реінвестується, за стратегією бізнес/побут/інфраструктура: Лайфстайл 50/20/30 (за замовчуванням), FIRE 80/10/10 або Дауншифтинг 20/30/50; інфраструктура амортизується в середньому за '+NOMAD.depInfraY+' років; дозвілля й особисті витрати учасник оплачує із зарплати;</li><li>дивіденди не виплачуються.</li></ul>','При вході учасник нічого не платить: хаб інвестує в нього житло й частку авто (гостьовий номер + 1/4 авто $10 000, таунхаус + 1/4 авто $25 000, окремий будинок + 1/4 авто $50 000). Кредиту немає, у спільноти є ресурси. Учасник відпрацьовує інвестицію своєю частиною інфраструктури, далі йде прибуток.','Кампус за містом будується як тимчасове житло, ціна місця включає частку землі й спільних приміщень. Місце проживання учасники декларують у гуртожитку для працівників. Переїзд в інший хаб раз на 1–5 років.','Компанія купує житло з ПДВ і здає учаснику з ПДВ: оренда 1/240 ціни на місяць, будинок окупається за 20 років. Учасник платить оренду із зарплати.','Авто з автопарку: робочі поїздки безкоштовні, особисті як Uber мінус 30% із зарплати.','ПДВ у ціні житла й авто йде в податковий кредит, амортизація (у середньому '+NOMAD.depInfraY+' років для житла й авто) зменшує податок на прибуток.','У кожного учасника персональний рахунок. При виході частку викуповує хаб: продає активи й платить податок на прибуток 18% з доходу бізнесу, далі з виплати учаснику ПДФО 18% + ВЗ 5%.']
  }[k]||[];
 }
 function renderRules(){
@@ -866,62 +1460,97 @@ function renderRules(){
   civil:[['ПДФО з зарплати',p(T.pdfo)],['Військовий збір',p(T.vz)],['Військовий збір, якщо ти військовий','1,5%'],['ЄСВ, платить держава',p(T.esvEmp)+' зверху']],
   fop:[['Єдиний податок, 2 група (на місяць)',fm(T.es2)+' грн'],['Військовий збір (на місяць)',fm(T.vz12)+' грн'],['ЄСВ (на місяць)',fm(T.esvFop)+' грн'],['Разом фіксовано на місяць',fm(T.es2+T.vz12+T.esvFop)+' грн']],
   owner:[['ПДФО й ВЗ з зарплат працівників',p(T.pdfo)+' + '+p(T.vz)],['ЄСВ за працівників',p(T.esvEmp)+' зверху'],['Податок на прибуток',p(T.profit)],['Дивіденди власнику: ПДФО + ВЗ',p(T.divPdfo)+' + '+p(T.divVz)]],
+  nomad:[['ПДВ при продажі створеного прибутку і з оренди кампусу',p(T.vat)],['ПДФО + ВЗ (податки з фонду ЗП)',p(T.pdfo)+' + '+p(T.vz)],['ЄСВ (податок з фонду ЗП)',p(T.esvEmp)],['Податок на прибуток',p(T.profit)],['Оренда кампусу на місяць','1/240 ціни (≈ 0,42%)'],['Податковий кредит з ПДВ у ціні кампусу й авто','1/6 ціни'],['Амортизація інфраструктури: у середньому '+NOMAD.depInfraY+' років','зменшує податок на прибуток'],['При виході: податок на прибуток з доходу бізнесу, потім ПДФО + ВЗ з виплати',p(T.profit)+', потім '+p(T.pdfo)+' + '+p(T.vz)]],
   deputy:[['Прожитковий мінімум для окладу',fm(T.deputyPm)+' грн'],['Оклад',fm(10*T.deputyPm)+'–'+fm(12*T.deputyPm)+' грн плюс надбавки'],['ПДФО з зарплати',p(T.pdfo)],['Військовий збір',p(T.vz)]]
  }[k]||[];
- box.innerHTML=rulesOpen?'<div class="ruleset"><button type="button" class="rx" data-rules="1" aria-label="Закрити">✕</button><div class="ib"><h3>'+roleCard(k).t+' - умови контракту</h3>'+ul(cond)+'</div>'
+ box.innerHTML=rulesOpen?'<div class="ruleset"><button type="button" class="rx" data-rules="1" aria-label="Закрити">✕</button><div class="ib"><h3>'+(k==='nomad'?'Умови контракту':roleCard(k).t+' - умови контракту')+'</h3>'+(k==='nomad'?nomadQuote():ul(cond))+'</div>'
   +'<div class="ib"><h3>Ставки й податки 2026</h3>'+tb(rates.concat(common))+'</div>'
   +'</div>':'';
 }
 function goalEvents(pl){
  const C=pl.C,rows=pl.rows,cr=pl.mode==='credit',ev={};
  const at=f=>{const i=rows.findIndex(f);return i<0?null:{i,age:rows[i].age};};
+ if(pl.nomad){ev.flat=at(r=>r.placeBought);if(pl.reached!==null&&!pl.noGoal)ev.total={i:pl.reached-1,age:rows[pl.reached-1].age};return ev;}
  if(!C.rent&&C.flat>0)ev.flat=cr?at(r=>r.debtM<=0.5):at(r=>r.flatV>0);
  if(C.car>0)ev.car=cr?at(r=>r.debtC<=0.5):at(r=>r.carBought);
  if(C.cash>0)ev.cash=at(r=>r.cashSaved>=C.cash-0.5);
  if(pl.reached!==null&&!pl.noGoal)ev.total={i:pl.reached-1,age:rows[pl.reached-1].age};
  return ev;
 }
+function lifePlanHtml(items,c){
+ if(!c||!(c.gen>0)||!RD||!RD.pl||!items.length)return '';
+ const cr=RD.pl.mode==='credit',fl=RD.fl||{};
+ const cats=[['emp','Роботодавцю',c.emp||0,'#8e5bd1'],['state','Державі',c.state||0,'#d1495b'],['bank','Банку',(cr?(c.int||0):0)+(c.biz||0),'#e0a526'],['equip','Обладнання',c.equip||0,'#6c8ea4'],['rent','Орендодавцю',c.rent||0,'#8a6d3b']].filter(x=>x[2]>0.5);
+ const oth=cats.reduce((a,x)=>a+x[2],0);
+ const n1=v=>(Math.round(v*10)/10).toString().replace('.',','),GR='#2f9e77',mm=v=>(Math.abs(v)>=1e6?fmMn(v).replace(/,00(?=\D|$)/,''):fm(v))+' грн';
+ const row=(icon,segs,N,unit,ri)=>{const nv=v=>ri?fm(Math.round(v)):n1(v);
+  const k=N>60?[2,5,10,20,50,100].find(q=>N/q<=60)||Math.ceil(N/60):1;
+  const M=N/k,cnt=Math.ceil(M-1e-9);let acc=0;const bounds=segs.map(s=>{const a=acc;acc+=s[2]/k;return [a,acc,s[3]];});
+  let h='';
+  for(let i=0;i<cnt;i++){const st=[];bounds.forEach(b=>{const a=Math.max(b[0],i),e=Math.min(b[1],i+1);if(e>a+1e-6)st.push(b[2]+' '+((a-i)*100).toFixed(1)+'% '+((e-i)*100).toFixed(1)+'%');});
+   const end=Math.min(1,M-i);if(end<1)st.push('rgba(255,255,255,.12) '+(end*100).toFixed(1)+'% 100%');
+   h+='<i class="lpi '+icon+'" style="background:linear-gradient(90deg,'+st.join(',')+')"></i>';}
+  const lg=segs.filter(s=>s[2]>0.05).map(s=>'<span><i style="background:'+s[3]+'"></i>'+s[1]+' <b>'+(s[0]==='you'?'1':'≈'+nv(s[2]))+'</b></span>').join('');
+  return '<div class="lpic">'+h+'</div>'+(k>1?'<small class="lpk">1 іконка = '+k+'</small>':'')+'<div class="lplg">'+lg+'</div>';
+ };
+ const gen={worker:'найманого працівника',civil:'працівника бюджетної сфери',fop:'ФОПа',owner:'бізнесмена',deputy:'народного депутата'}[S.path]||'героя';
+ let out='<div class="lplan"><h3 class="flowh">План '+gen+' на життя:</h3>';
+ items.forEach(it=>{
+  const N=it.nd/it.val;if(!(N>0)||!isFinite(N))return;
+  const rest=Math.max(0,N-1);
+  const segs=[['you','Твоє',Math.min(1,N),GR]].concat(cats.map(x=>[x[0],x[1],oth>0?rest*x[2]/oth:0,x[3]]));
+  const L={flat:['Житло','одне','house'],car:['Авто','одне','car'],cash:['Гроші','одну суму','coin']}[it.k];
+  const ri=it.k!=='cash',NR=segs.reduce((q,x)=>q+(x[0]==='you'?1:x[2]>0.05?Math.round(x[2]):0),0);out+='<div class="lprow"><h4>'+L[0]+' ≈'+(ri?fm(NR):n1(N))+'</h4>'+row(L[2],segs,N,'×',ri)+'</div>';
+ });
+ return out+'</div>';
+}
 function goalBlocksHtml(ev,ix,c,r,part){
  ev=ev||{};ix=ix||0;
+ if(S.path==='nomad')return part==='sum'?(r?nomadShareHtml(r)+nomadCmpHtml(r):''):nomadGoalBlocks(ev,ix)+(r&&RD&&RD.pl.nomad?nomadMainHtml(r,idx>=RD.pl.rows.length):'');
  const C=costs(S),fp=FLATS.find(x=>x.id===S.flat)||FLATS[1],car=CARS.find(x=>x.id===S.car)||CARS[0];
  const dn=e=>e&&e.i<ix,t=(k,v,sub,c,e,lk)=>'<div class="gb'+(dn(e)?' done':'')+'" style="--c:'+c+'"><span>'+k+'</span><b>'+v+'</b>'+(dn(e)?'<i class="gd">✓ досягнуто у віці '+e.age+'</i>':'')+'<small>'+sub+'</small>'+(lk?'<small class="gbl">'+lk+'</small>':'')+'</div>';
  const rent=S.flat==='rent',goal=C.flat+C.car+C.cash,cr=S.finMode==='credit';
- let h=t('Авто',car.id==='none'?'Без авто':car.name,car.id==='none'?'—':fm(C.car)+' грн'+(cr&&C.carL>0?'<br>автокредит '+String(S.carRate).replace('.',',')+'%':''),'#6c8ea4',ev.car);
- h+=t('Житло',rent?'Оренда':fp.name+' $'+fm(fp.area*S.ppm2),rent?fm(S.rentUah)+' грн/міс, ' + CITY[S.city].name:fp.area+' м², '+CITY[S.city].name+', '+fm(C.flat)+' грн'+(cr&&C.mortL>0?'<br>іпотека '+S.mortRate+'%':''),'#8a6d3b',ev.flat);
+ let h=t('Авто',car.id==='none'?'Без авто':car.name,car.id==='none'?'—':fm(C.car)+' грн'+(cr&&C.carL>0?'<br>'+(S.path==='nomad'?'кредит компанії ':'автокредит ')+String(S.carRate).replace('.',',')+'%':''),'#6c8ea4',ev.car);
+ h+=t('Житло',rent?'Оренда':fp.name+' $'+fm(fp.area*S.ppm2),rent?fm(S.rentUah)+' грн/міс, ' + CITY[S.city].name:fp.area+' м², '+CITY[S.city].name+', '+fm(C.flat)+' грн'+(cr&&C.mortL>0?'<br>'+(S.path==='nomad'?'іпотека компанії ':'іпотека ')+S.mortRate+'%':''),'#8a6d3b',ev.flat);
  h+=t('Накопичити',C.cash>0?fm(C.cash)+' грн':'не потрібно','','#c2569b',ev.cash);
- let S3='';if(part==='sum'){ {const cd=S.finMode==='credit',has=!!(c&&r),A=has?assetVals(r):null,wk=S.path==='worker';
-  if(!C.car&&rent)return '';
+ let S3='';if(part==='sum'){ {const cd=S.finMode==='credit',has=!!(c&&r),A=has?assetVals(r):null,wk=S.path==='worker',nm=S.path==='nomad';
+  if(!C.car&&rent)return nm?nomadShareHtml(r):'';
   const rowsU=has?RD.pl.rows.slice(0,r.y):[];
   const lnk=(a,k,open)=>'<button type="button" class="lnk" data-'+a+'="'+k+'">'+(open===k?'сховати розрахунок':'розрахунок')+'</button>';
   const sub0=cd?'на момент погашення кредиту':'на момент покупки';
-  const need=sp=>has&&sp>0?(wk?chain(S,costOf(RD.NA/nf()),'tov').V*sp/RD.NA:(c.hero>0?sp*c.gen/c.hero:0)):0;
+  const need=sp=>has&&sp>0?(nm?(c.gen>(c.stateDir||0)?sp*c.gen/(c.gen-c.stateDir):0):wk?chain(S,costOf(RD.NA/nf()),'tov').V*sp/RD.NA:(c.hero>0?sp*c.gen/c.hero:0)):0;
+  const LPI=[];
   const track=(k,title,col,x,spend,inte)=>{
-   const ok=!!(A&&x&&x.row),nd=need(spend);
+   const ok=!!(A&&x&&x.row),nd=need(spend);if(ok&&nd>0&&x.val>0)LPI.push({k,nd,val:x.val});
    let g=t('Вартість '+(k==='car'?'авто':'житла'),ok?fm(x.val)+' грн':'—',sub0,col,null,ok?lnk('own',k,ownOpen):'');
-   g+=t('Реальні витрати',has?fm(spend)+' грн':'—',(has&&cd&&inte>0?'повна вартість + відсотки '+fm(inte)+' грн':'повна вартість'),'#d1495b',null,ok?lnk('spend',k,spendOpen):'');
-   g+=t('Створений '+(S.path==='fop'?'ФОП':'працівником')+' прибуток',nd>0?fm(nd)+' грн':'—','','#8e5bd1',null,has&&nd>0?lnk('calc',k,calcOpen):'');
-   g+=t('У власність переходить',nd>0&&ok&&x.val>0?pct(x.val/nd):'—',S.path==='fop'?'створеного ФОП прибутку':'створеного працівником прибутку','#2f9e77',null,ok&&nd>0&&x.val>0?lnk('share',k,shareOpen):'');
+   g+=t(nm?'Реальні витрати компанії':'Реальні витрати',has?fm(spend)+' грн':'—',(has&&cd&&inte>0?'повна вартість + відсотки '+fm(inte)+' грн':'повна вартість')+(nm?', мінус податковий кредит з ПДВ':''),'#d1495b',null,ok?lnk('spend',k,spendOpen):'');
+   g+=t('Створений '+(S.path==='fop'?'ФОП':S.path==='nomad'?'учасником':'працівником')+' прибуток',nd>0?fm(nd)+' грн':'—','','#8e5bd1',null,has&&nd>0?lnk('calc',k,calcOpen):'');
+   g+=t(nm?'Переходить у твою частку':'У власність переходить',nd>0&&ok&&x.val>0?pct(x.val/nd):'—',S.path==='fop'?'створеного ФОП прибутку':nm?'створеного учасником прибутку':'створеного працівником прибутку','#2f9e77',null,ok&&nd>0&&x.val>0?lnk('share',k,shareOpen):'');
    return '<h4 class="trk" style="--c:'+col+'">'+title+'</h4><div class="gblocks">'+g+'</div>'+(ownOpen===k&&A?ownCalcHtml(k,A):'')+(spendOpen===k&&A?spendCalcHtml(k,spend,inte,A):'')+(calcOpen===k&&has&&nd>0?(wk?wageCalcHtml(spend):genCalcHtml(k,spend,c,r,nd)):'')+(shareOpen===k&&ok&&nd>0&&x.val>0?shareCalcHtml(k,x,spend,inte,nd,cd):'');
   };
-  let out='<h3 class="flowh">Яка частина переходить у власність на момент '+(cd?'виплати кредиту':'покупки')+'</h3>';
-  if(C.car>0){const sp=has?(cd?(C.carL||0)+rowsU.reduce((q,x)=>q+(x.interestC||0),0):rowsU.reduce((q,x)=>q+(x.carP||0),0)):0,it=has&&cd?rowsU.reduce((q,x)=>q+(x.interestC||0),0):0;out+=track('car','Авто','#6c8ea4',A&&A.car,sp,it);}
-  if(!rent){const sp=has?(cd?(C.mortL||0)+rowsU.reduce((q,x)=>q+(x.interestM||0),0):rowsU.reduce((q,x)=>q+(x.flatP||0),0)):0,it=has&&cd?rowsU.reduce((q,x)=>q+(x.interestM||0),0):0;out+=track('flat','Житло','#8a6d3b',A&&A.flat,sp,it);}
+  let out=(nm?nomadShareHtml(r):'')+'<h3 class="flowh">'+(nm?'Яка частина переходить у твою частку в компанії на момент ':'Яка частина переходить у власність на момент ')+(cd?'виплати кредиту':'покупки')+'</h3>';
+  if(C.car>0){const sp=has?(cd?(C.carL||0)+rowsU.reduce((q,x)=>q+(x.interestC||0),0):rowsU.reduce((q,x)=>q+(x.carP||0),0)):0,it=has&&cd?rowsU.reduce((q,x)=>q+(x.interestC||0),0):0;out+=track('car','Авто','#6c8ea4',A&&A.car,sp-(nm&&sp>0?C.car*vkOf():0),it);}
+  if(!rent){const sp=has?(cd?(C.mortL||0)+rowsU.reduce((q,x)=>q+(x.interestM||0),0):rowsU.reduce((q,x)=>q+(x.flatP||0),0)):0,it=has&&cd?rowsU.reduce((q,x)=>q+(x.interestM||0),0):0;out+=track('flat','Житло','#8a6d3b',A&&A.flat,sp-(nm&&sp>0?C.flat*vkOf():0),it);}
+  if(!nm&&has&&idx>=RD.pl.rows.length){if(C.cash>0){const nd=need(C.cash);if(nd>0)LPI.push({k:'cash',nd,val:C.cash});}const O={flat:0,car:1,cash:2};out+=lifePlanHtml(LPI.sort((a,b)=>O[a.k]-O[b.k]),c);}
   return out;}}
  return '<div class="gblocks">'+h+'<div class="gb gt'+(dn(ev.total)?' done':'')+'"><span>Вартість мети</span><b>'+(goal>0?fm(goal)+' грн':'—')+'</b>'+(dn(ev.total)?'<i class="gd">✓ досягнуто у віці '+ev.total.age+'</i>':'')+'<small class="gbl"><button type="button" class="lnk" data-go="1">змінити мету</button></small></div></div>';
 }
 function renderPathOpts(){
- const box=$('pathOpts');box.innerHTML=goalBlocksHtml();
- const gen={worker:'найманого працівника',civil:'працівника бюджетної сфери',fop:'ФОПа',owner:'бізнесмена',deputy:'народного депутата'};{const mt=$('moneyTitle');if(mt)mt.textContent='Зарплата й витрати '+(gen[S.path]||'героя');}
+ const box=$('pathOpts');box.innerHTML=S.path==='nomad'?'':goalBlocksHtml();
+ const gen={worker:'найманого працівника',civil:'працівника бюджетної сфери',fop:'ФОПа',owner:'бізнесмена',deputy:'народного депутата',nomad:'учасника NomadHub'};{const mt=$('moneyTitle');if(mt)mt.textContent='Зарплата й витрати '+(gen[S.path]||'героя');}
  if(S.path==='civil'){
   const sg=document.createElement('div');sg.id='qSector';sg.className='grid';box.appendChild(sg);
   choices('qSector',Object.entries(SECTORS).map(([v,s])=>({v,t:s.name,d:'Зарплата на руки\n'+fm(bandNet({...S,sector:v}).lo)+' - '+fm(bandNet({...S,sector:v}).hi)+' грн.'})),'sector',()=>{setPathDefaults('civil');renderPathOpts();});
  }
  if(S.path==='owner'){const bg=document.createElement('div');bg.id='qBiz';bg.className='grid';box.appendChild(bg);choices('qBiz',[{v:'credit',t:'Інвестиція в кредит',d:'відсотки за загальною ставкою з мети'},{v:'own',t:'З власних коштів',d:'без відсотків, щомісяця відкладаємо на нове обладнання'}],'bizMode',()=>{renderPathOpts();});}
  const g=document.createElement('div');g.className='sgrid';
- SL.filter(sl=>sl.where==='path'&&(!sl.show||sl.show(S))).forEach(sl=>g.appendChild(mkSl(sl,s=>{if(false)renderPathOpts();else{g.querySelectorAll('.dyn').length&&refreshDyn();updateSalaryCard();}})));
- {const sb=document.createElement('div');sb.id='salBig';sb.className='salbig mainblk';sb.innerHTML='<div id="salOw"></div><div class="mtot"><span id="salT"></span><b id="salV"></b></div><div id="livCard"></div>';g.id='mainSl';sb.appendChild(g);const w=document.createElement('div');w.id='livWarn';sb.appendChild(w);box.appendChild(sb);}
+ const els=[];
+ SL.filter(sl=>sl.where==='path'&&(!sl.show||sl.show(S))).forEach(sl=>{const el=(sl.mk||mkSl)(sl,s=>{if(false)renderPathOpts();else{g.querySelectorAll('.dyn').length&&refreshDyn();updateSalaryCard();}});el._k=sl.k;els.push(el);g.appendChild(el);});
+ {const sb=document.createElement('div');sb.id='salBig';sb.className='salbig mainblk';sb.innerHTML='<div id="salOw"></div><div class="mtot"><span id="salT"></span><b id="salV"></b></div><div id="livCard"></div>';g.id='mainSl';sb.appendChild(g);const w=document.createElement('div');w.id='livWarn';sb.appendChild(w);box.appendChild(sb);
+  if(S.path==='nomad'){sb.classList.add('nmb');const st=els.find(e=>e._k==='bizP');if(st){st.classList.add('nstrat');sb.insertBefore(st,sb.firstChild);}}}
+ if(S.path==='nomad'){if(!CAMP.some(c=>c.id===S.camp))S.camp='town';const cb=document.createElement('div');cb.className='ncamp';cb.innerHTML='<h3 class="flowh">Інвестиція хабу на 1 учасника</h3><div class="grid" id="qCamp"></div>';{const st2=box.querySelector('.nstrat');if(st2)st2.after(cb);else box.appendChild(cb);}choices('qCamp',CAMP.map(c=>{const TT={...S,camp:c.id};return {v:c.id,t:c.name+(S.carUsd>0?' + 1/'+c.k+' авто':''),d:'Інвестиція хабу $'+fm(c.usd)+'\nОренда '+fm(nomadRent(TT))+' грн'};}),'camp',()=>{renderNomadCond();renderPathOpts();});}
  renderSplit();
- function refreshDyn(){SL.filter(sl=>sl.where==='path'&&(!sl.show||sl.show(S))).forEach((sl,i)=>{const el=g.children[i];if(el&&sl.dyn)el.querySelector('.dyn').textContent=sl.dyn(S);if(el&&sl.vt)el.querySelector('output').textContent=valText(sl,S[sl.k]);});}
+ function refreshDyn(){SL.filter(sl=>sl.where==='path'&&(!sl.show||sl.show(S))).forEach((sl,i)=>{const el=els[i];if(el&&sl.dyn)el.querySelector('.dyn').textContent=sl.dyn(S);if(el&&sl.vt)el.querySelector('output').textContent=valText(sl,S[sl.k]);});}
 }
 function renderTune(){
  const dep=S.path==='deputy'||S.path==='owner';
@@ -949,6 +1578,7 @@ function currentNA(){
  let NA;
  if(S.path==='deputy')NA=deputyPay(S).N;
  else if(S.path==='owner')NA=ownerFrom(S,Math.max(1,Math.round(S.nWork))).net;
+ else if(S.path==='nomad'){nomadSync(S);NA=S.chosenN;}
  else{const lim=salaryLimit(S);S.chosenN=Math.min(lim.hi,Math.max(lim.lo,S.chosenN));NA=S.chosenN;}
  syncLiving(NA);return NA;
 }
@@ -987,11 +1617,11 @@ function startRun(){
  stopRun();
  const NA=currentNA();
  const res=calcPath(S.path,NA,S),pl=plan(S,S.path,NA);
- const fl=aggregate(res,NA,pl,S);
+ const fl=S.path==='nomad'?aggregateNomad(pl):aggregate(res,NA,pl,S);
  pl.rows.forEach(r=>{r.tax=r.cum.state;});
  RD={NA,res,pl,fl,caught:null,done:false,ev:goalEvents(pl)};
  idx=0;paused=false;
- $('runSub').textContent=PATHS[S.path].name+': '+(pl.mode==='credit'?'життя в кредит':'життя з накопиченням');
+ $('runSub').textContent=PATHS[S.path].name+': '+(S.path==='nomad'?'живеш у кампусі за містом; для порівняння '+CMPW[pl.cmp.id]+(pl.cmp.pl.mode==='credit'?', життя в кредит':', життя з накопиченням'):pl.mode==='credit'?'життя в кредит':'життя з накопиченням');
  $('feed').innerHTML='';$('feed').style.maxHeight='';
  const C=pl.C;
  draw();counters();
@@ -1006,21 +1636,27 @@ function taxParts(c){
  if(!ks.length||sum<=0)return [['Податки з доходу й ПДВ бізнесу',base]];
  return ks.map(k=>[nm(k),base*ps[k]/sum]).filter(x=>x[1]>0.5);
 }
-function pieCol(c,fl,credit){
+function pieCol(c,fl,credit,rw){
  const bk=(credit?c.int:0)+(c.biz||0);
- const sl=[[fl.empLabel,c.emp,'#8e5bd1'],['Державі (податки й ПДВ)',c.state,'#d1495b'],['Банку (відсотки)',bk,'#e0a526'],['Обладнання (тіло інвест кредиту)',c.equip||0,'#6c8ea4'],['Орендодавцю (оренда)',c.rent||0,'#8a6d3b'],['Герою на руки (життя + мета)',Math.max(0,c.hero-(credit?c.int:0)-(c.rent||0)-(c.cvat||0)),'#2f9e77']].filter(s=>s[1]>0.5);
+ const nmd=S.path==='nomad',sl=nmd?[['Державі (податки й ПДВ)',c.state||0,'#d1495b'],['Бізнес хабу, '+S.bizYield+'% річних',c.biz||0,'#14532d'],['Побут (корпоративна їжа й побут)',c.daily||0,'#c9a227'],['Інфраструктура хабу (амортизація '+NOMAD.depInfraY+' років)',c.infra||0,'#86d9a8'],['Учаснику на руки на життя (без оренди)',c.member||0,'#2f9e77']].filter(s=>s[1]>0.5):[[fl.empLabel,c.emp,'#8e5bd1'],['Державі (податки й ПДВ)',c.state,'#d1495b'],['Банку (відсотки)',bk,'#e0a526'],['Обладнання (тіло інвест кредиту)',c.equip||0,'#6c8ea4'],['Орендодавцю (оренда)',c.rent||0,'#8a6d3b'],['Герою на руки (життя + мета)',Math.max(0,c.hero-(credit?c.int:0)-(c.rent||0)-(c.cvat||0)),'#2f9e77']].filter(s=>s[1]>0.5);
  const tot=sl.reduce((a,s)=>a+s[1],0);
  let off=0,arcs='';
  sl.forEach(s=>{const p=s[1]/tot*100;arcs+='<circle r="15.9155" cx="21" cy="21" fill="none" stroke="'+s[2]+'" stroke-width="6" stroke-dasharray="'+p.toFixed(3)+' '+(100-p).toFixed(3)+'" stroke-dashoffset="'+(-off).toFixed(3)+'"><title>'+s[0]+'</title></circle>';off+=p;});
  const svg='<svg viewBox="0 0 42 42" role="img" aria-label="Кругова діаграма: кому дісталася створена вартість"><circle r="15.9155" cx="21" cy="21" fill="none" stroke="var(--line)" stroke-width="6"/><g transform="rotate(-90 21 21)">'+arcs+'</g><text x="21" y="19.5" text-anchor="middle" font-size="2.6" fill="var(--mute)">Згенеровано</text><text x="21" y="24.5" text-anchor="middle" font-size="3.6" font-weight="700" fill="var(--gold)">'+(c.gen?fmM(c.gen):'0')+'</text><text x="21" y="28" text-anchor="middle" font-size="2.4" fill="var(--mute)">грн</text></svg>';
- const row=(s,x,st)=>'<tr'+(st?' class="tg" data-tax="1"':(s[0].startsWith('Герою')?' class="hl"':''))+'><td><span class="sw" style="background:'+s[2]+'"></span>'+(st?'<span class="ar">'+(taxOpen?'▾':'▸')+'</span> ':'')+s[0]+'</td><td class="r"><b>'+fm(s[1])+' грн</b></td><td class="r"><em>'+pct(s[1]/tot)+'</em></td></tr>'+(x||'');
+ const row=(s,x,st)=>'<tr'+(st?' class="tg" data-tax="1"':(s[0].startsWith('Герою')||s[0].startsWith('Учаснику')?' class="hl"':''))+'><td><span class="sw" style="background:'+s[2]+'"></span>'+(st?'<span class="ar">'+(taxOpen?'▾':'▸')+'</span> ':'')+s[0]+'</td><td class="r"><b>'+fm(s[1])+' грн</b></td><td class="r"><em>'+pct(s[1]/tot)+'</em></td></tr>'+(x||'');
  const dr=(t,v,lvl)=>'<tr class="x'+(lvl?' x2':'')+'"><td>'+t+'</td><td class="r"><b>'+fm(v)+' грн</b></td><td class="r"><em>'+pct(v/tot)+'</em></td></tr>';
  let lg='';
- sl.forEach(s=>{const st=s[0].startsWith('Державі');lg+=row(s,st&&taxOpen?taxParts(c).map(x=>dr(x[0],x[1])).join('')+((c.vatLife||0)>0?dr('ПДВ у витратах на життя',c.vatLife):'')+((c.vatFlat||0)>0?dr('ПДВ у квартирі',c.vatFlat):'')+((c.vatCar||0)>0?dr('ПДВ у новому авто',c.vatCar):''):'',st);});
+ sl.forEach(s=>{const st=s[0].startsWith('Державі');lg+=row(s,st&&taxOpen?(nmd?[['ПДВ мінус ПДВ на житло та авто',c.vatPay||0],['Податки з ЗП',c.wageTax||0],['Податок на прибуток',c.profitTax||0]].filter(x=>x[1]>0.5):taxParts(c)).map(x=>dr(x[0],x[1])).join('')+((c.vatLife||0)>0?dr('ПДВ у витратах на життя',c.vatLife):'')+((c.vatFlat||0)>0?dr('ПДВ у квартирі',c.vatFlat):'')+((c.vatCar||0)>0?dr('ПДВ у новому авто',c.vatCar):''):'',st);});
  lg=lg?'<table class="plt">'+lg+'</table>':'<div class="pl"><span class="pn">Поки нічого</span></div>';
  const hs=sl.find(s=>s[0]==='Герою на руки (життя + мета)'),kp=hs&&tot>0?pct(hs[1]/tot):'—';
- const who={fop:'підприємцем',owner:'бізнесменом',deputy:'депутатом'}[S.path]||'працівником';
- return '<div class="flow"><h3>Як був розподілений створений '+who+' прибуток</h3><div class="pie">'+svg+'<div class="plg">'+lg+'</div></div></div>';
+ const who={fop:'підприємцем',owner:'бізнесменом',deputy:'депутатом',nomad:'учасником'}[S.path]||'працівником';
+ let res='';
+ if(nmd&&rw&&(c.biz>0.5||c.infra>0.5||(c.daily||0)>0.5)){const mm=v=>(Math.abs(v)>=1e6?fmMn(v):fm(v))+' грн',a=rw.nm||{},left=(rw.infraBook||0)+(rw.infraCash||0),dep=a.dep||0,fD=a.fDaily||0,fI=a.fInfra||0,vr=Math.max(0,(c.infra||0)+fI-left-dep);
+  res='<div class="pres"><h4>Що з цього стало у віці '+rw.age+'</h4>'
+   +'<div class="prl"><span><i class="sw" style="background:#14532d"></i>Бізнес фонд<small class="prs">'+S.bizYield+'% на рік'+(vr>0.5?' + ПДВ-кредит '+mm(vr):'')+'</small></span><em>вкладено '+mm(c.biz||0)+'</em><b class="up">зараз '+mm(rw.bizCash||0)+'</b></div>'
+   +((c.daily||0)+fD>0.5?'<div class="prl"><span><i class="sw" style="background:#c9a227"></i>Побут<small class="prs">корпоративна їжа й побут, щомісяця'+(fD>0.5?'; з доходу фонду '+mm(fD):'')+'</small></span><em>вкладено '+mm((c.daily||0)+fD)+'</em><b class="dn">витрачено '+mm((c.daily||0)+fD)+'</b></div>':'')
+   +'<div class="prl"><span><i class="sw" style="background:#86d9a8"></i>Інфраструктура<small class="prs">амортизація '+NOMAD.depInfraY+' років'+(fI>0.5?'; з доходу фонду '+mm(fI):'')+'</small></span><em>вкладено '+mm((c.infra||0)+fI)+'</em><b class="dn">лишилося '+mm(left)+'</b></div></div>';}
+ return '<div class="flow"><h3>Як був розподілений створений '+who+' прибуток</h3><div class="pie">'+svg+'<div class="plg">'+lg+'</div></div>'+res+'</div>';
 }
 function payAges(pl){const m=pl.rows.find(r=>r.debtM<=0.5),c=pl.rows.find(r=>r.debtC<=0.5);return {m:m?m.age:null,c:c?c.age:null};}
 function ageAt(m){const a=S.startAge+Math.floor(m/12),mm=m%12;return yrs(a)+(mm?' '+mm+' міс.':'');}
@@ -1062,7 +1698,7 @@ function counters(){
  if($('goalTop'))$('goalTop').innerHTML=goalBlocksHtml(RD.ev,idx,r?r.cum:null,r);
  if($('goalSum'))$('goalSum').innerHTML=goalBlocksHtml(RD.ev,idx,r?r.cum:null,r,'sum');
  const c=r?r.cum:{gen:0,emp:0,state:0,hero:0,liv:0,int:0,goal:0};
- if($('pieBox'))$('pieBox').innerHTML=pieCol(c,RD.fl,RD.pl.mode==='credit');
+ if($('pieBox'))$('pieBox').innerHTML=pieCol(c,RD.fl,RD.pl.mode==='credit',r);
  $('counters').innerHTML='';
 }
 function tick(){
@@ -1070,7 +1706,7 @@ function tick(){
  const pl=RD.pl;
  if(idx>=pl.rows.length){finish();return;}
  idx++;const r=pl.rows[idx-1];
- let ev='Вік '+r.age+': на руки '+fm(r.inc)+' грн/міс, податків усього '+fm(r.tax)+' грн.';
+ let ev='Вік '+r.age+': на руки '+fm(r.inc)+' грн/міс, податків усього '+fm(r.tax)+' грн.'+(S.path==='nomad'?' Частка в компанії '+fm(r.share)+' грн, з них бізнес '+fm(r.bizCash)+' грн.':'');
  if(pl.mode==='credit'){
   if(idx===loanY(S)&&pl.C.mortL>0)ev+=' Іпотеку виплачено.';
   if(idx===loanY(S)&&pl.C.carL>0)ev+=' Авто виплачено.';
@@ -1125,6 +1761,7 @@ function heroHtml(C,N,res,pl,cum,req,isDep,goal){
 function finish(){
  if(RD.done)return;RD.done=true;stopRun();
  const pl=RD.pl,last=pl.rows[Math.max(0,idx-1)];let t;
+ if(pl.nomad)return;
  if(RD.caught)t='Гру зупинено викриттям на '+RD.caught+'-му році. Привласнення не довело героя до мети.';
  else if(pl.noGoal)t='Мети купувати немає (оренда, без авто): розрахунок на 20 років, подивіться на розподіл нижче. Податків сплачено '+fm(last.tax)+' грн.';
  else if(pl.reached!==null){
@@ -1133,6 +1770,7 @@ function finish(){
   else{const sq=[];if(C.car>0)sq.push('куплено авто у віці '+(pl.carMonths!=null?ageAt(pl.carMonths):yrs(pl.carAge)));if(!C.rent)sq.push('куплено квартиру у віці '+yrs(pl.flatAge));if(C.cash>0)sq.push('накопичено '+fm(C.cash)+' грн');t1+=sq.join(', потім ')+'. ';}
   t=t1+'Податків сплачено '+fm(last.cum.state)+' грн.';
  }
+ else if(pl.nomad)t='Мети не досягти: компанії не вистачає грошей на житло й авто'+(pl.mode==='credit'?' та відсотки банку':'')+' або зарплати не вистачає на особисті накопичення. Спробуй меншу зарплату, більшу частку інфраструктури чи більший прибуток.';
  else if(pl.blocked)t='Мети не досягти: на мету лишається менше, ніж відсотки за кредитом (або нема що накопичувати).';
  else t='До пенсійного віку ('+RETIRE+' років) мету не досягнуто: доходу не вистачає на життя й оплату мети.';
  if(pl.reached!==null&&!RD.caught&&!pl.noGoal)return;
@@ -1142,9 +1780,9 @@ function draw(){
  const cv=$('cv'),dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=cv.clientHeight;
  cv.width=w*dpr;cv.height=h*dpr;const g=cv.getContext('2d');g.scale(dpr,dpr);
  const cs=getComputedStyle(document.documentElement),col=n=>cs.getPropertyValue(n).trim();
- const rows=RD.pl.rows,cred=RD.pl.mode==='credit';
- const a=rows.map(r=>cred?r.worth:r.cash),b=rows.map(r=>cred?r.debt:r.target);
- const gl=cred?[[rows.map(r=>r.debtM),'#8a6d3b','іпотека: борг',RD.pl.C.mortL>0],[rows.map(r=>r.debtC),'#6c8ea4','авто: борг',RD.pl.C.carL>0],[rows.map(r=>r.cashSaved),'#c2569b','накопичення',RD.pl.C.cash>0]].filter(x=>x[3]):[];
+ const rows=RD.pl.rows,cred=RD.pl.mode==='credit',nmd=!!RD.pl.nomad;
+ const a=rows.map(r=>nmd?r.share:cred?r.worth:r.cash),b=rows.map(r=>cred?r.debt:r.target);
+ const gl=nmd?[[rows.map(r=>r.cmpCap),'#7f8ea3','',true]]:cred?[[rows.map(r=>r.debtM),'#8a6d3b','іпотека: борг',RD.pl.C.mortL>0],[rows.map(r=>r.debtC),'#6c8ea4','авто: борг',RD.pl.C.carL>0],[rows.map(r=>r.cashSaved),'#c2569b','накопичення',RD.pl.C.cash>0]].filter(x=>x[3]):[];
  const mx=Math.max(1,...a,...gl.flatMap(x=>x[0])),mn=Math.min(0,...a,...gl.flatMap(x=>x[0]));
 const L=58,Rm=10,Bm=26,pw=w-L-Rm,n=rows.length;
  const X=i=>L+(n<=1?0:(i/(n-1))*pw);
@@ -1152,8 +1790,17 @@ const L=58,Rm=10,Bm=26,pw=w-L-Rm,n=rows.length;
  const lab=[];
  const Cc=RD.pl.C,has={car:Cc.car>0,flat:Cc.flat>0,cash:Cc.cash>0,total:true};
  mk.forEach(([k,t,c])=>{const e=RD.ev&&RD.ev[k];if(!e||e.i>=idx||k==='total')return;lab.push({k,c,x:X(e.i),t});});
- const Tm=40,ph=h-Tm-Bm;
- let gs=1e6;for(const m of [2e6,5e6,1e7,2e7,5e7,1e8])if(Math.ceil((mx-mn)/gs)*15>ph)gs=m;
+ const dn=k=>!!(RD.ev&&RD.ev[k]&&RD.ev[k].i<idx);
+ const it=nmd?[[true,'#16a34a',0,'Твоя частка: бізнес + інфраструктура',false],[true,'#7f8ea3',1,'Капіталізація '+CMPG[RD.pl.cmp.id],dn('total')],[true,'#8a6d3b',null,'інвестицію відпрацьовано',dn('flat')]]
+  :cred?[
+   [has.car,'#6c8ea4',1,'Авто кредит',dn('car')],[has.flat,'#8a6d3b',1,'Квартира іпотека',dn('flat')],[has.cash,'#c2569b',1,'Накопичення',dn('cash')],[true,'#16a34a',0,dn('total')?'Капіталізація: мета досягнута':'Капіталізація',dn('total')]
+  ]:[[true,'#16a34a',0,'накопичено',false],[has.car,'#6c8ea4',null,'авто',dn('car')],[has.flat,'#8a6d3b',null,'квартира',dn('flat')],[has.cash,'#c2569b',null,'Накопичення',dn('cash')],[true,'#16a34a',null,'мета досягнута',dn('total')]];
+ const its=it.filter(x=>x[0]).map(x=>({c:x[1],ln:x[2],t:x[3]+(x[4]?' ✓':''),ok:x[4]}));
+ g.font='11px '+getComputedStyle(document.body).fontFamily;
+ const ws=its.map(x=>g.measureText(x.t).width+(x.ln===null?0:24));
+ const lrows=[];{const avail=w-Rm-4;let cur=null;its.forEach((x,q)=>{const add=ws[q]+(cur?16:0);if(!cur||cur.w+add>avail){cur={ix:[q],w:ws[q]};lrows.push(cur);}else{cur.ix.push(q);cur.w+=add;}});}
+ const Tm=40+14*Math.max(0,lrows.length-1),ph=h-Tm-Bm;
+ let gs=1e6;for(const m of [2e6,5e6,1e7,2e7,5e7,1e8,2e8,5e8,1e9,2e9])if(Math.ceil((mx-mn)/gs)*15>ph)gs=m;
  const lo=Math.floor(mn/gs+1e-9)*gs,hi=Math.max(lo+gs,Math.ceil(mx/gs-1e-9)*gs);
  const Y=v=>Tm+ph-(v-lo)/(hi-lo)*ph;
  g.font='11px '+getComputedStyle(document.body).fontFamily;g.fillStyle=col('--mute');g.strokeStyle=col('--line');g.lineWidth=1;
@@ -1162,20 +1809,12 @@ const L=58,Rm=10,Bm=26,pw=w-L-Rm,n=rows.length;
  g.textAlign='center';for(let i=0;i<n;i+=step)g.fillText(String(rows[i].age),X(i),h-8);g.textAlign='left';
  const line=(arr,c,dash)=>{g.save();g.setLineDash(dash?[7,5]:[]);g.strokeStyle=c;g.lineWidth=2.5;g.beginPath();for(let i=0;i<idx;i++){const x=X(i),y=Y(arr[i]);i?g.lineTo(x,y):g.moveTo(x,y);}g.stroke();g.restore();
   if(idx>0){g.fillStyle=c;g.beginPath();g.arc(X(idx-1),Y(arr[idx-1]),4,0,7);g.fill();}};
- if(0)mk.forEach(([k,t,c],j)=>{const e=RD.ev&&RD.ev[k];if(!e||e.i>=idx)return;const x=X(e.i);g.save();g.strokeStyle=c;g.fillStyle=c;g.lineWidth=k==='total'?2:1.5;g.setLineDash([5,4]);g.beginPath();g.moveTo(x,Tm);g.lineTo(x,Tm+ph);g.stroke();g.setLineDash([]);g.font='bold 11px '+getComputedStyle(document.body).fontFamily;const tw=g.measureText('✓ '+t).width;g.fillText('✓ '+t,x+4+tw>w-Rm?x-4-tw:x+4,Tm+24+j*13);g.restore();});
  {const by={};lab.forEach(l=>{const key=Math.round(l.x);(by[key]=by[key]||[]).push(l);});
   Object.values(by).forEach(arr=>arr.forEach((l,q)=>{const ox=(q-(arr.length-1)/2)*11;g.save();g.strokeStyle=l.c;g.fillStyle=l.c;g.lineWidth=l.k==='total'?2:1.5;g.setLineDash([5,4]);g.beginPath();g.moveTo(l.x,Tm-2);g.lineTo(l.x,Tm+ph);g.stroke();g.setLineDash([]);g.restore();}));}
  gl.forEach(x=>line(x[0],x[1],true));line(a,'#16a34a');
- {const dn=k=>!!(RD.ev&&RD.ev[k]&&RD.ev[k].i<idx);
-  const it=cred?[
-   [has.car,'#6c8ea4',1,'Авто кредит',dn('car')],[has.flat,'#8a6d3b',1,'Квартира іпотека',dn('flat')],[has.cash,'#c2569b',1,'Накопичення',dn('cash')],[true,'#16a34a',0,dn('total')?'Капіталізація: мета досягнута':'Капіталізація',dn('total')]
-  ]:[[true,'#16a34a',0,'накопичено',false],[has.car,'#6c8ea4',null,'авто',dn('car')],[has.flat,'#8a6d3b',null,'квартира',dn('flat')],[has.cash,'#c2569b',null,'Накопичення',dn('cash')],[true,'#16a34a',null,'мета досягнута',dn('total')]];
-  const its=it.filter(x=>x[0]).map(x=>({c:x[1],ln:x[2],t:x[3]+(x[4]?' ✓':''),ok:x[4]}));
-  g.font='11px '+getComputedStyle(document.body).fontFamily;
-  const ws=its.map(x=>g.measureText(x.t).width+(x.ln===null?0:24)),tot=ws.reduce((s,v)=>s+v,0)+16*(its.length-1);
-  let lx=w-Rm-tot;
-  its.forEach((x,q)=>{if(x.ln!==null){g.save();g.strokeStyle=x.c;g.lineWidth=2.5;g.setLineDash(x.ln?[5,3]:[]);g.beginPath();g.moveTo(lx,12);g.lineTo(lx+18,12);g.stroke();g.restore();}
-   g.fillStyle=x.ok?x.c:col('--fg');g.font=(x.ok?'bold ':'')+'11px '+getComputedStyle(document.body).fontFamily;g.fillText(x.t,lx+(x.ln===null?0:24),16);lx+=ws[q]+16;});}
+ lrows.forEach((lr,li)=>{let lx=w-Rm-lr.w;const dy=li*14;
+  lr.ix.forEach(q=>{const x=its[q];if(x.ln!==null){g.save();g.strokeStyle=x.c;g.lineWidth=2.5;g.setLineDash(x.ln?[5,3]:[]);g.beginPath();g.moveTo(lx,12+dy);g.lineTo(lx+18,12+dy);g.stroke();g.restore();}
+   g.fillStyle=x.ok?x.c:col('--fg');g.font=(x.ok?'bold ':'')+'11px '+getComputedStyle(document.body).fontFamily;g.fillText(x.t,lx+(x.ln===null?0:24),16+dy);lx+=ws[q]+16;});});
 }
 $('resetBtn').onclick=()=>{stopRun();Object.keys(S).forEach(k=>delete S[k]);Object.assign(S,DEF);RD=null;initQuiz();go(1);window.scrollTo(0,0);};
 window.addEventListener('resize',()=>{if(step===4&&RD)draw();});
@@ -1220,7 +1859,8 @@ $('shareSend').onclick=async()=>{
 };
 $('restartBtn').onclick=$('restart2').onclick=()=>$('resetBtn').click();
 $('setPaths').onchange=e=>{const c=e.target.closest('[data-en]');if(!c)return;EN[c.dataset.en]=c.checked;if(!Object.values(EN).some(Boolean))EN[c.dataset.en]=true;ensurePath();try{localStorage.setItem('shEn',JSON.stringify(EN));}catch(er){}renderSettings();const pg=$('pathGrid');if(pg&&pg._draw)pg._draw();};
-$('setBack').onclick=$('modBack').onclick=()=>go(backStep);
+$('modCopy').onclick=async()=>{const b=$('modCopy'),ok=await copyText(modelText());b.textContent=ok?'Скопійовано':'Не вдалося скопіювати';setTimeout(()=>{b.textContent='Скопіювати текст для ШІ';},2000);};
+$('setBack').onclick=$('modBack').onclick=$('prBack').onclick=()=>go(backStep);
 const setMenu=o=>{$('setMenu').hidden=!o;$('setBtn').setAttribute('aria-expanded',o?'true':'false');};
 $('setBtn').onclick=e=>{e.stopPropagation();setMenu($('setMenu').hidden);};
 document.addEventListener('click',e=>{if(!$('setMenu').hidden&&(!e.target.closest('#setMenu')||e.target.closest('.sm')))setMenu(false);});
